@@ -5,48 +5,30 @@
   --color-brand: #3b82f6;
 }
 
-/* Wichtig für manuelle Steuerung in Tailwind v4 */
+/* Tailwind v4 zwingen, auf die .dark Klasse am <html> Element zu hören */
 @custom-variant dark (&:where(.dark, .dark *));
 
 html {
   scroll-behavior: smooth;
 }
 
-/* --- LIGHT MODE (Standard) --- */
+/* LIGHT MODE STYLES */
 body {
     background-color: #f1f5f9;
     color: #0f172a;
-    position: relative;
-    min-height: 100vh;
-    margin: 0;
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-body::before {
-    content: "";
-    position: fixed;
-    inset: 0;
-    background: radial-gradient(at 0% 0%, rgba(59, 130, 246, 0.1) 0px, transparent 45%),
-                radial-gradient(at 100% 100%, rgba(37, 99, 235, 0.05) 0px, transparent 40%);
-    pointer-events: none;
-    z-index: -1;
-}
-
-/* --- DARK MODE --- */
+/* DARK MODE STYLES */
 .dark body {
     background-color: #0b0f1a;
     color: #f8fafc;
 }
 
-.dark body::before {
-    background: radial-gradient(at 0% 0%, rgba(0, 176, 240, 0.12) 0px, transparent 45%),
-                radial-gradient(at 100% 100%, rgba(88, 101, 242, 0.08) 0px, transparent 40%);
-}
-
-/* Fix für das Logo im Light Mode: Nur Schwarz/Weiß Invertierung, kein Farbshift */
+/* LOGO FIX: Verhindert Farbwechsel zu Orange/Blau-Mischmasch */
 .light-img-fix {
-    filter: brightness(0) saturate(100%); /* Macht das Logo komplett schwarz im Light Mode */
+    filter: brightness(0) saturate(100%); /* Macht Logo im Light Mode schwarz */
 }
 .dark .light-img-fix {
-    filter: none; /* Originalfarben (Blau/Weiß) im Dark Mode */
+    filter: none; /* Im Dark Mode Originalfarben */
 }
