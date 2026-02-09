@@ -6,28 +6,21 @@
 
 @custom-variant dark (&:where(.dark, .dark *));
 
+/* Standardtexte für die ganze Seite */
+@layer base {
+  h1, h2, h3, h4, strong, b {
+    @apply text-slate-900 dark:text-white transition-colors duration-300;
+  }
+  
+  p, span, li {
+    @apply text-slate-700 dark:text-slate-300 transition-colors duration-300;
+  }
+}
+
 html {
   scroll-behavior: smooth;
 }
 
-/* --- LIGHT MODE --- */
 body {
-    background-color: #ffffff; /* Reinweiß für maximale Lesbarkeit */
-    color: #0f172a; /* Dunkles Slate für Text */
-    transition: background-color 0.3s ease;
-}
-
-/* Verbessert die Lesbarkeit der Überschriften im Light Mode */
-.dark body {
-    background-color: #0b0f1a;
-    color: #f8fafc;
-}
-
-/* Damit die Hero-Section im Hellen nicht zu blass ist */
-h1 {
-    @apply text-slate-900 dark:text-white font-bold;
-}
-
-p {
-    @apply text-slate-600 dark:text-slate-400;
+    @apply bg-white dark:bg-[#0b0f1a];
 }
