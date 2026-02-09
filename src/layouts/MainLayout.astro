@@ -12,7 +12,7 @@ const inactiveClass = "text-slate-600 dark:text-slate-400 hover:text-[#00b0f0]";
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="en" class="h-full">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -28,12 +28,12 @@ const inactiveClass = "text-slate-600 dark:text-slate-400 hover:text-[#00b0f0]";
 			document.addEventListener('astro:after-swap', setVeloxTheme);
 		</script>
 	</head>
-	<body class="bg-white dark:bg-[#0b0f1a] text-slate-900 dark:text-slate-100 transition-colors duration-300 min-h-screen relative overflow-x-hidden">
+	<body class="bg-white dark:bg-[#0b0f1a] text-slate-900 dark:text-slate-100 transition-colors duration-300 min-h-full relative overflow-x-hidden flex flex-col">
 		
-		<div class="fixed inset-0 z-0 pointer-events-none">
-			<div class="absolute -top-48 -left-48 w-[600px] h-[600px] rounded-full bg-[#00b0f0]/10 dark:bg-[#00b0f0]/15 blur-[150px]"></div>
+		<div class="absolute inset-0 z-0 pointer-events-none overflow-hidden h-full w-full">
+			<div class="absolute -top-32 -left-32 w-[500px] h-[500px] rounded-full bg-[#00b0f0]/10 dark:bg-[#00b0f0]/15 blur-[120px]"></div>
 			
-			<div class="absolute -bottom-48 -right-48 w-[500px] h-[500px] rounded-full bg-blue-500/5 dark:bg-[#00b0f0]/10 blur-[130px]"></div>
+			<div class="absolute -bottom-32 -right-32 w-[600px] h-[600px] rounded-full bg-blue-500/5 dark:bg-[#00b0f0]/10 blur-[150px]"></div>
 		</div>
 
 		<div class="relative z-10 flex flex-col min-h-screen">
