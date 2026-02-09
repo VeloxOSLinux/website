@@ -2,33 +2,32 @@
 
 @theme {
   --font-sans: "Inter", sans-serif;
-  --color-brand: #3b82f6;
 }
 
-/* Tailwind v4 zwingen, auf die .dark Klasse am <html> Element zu hören */
 @custom-variant dark (&:where(.dark, .dark *));
 
 html {
   scroll-behavior: smooth;
 }
 
-/* LIGHT MODE STYLES */
+/* --- LIGHT MODE --- */
 body {
-    background-color: #f1f5f9;
-    color: #0f172a;
-    transition: background-color 0.3s ease, color 0.3s ease;
+    background-color: #ffffff; /* Reinweiß für maximale Lesbarkeit */
+    color: #0f172a; /* Dunkles Slate für Text */
+    transition: background-color 0.3s ease;
 }
 
-/* DARK MODE STYLES */
+/* Verbessert die Lesbarkeit der Überschriften im Light Mode */
 .dark body {
     background-color: #0b0f1a;
     color: #f8fafc;
 }
 
-/* LOGO FIX: Verhindert Farbwechsel zu Orange/Blau-Mischmasch */
-.light-img-fix {
-    filter: brightness(0) saturate(100%); /* Macht Logo im Light Mode schwarz */
+/* Damit die Hero-Section im Hellen nicht zu blass ist */
+h1 {
+    @apply text-slate-900 dark:text-white font-bold;
 }
-.dark .light-img-fix {
-    filter: none; /* Im Dark Mode Originalfarben */
+
+p {
+    @apply text-slate-600 dark:text-slate-400;
 }
