@@ -9,10 +9,8 @@ interface Props {
 const { title } = Astro.props;
 
 // Normalisierung des Pfads für die aktive Klasse (entfernt Trailing Slash für den Vergleich)
-const rawPathname = Astro.url.pathname;
-const pathname = rawPathname.endsWith('/') && rawPathname !== '/' 
-    ? rawPathname.slice(0, -1) 
-    : rawPathname;
+const { pathname: rawPath } = Astro.url;
+const pathname = rawPath.replace(/\/$/, "") || "/";
 
 const activeClass = "text-[#00b0f0] font-semibold";
 const inactiveClass = "text-slate-400 hover:text-[#00b0f0]";
@@ -158,3 +156,4 @@ const inactiveClass = "text-slate-400 hover:text-[#00b0f0]";
 		</script>
 	</body>
 </html>
+
