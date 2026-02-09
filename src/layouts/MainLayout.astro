@@ -36,7 +36,7 @@ const inactiveClass = "text-slate-600 dark:text-slate-400 hover:text-[#00b0f0] t
 		</div>
 
 		<div class="relative z-10 flex flex-col min-h-screen w-full">
-			<nav id="mainNav" transition:persist class="fixed top-0 left-0 w-full z-50 transition-all duration-300 border-b border-transparent">
+			<nav id="mainNav" class="fixed top-0 left-0 w-full z-50 transition-all duration-300 border-b border-transparent">
 				<div class="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
 					<a href="/" class="hover:opacity-80 transition flex-shrink-0">
 						<img src="/logo_wText.webp" alt="Veloxos Logo" class="h-8 w-auto" />
@@ -86,7 +86,7 @@ const inactiveClass = "text-slate-600 dark:text-slate-400 hover:text-[#00b0f0] t
 				<slot />
 			</main>
 
-			<footer class="border-t transition:persist border-slate-200 dark:border-white/5 mt-20 bg-slate-50/50 dark:bg-black/20 backdrop-blur-md">
+			<footer transition:persist class="border-t border-slate-200 dark:border-white/5 mt-20 bg-slate-50/50 dark:bg-black/20 backdrop-blur-md">
 				<div class="max-w-6xl mx-auto px-6 py-12 flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
 					<div class="flex flex-col gap-2">
 						<img src="/logo_wText.webp" alt="Veloxos Logo" class="h-6 w-fit mb-2 opacity-80" />
@@ -156,6 +156,7 @@ const inactiveClass = "text-slate-600 dark:text-slate-400 hover:text-[#00b0f0] t
 		</script>
 	</body>
 </html>
+
 
 
 
