@@ -37,3 +37,16 @@ body {
     color: #00b0f0;
     opacity: 1; /* optional, falls du sie auch heller haben willst */
 }
+
+/* Erwingt saubere Hardware-Beschleunigung */
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation-duration: 0.4s;
+  animation-fill-mode: both;
+}
+
+/* Verhindert das "Springen" der Scrollbar, was oft das Ruckeln verursacht */
+html {
+  overflow-y: scroll;
+}
+
