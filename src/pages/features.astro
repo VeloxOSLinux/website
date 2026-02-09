@@ -2,49 +2,51 @@
 import Layout from '../layouts/MainLayout.astro';
 ---
 
-<Layout title="VeloxOS - Next Generation Performance">
-	<main class="py-20">
+<Layout title="VeloxOS - Technical Features">
+	<main class="py-20 bg-white dark:bg-transparent transition-colors duration-300">
 		<section class="max-w-6xl mx-auto px-6">
 			
 			<div class="flex items-center gap-4 mb-16">
 				<div class="w-1.5 h-10 bg-[#00b0f0] shadow-[0_0_15px_rgba(0,176,240,0.5)]"></div>
-				<h2 class="text-3xl font-bold text-white tracking-tight">The VeloxOS Stack</h2>
+				<h2 class="text-3xl font-bold text-slate-900 dark:text-white tracking-tight">The VeloxOS Stack</h2>
 			</div>
 
 			<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
 				
-				<div class="bg-white/5 border border-white/10 p-8 rounded-2xl transition-all duration-300 hover:-translate-y-1 hover:bg-white/10 hover:border-[#00b0f0]/50 hover:shadow-[0_10px_30px_rgba(0,176,240,0.2)]">
+				<div class="bg-slate-50 dark:bg-white/5 border border-slate-200 dark:border-white/10 p-8 rounded-2xl transition-all duration-300 hover:-translate-y-1 hover:bg-slate-100 dark:hover:bg-white/10 hover:border-[#00b0f0]/50 hover:shadow-[0_10px_30px_rgba(0,176,240,0.1)] dark:hover:shadow-[0_10px_30px_rgba(0,176,240,0.2)]">
 					<div class="text-3xl mb-6">🚀</div>
 					<h3 class="text-xl font-bold mb-6 text-[#00b0f0]">Core & Performance</h3>
-					<ul class="space-y-4 text-[15px] text-slate-400">
-						<li><strong class="text-white font-semibold">Manjaro Base:</strong> Professional rolling-release stability.</li>
-						<li><strong class="text-white font-semibold">CachyOS Kernel:</strong> Compiled with x86-64-v3/v4 optimizations for maximum speed.</li>
-						<li><strong class="text-white font-semibold">CachyOS Repos:</strong> Access to performance-optimized system packages.</li>
-						<li><strong class="text-white font-semibold">ZRAM:</strong> Intelligent memory compression enabled by default.</li>
+					<ul class="space-y-4 text-[15px] text-slate-600 dark:text-slate-400">
+						<li><strong class="text-slate-900 dark:text-white font-semibold">Manjaro Base:</strong> Professional rolling-release stability.</li>
+						<li><strong class="text-slate-900 dark:text-white font-semibold">CachyOS Kernel:</strong> Compiled with x86-64-v3/v4 optimizations for maximum speed.</li>
+						<li><strong class="text-slate-900 dark:text-white font-semibold">CachyOS Repos:</strong> Access to performance-optimized system packages.</li>
+						<li><strong class="text-slate-900 dark:text-white font-semibold">ZRAM:</strong> Intelligent memory compression enabled by default.</li>
 					</ul>
 				</div>
 
-				<div class="bg-white/5 border border-white/10 p-8 rounded-2xl transition-all duration-300 hover:-translate-y-1 hover:bg-white/10 hover:border-[#00b0f0]/50 hover:shadow-[0_10px_30px_rgba(0,176,240,0.2)]">
+				<div class="bg-slate-50 dark:bg-white/5 border border-slate-200 dark:border-white/10 p-8 rounded-2xl transition-all duration-300 hover:-translate-y-1 hover:bg-slate-100 dark:hover:bg-white/10 hover:border-[#00b0f0]/50 hover:shadow-[0_10px_30px_rgba(0,176,240,0.1)] dark:hover:shadow-[0_10px_30px_rgba(0,176,240,0.2)]">
 					<div class="text-3xl mb-6">🛡️</div>
 					<h3 class="text-xl font-bold mb-6 text-[#00b0f0]">Security & Privacy</h3>
-					<ul class="space-y-4 text-[15px] text-slate-400">
-						<li><strong class="text-white font-semibold">LibreWolf:</strong> The ultimate privacy-focused browser (pre-installed).</li>
-						<li><strong class="text-white font-semibold">Betterbird:</strong> A superior, privacy-hardened email experience.</li>
-						<li><strong class="text-white font-semibold">Active Firewall:</strong> Pre-configured UFW protection from the first boot.</li>
+					<ul class="space-y-4 text-[15px] text-slate-600 dark:text-slate-400">
+						<li><strong class="text-slate-900 dark:text-white font-semibold">LibreWolf:</strong> The ultimate privacy-focused browser (pre-installed).</li>
+						<li><strong class="text-slate-900 dark:text-white font-semibold">Betterbird:</strong> A superior, privacy-hardened email experience.</li>
+						<li><strong class="text-slate-900 dark:text-white font-semibold">Active Firewall:</strong> Pre-configured UFW protection from the first boot.</li>
 					</ul>
 				</div>
 
-				<div class="bg-white/5 border border-white/10 p-8 rounded-2xl transition-all duration-300 hover:-translate-y-1 hover:bg-white/10 hover:border-[#00b0f0]/50 hover:shadow-[0_10px_30px_rgba(0,176,240,0.2)]">
+				<div class="bg-slate-50 dark:bg-white/5 border border-slate-200 dark:border-white/10 p-8 rounded-2xl transition-all duration-300 hover:-translate-y-1 hover:bg-slate-100 dark:hover:bg-white/10 hover:border-[#00b0f0]/50 hover:shadow-[0_10px_30px_rgba(0,176,240,0.1)] dark:hover:shadow-[0_10px_30px_rgba(0,176,240,0.2)]">
 					<div class="text-3xl mb-6">🎮</div>
 					<h3 class="text-xl font-bold mb-6 text-[#00b0f0]">Gaming & Apps</h3>
-					<ul class="space-y-4 text-[15px] text-slate-400">
-						<li><strong class="text-white font-semibold">Steam & Heroic:</strong> Ready-to-play launchers pre-installed.</li>
-						<li><strong class="text-white font-semibold">CachyOS-Proton:</strong> Cutting-edge compatibility for Windows games.</li>
-						<li><strong class="text-white font-semibold">No Bloat:</strong> Only essential tools for a clean start.</li>
+					<ul class="space-y-4 text-[15px] text-slate-600 dark:text-slate-400">
+						<li><strong class="text-slate-900 dark:text-white font-semibold">Steam & Heroic:</strong> Ready-to-play launchers pre-installed.</li>
+						<li><strong class="text-slate-900 dark:text-white font-semibold">CachyOS-Proton:</strong> Cutting-edge compatibility for Windows games.</li>
+						<li><strong class="text-slate-900 dark:text-white font-semibold">No Bloat:</strong> Only essential tools for a clean start.</li>
 					</ul>
 				</div>
 
-			</div> <p class="mt-20 text-center text-slate-500 text-sm italic opacity-50">
+			</div> 
+			
+			<p class="mt-20 text-center text-slate-500 dark:text-slate-500 text-sm italic opacity-70 dark:opacity-50 transition-opacity">
 				VeloxOS is designed to give you the best out-of-the-box experience without the need for manual tuning.
 			</p>
 
