@@ -27,3 +27,13 @@ body {
     @apply bg-white dark:bg-[#0b0f1a];
     min-height: 100vh;
 }
+
+/* Spezifische Styles für die About-Cards */
+.about-card-number {
+    @apply transition-colors duration-300 opacity-50 italic mb-4 text-3xl;
+}
+
+.group:hover .about-card-number {
+    color: #00b0f0;
+    opacity: 1; /* optional, falls du sie auch heller haben willst */
+}
