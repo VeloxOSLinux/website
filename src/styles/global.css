@@ -1,0 +1,37 @@
+@import "tailwindcss";
+@theme {
+  --font-sans: "Inter", sans-serif;
+  --color-brand: #3b82f6;
+}
+html {
+  scroll-behavior: smooth;
+}
+/* Subtiler VeloxOS Background-Effekt */
+body {
+    background-color: #0b0f1a; /* Deine Grundfarbe */
+    position: relative;
+    min-height: 100vh;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    /* Ein sanfter blauer Lichtkegel oben links und ein dezenter rechts unten */
+    background: 
+        radial-gradient(at 0% 0%, rgba(0, 176, 240, 0.12) 0px, transparent 45%),
+        radial-gradient(at 100% 100%, rgba(88, 101, 242, 0.08) 0px, transparent 40%);
+    pointer-events: none;
+    z-index: -1;
+}
+
+body::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    /* Ein hauchdünnes Raster-Muster für den technischen Look */
+    background-image: radial-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+    background-size: 40px 40px;
+    pointer-events: none;
+    z-index: -1;
+}
