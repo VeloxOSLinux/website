@@ -5,7 +5,7 @@
   --color-brand: #3b82f6;
 }
 
-/* Tailwind v4 sagen, dass wir die Klasse .dark manuell steuern */
+/* Wichtig für manuelle Steuerung in Tailwind v4 */
 @custom-variant dark (&:where(.dark, .dark *));
 
 html {
@@ -14,8 +14,8 @@ html {
 
 /* --- LIGHT MODE (Standard) --- */
 body {
-    background-color: #f8fafc;
-    color: #1e293b;
+    background-color: #f1f5f9;
+    color: #0f172a;
     position: relative;
     min-height: 100vh;
     margin: 0;
@@ -26,23 +26,13 @@ body::before {
     content: "";
     position: fixed;
     inset: 0;
-    background: radial-gradient(at 0% 0%, rgba(0, 176, 240, 0.1) 0px, transparent 45%),
-                radial-gradient(at 100% 100%, rgba(59, 130, 246, 0.05) 0px, transparent 40%);
+    background: radial-gradient(at 0% 0%, rgba(59, 130, 246, 0.1) 0px, transparent 45%),
+                radial-gradient(at 100% 100%, rgba(37, 99, 235, 0.05) 0px, transparent 40%);
     pointer-events: none;
     z-index: -1;
 }
 
-body::after {
-    content: "";
-    position: fixed;
-    inset: 0;
-    background-image: radial-gradient(rgba(15, 23, 42, 0.05) 1px, transparent 1px);
-    background-size: 40px 40px;
-    pointer-events: none;
-    z-index: -1;
-}
-
-/* --- DARK MODE (Wenn Klasse .dark am html-Tag vorhanden ist) --- */
+/* --- DARK MODE --- */
 .dark body {
     background-color: #0b0f1a;
     color: #f8fafc;
@@ -53,6 +43,10 @@ body::after {
                 radial-gradient(at 100% 100%, rgba(88, 101, 242, 0.08) 0px, transparent 40%);
 }
 
-.dark body::after {
-    background-image: radial-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+/* Fix für das Logo im Light Mode: Nur Schwarz/Weiß Invertierung, kein Farbshift */
+.light-img-fix {
+    filter: brightness(0) saturate(100%); /* Macht das Logo komplett schwarz im Light Mode */
+}
+.dark .light-img-fix {
+    filter: none; /* Originalfarben (Blau/Weiß) im Dark Mode */
 }
