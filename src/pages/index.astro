@@ -4,16 +4,15 @@ import Layout from '../layouts/MainLayout.astro';
 
 <Layout title="VeloxOS - Next Generation Performance">
 	<main>
-		<section class="relative pt-20 pb-20 overflow-hidden bg-white dark:bg-[#0b0f1a] transition-colors duration-300">
+		<section class="relative pt-20 pb-20 overflow-hidden transition-colors duration-300">
 			<div class="max-w-6xl mx-auto px-6">
 				
 				<div class="grid lg:grid-cols-2 gap-12 items-center text-left">
-					
 					<div>
 						<div class="inline-block px-4 py-1.5 mb-6 text-sm font-medium tracking-wide text-[#00b0f0] uppercase bg-[#00b0f0]/10 rounded-full border border-[#00b0f0]/20">
 							Next Generation Performance
 						</div>
-						<h1 class="text-5xl md:text-7xl font-extrabold tracking-tight mb-8 text-slate-900 dark:text-white">
+						<h1 class="text-5xl md:text-7xl font-extrabold tracking-tight mb-8 text-slate-900 dark:text-white leading-[1.1]">
 							The Speed of CachyOS.<br/> The Stability of Manjaro.
 						</h1>
 						<p class="text-lg md:text-xl text-slate-600 dark:text-slate-400 max-w-xl mb-10 leading-relaxed">
@@ -61,7 +60,7 @@ import Layout from '../layouts/MainLayout.astro';
 			</div>
 		</section>
 
-		<section id="why-veloxos" class="max-w-6xl mx-auto px-6 py-20 bg-white dark:bg-transparent">
+		<section id="why-veloxos" class="max-w-6xl mx-auto px-6 py-20 bg-transparent">
 			<div class="text-center mb-16">
 				<h2 class="text-3xl md:text-5xl font-bold mb-4 text-slate-900 dark:text-white">Why VeloxOS?</h2>
 				<p class="text-slate-600 dark:text-slate-400 text-lg">The perfect balance between cutting-edge performance and out-of-the-box usability.</p>
@@ -120,12 +119,6 @@ import Layout from '../layouts/MainLayout.astro';
 		}
 		function closeVeloxModal() {
 			document.getElementById("veloxDownloadModal").style.display = "none";
-		}
-		window.onclick = function(event) {
-			let modal = document.getElementById("veloxDownloadModal");
-			if (event.target == modal) {
-				modal.style.display = "none";
-			}
 		}
 	</script>
 </Layout>
