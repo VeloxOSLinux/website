@@ -4,7 +4,7 @@ import Layout from '../layouts/MainLayout.astro';
 
 <Layout title="VeloxOS - Next Generation Performance">
 	<main>
-		<section class="relative pt-20 pb-20 overflow-hidden">
+		<section class="relative pt-20 pb-20 overflow-hidden bg-white dark:bg-[#0b0f1a] transition-colors duration-300">
 			<div class="max-w-6xl mx-auto px-6">
 				
 				<div class="grid lg:grid-cols-2 gap-12 items-center text-left">
@@ -13,11 +13,11 @@ import Layout from '../layouts/MainLayout.astro';
 						<div class="inline-block px-4 py-1.5 mb-6 text-sm font-medium tracking-wide text-[#00b0f0] uppercase bg-[#00b0f0]/10 rounded-full border border-[#00b0f0]/20">
 							Next Generation Performance
 						</div>
-						<h1 class="text-5xl md:text-7xl font-extrabold tracking-tight mb-8 text-white">
+						<h1 class="text-5xl md:text-7xl font-extrabold tracking-tight mb-8 text-slate-900 dark:text-white">
 							The Speed of CachyOS.<br/> The Stability of Manjaro.
 						</h1>
-						<p class="text-lg md:text-xl text-slate-400 max-w-xl mb-10 leading-relaxed">
-							<span class="text-white font-semibold">VeloxOS</span> is a performance-driven Linux distribution designed for users who refuse to compromise between rock-solid reliability and cutting-edge speed.
+						<p class="text-lg md:text-xl text-slate-600 dark:text-slate-400 max-w-xl mb-10 leading-relaxed">
+							<span class="text-slate-900 dark:text-white font-semibold">VeloxOS</span> is a performance-driven Linux distribution designed for users who refuse to compromise between rock-solid reliability and cutting-edge speed.
 						</p>
 						
 						<div class="flex flex-col sm:flex-row items-center gap-4 mb-16">
@@ -26,7 +26,7 @@ import Layout from '../layouts/MainLayout.astro';
 								Download VeloxOS (ISO)
 							</button>
 
-							<a href="#why-veloxos" class="w-full sm:w-auto px-8 py-4 bg-white/5 hover:bg-white/10 text-white font-semibold rounded-xl border border-white/20 transition-all hover:border-[#00b0f0] flex items-center justify-center">
+							<a href="#why-veloxos" class="w-full sm:w-auto px-8 py-4 bg-slate-100 dark:bg-white/5 hover:bg-slate-200 dark:hover:bg-white/10 text-slate-900 dark:text-white font-semibold rounded-xl border border-slate-200 dark:border-white/20 transition-all hover:border-[#00b0f0] flex items-center justify-center">
 								More information
 							</a>
 						</div>
@@ -44,7 +44,7 @@ import Layout from '../layouts/MainLayout.astro';
 								<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#00b0f0] opacity-75"></span>
 								<span class="relative inline-flex rounded-full h-3 w-3 bg-[#00b0f0]"></span>
 							</span>
-							<p class="text-sm md:text-base font-medium text-white">
+							<p class="text-sm md:text-base font-medium text-slate-900 dark:text-white">
 								<span class="text-[#00b0f0] uppercase mr-2">Current Status:</span> 🎨 Phase 1 (The Identity) is currently <b>In Progress</b>
 							</p>
 						</div>
@@ -54,41 +54,41 @@ import Layout from '../layouts/MainLayout.astro';
 		
 				<div class="relative mx-auto max-w-5xl group">
 					<div class="absolute -inset-1 bg-gradient-to-r from-[#00b0f0] to-[#5865f2] rounded-2xl blur opacity-20 group-hover:opacity-30 transition duration-1000"></div>
-					<div class="relative bg-slate-900 rounded-xl border border-white/10 overflow-hidden shadow-2xl">
+					<div class="relative bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-white/10 overflow-hidden shadow-2xl">
 						<img src="/Screenshot1.webp" alt="Veloxos Desktop Preview" class="w-full h-auto block" />
 					</div>
 				</div>
 			</div>
 		</section>
 
-		<section id="why-veloxos" class="max-w-6xl mx-auto px-6 py-20">
+		<section id="why-veloxos" class="max-w-6xl mx-auto px-6 py-20 bg-white dark:bg-transparent">
 			<div class="text-center mb-16">
-				<h2 class="text-3xl md:text-5xl font-bold mb-4 text-white">Why VeloxOS?</h2>
-				<p class="text-slate-400 text-lg">The perfect balance between cutting-edge performance and out-of-the-box usability.</p>
+				<h2 class="text-3xl md:text-5xl font-bold mb-4 text-slate-900 dark:text-white">Why VeloxOS?</h2>
+				<p class="text-slate-600 dark:text-slate-400 text-lg">The perfect balance between cutting-edge performance and out-of-the-box usability.</p>
 			</div>
 
 			<div class="grid md:grid-cols-3 gap-8">
-				<div class="bg-white/5 border border-white/10 p-8 rounded-2xl transition-all duration-300 hover:-translate-y-1 hover:bg-white/10 hover:border-[#00b0f0]/50 hover:shadow-[0_10px_30px_rgba(0,176,240,0.2)]">
+				<div class="bg-slate-50 dark:bg-white/5 border border-slate-200 dark:border-white/10 p-8 rounded-2xl transition-all duration-300 hover:-translate-y-1 hover:bg-slate-100 dark:hover:bg-white/10 hover:border-[#00b0f0]/50 hover:shadow-[0_10px_30px_rgba(0,176,240,0.1)] dark:hover:shadow-[0_10px_30px_rgba(0,176,240,0.2)]">
 					<div class="text-4xl mb-6">⚡</div>
-					<h3 class="text-xl font-bold mb-4 text-white">Built for Speed</h3>
-					<p class="text-slate-400 leading-relaxed">
-						With the <span class="text-white">CachyOS Kernel</span> and <span class="text-white">x86-64-v3/v4</span> optimizations, we squeeze every bit of performance out of your CPU.
+					<h3 class="text-xl font-bold mb-4 text-slate-900 dark:text-white">Built for Speed</h3>
+					<p class="text-slate-600 dark:text-slate-400 leading-relaxed">
+						With the <span class="text-slate-900 dark:text-white font-medium">CachyOS Kernel</span> and <span class="text-slate-900 dark:text-white font-medium">x86-64-v3/v4</span> optimizations, we squeeze every bit of performance out of your CPU.
 					</p>
 				</div>
 
-				<div class="bg-white/5 border border-white/10 p-8 rounded-2xl transition-all duration-300 hover:-translate-y-1 hover:bg-white/10 hover:border-[#00b0f0]/50 hover:shadow-[0_10px_30px_rgba(0,176,240,0.2)]">
+				<div class="bg-slate-50 dark:bg-white/5 border border-slate-200 dark:border-white/10 p-8 rounded-2xl transition-all duration-300 hover:-translate-y-1 hover:bg-slate-100 dark:hover:bg-white/10 hover:border-[#00b0f0]/50 hover:shadow-[0_10px_30px_rgba(0,176,240,0.1)] dark:hover:shadow-[0_10px_30px_rgba(0,176,240,0.2)]">
 					<div class="text-4xl mb-6">🛠️</div>
-					<h3 class="text-xl font-bold mb-4 text-white">Zero Setup Required</h3>
-					<p class="text-slate-400 leading-relaxed">
-						Skip the hours of configuration. Essential tools like <span class="text-white">Steam, Heroic, and Betterbird</span> are pre-installed and optimized.
+					<h3 class="text-xl font-bold mb-4 text-slate-900 dark:text-white">Zero Setup Required</h3>
+					<p class="text-slate-600 dark:text-slate-400 leading-relaxed">
+						Skip the hours of configuration. Essential tools like <span class="text-slate-900 dark:text-white font-medium">Steam, Heroic, and Betterbird</span> are pre-installed and optimized.
 					</p>
 				</div>
 
-				<div class="bg-white/5 border border-white/10 p-8 rounded-2xl transition-all duration-300 hover:-translate-y-1 hover:bg-white/10 hover:border-[#00b0f0]/50 hover:shadow-[0_10px_30px_rgba(0,176,240,0.2)]">
+				<div class="bg-slate-50 dark:bg-white/5 border border-slate-200 dark:border-white/10 p-8 rounded-2xl transition-all duration-300 hover:-translate-y-1 hover:bg-slate-100 dark:hover:bg-white/10 hover:border-[#00b0f0]/50 hover:shadow-[0_10px_30px_rgba(0,176,240,0.1)] dark:hover:shadow-[0_10px_30px_rgba(0,176,240,0.2)]">
 					<div class="text-4xl mb-6">🛡️</div>
-					<h3 class="text-xl font-bold mb-4 text-white">Privacy by Design</h3>
-					<p class="text-slate-400 leading-relaxed">
-						No AI-bloat, no telemetry. With <span class="text-white">LibreWolf</span> and an active firewall, your data stays where it belongs: with you.
+					<h3 class="text-xl font-bold mb-4 text-slate-900 dark:text-white">Privacy by Design</h3>
+					<p class="text-slate-600 dark:text-slate-400 leading-relaxed">
+						No AI-bloat, no telemetry. With <span class="text-slate-900 dark:text-white font-medium">LibreWolf</span> and an active firewall, your data stays where it belongs: with you.
 					</p>
 				</div>
 			</div>
@@ -101,14 +101,14 @@ import Layout from '../layouts/MainLayout.astro';
 		</section>
 	</main>
 
-	<div id="veloxDownloadModal" class="hidden fixed inset-0 z-[9999] bg-black/80 backdrop-blur-md items-center justify-center p-6">
-		<div class="bg-[#111] border border-blue-500/40 p-8 rounded-2xl max-w-sm w-full text-center shadow-2xl">
+	<div id="veloxDownloadModal" class="hidden fixed inset-0 z-[9999] bg-black/60 dark:bg-black/80 backdrop-blur-md items-center justify-center p-6">
+		<div class="bg-white dark:bg-[#111] border border-slate-200 dark:border-blue-500/40 p-8 rounded-2xl max-w-sm w-full text-center shadow-2xl">
 			<div class="text-5xl mb-4">🚀</div>
-			<h2 class="text-2xl font-bold text-white mb-2">Coming Soon</h2>
-			<p class="text-slate-400 mb-8 leading-relaxed">
+			<h2 class="text-2xl font-bold text-slate-900 dark:text-white mb-2">Coming Soon</h2>
+			<p class="text-slate-600 dark:text-slate-400 mb-8 leading-relaxed">
 				The first public ISO is currently in the final testing phase. Please check back later!
 			</p>
-			<button onclick="closeVeloxModal()" class="w-full py-3 bg-[#00b0f0] hover:bg-[#00d4ff] text-white font-bold rounded-lg transition-colors">
+			<button onclick="closeVeloxModal()" class="w-full py-3 bg-[#00b0f0] hover:bg-[#00d4ff] text-white font-bold rounded-lg transition-colors cursor-pointer">
 				Got it!
 			</button>
 		</div>
