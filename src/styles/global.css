@@ -6,13 +6,15 @@
 
 @custom-variant dark (&:where(.dark, .dark *));
 
-/* Standardtexte für die ganze Seite */
+/* FIX FÜR DIE LESBARKEIT */
 @layer base {
-  h1, h2, h3, h4, strong, b {
+  /* Überschriften & Fettschrift automatisch anpassen */
+  h1, h2, h3, h4, h5, h6, strong, b {
     @apply text-slate-900 dark:text-white transition-colors duration-300;
   }
   
-  p, span, li {
+  /* Standard-Texte */
+  p, span, li, a {
     @apply text-slate-700 dark:text-slate-300 transition-colors duration-300;
   }
 }
@@ -23,4 +25,5 @@ html {
 
 body {
     @apply bg-white dark:bg-[#0b0f1a];
+    min-height: 100vh;
 }
