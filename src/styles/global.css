@@ -1,37 +1,63 @@
 @import "tailwindcss";
+
 @theme {
   --font-sans: "Inter", sans-serif;
   --color-brand: #3b82f6;
 }
+
 html {
   scroll-behavior: smooth;
 }
-/* Subtiler VeloxOS Background-Effekt */
+
+/* --- BASIS-STYLING (Standard: LIGHT MODE) --- */
 body {
-    background-color: #0b0f1a; /* Deine Grundfarbe */
+    background-color: #f8fafc; /* Hellgrauer/Bläulicher Hintergrund */
+    color: #1e293b;            /* Dunkler Text (Slate-800) */
     position: relative;
     min-height: 100vh;
+    margin: 0;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
+/* Glow-Effekte für Light Mode */
 body::before {
     content: "";
     position: fixed;
     inset: 0;
-    /* Ein sanfter blauer Lichtkegel oben links und ein dezenter rechts unten */
     background: 
-        radial-gradient(at 0% 0%, rgba(0, 176, 240, 0.12) 0px, transparent 45%),
-        radial-gradient(at 100% 100%, rgba(88, 101, 242, 0.08) 0px, transparent 40%);
+        radial-gradient(at 0% 0%, rgba(0, 176, 240, 0.1) 0px, transparent 45%),
+        radial-gradient(at 100% 100%, rgba(59, 130, 246, 0.05) 0px, transparent 40%);
     pointer-events: none;
     z-index: -1;
 }
 
+/* Punkt-Raster für Light Mode */
 body::after {
     content: "";
     position: fixed;
     inset: 0;
-    /* Ein hauchdünnes Raster-Muster für den technischen Look */
-    background-image: radial-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+    background-image: radial-gradient(rgba(15, 23, 42, 0.05) 1px, transparent 1px);
     background-size: 40px 40px;
     pointer-events: none;
     z-index: -1;
+}
+
+/* --- AUTOMATISCHER DARK MODE (Bei Systemeinstellung Dunkel) --- */
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #0b0f1a; /* Dein originales Dark-Blue */
+        color: #f8fafc;            /* Weißer Text */
+    }
+
+    /* Glow-Effekte für Dark Mode (Originalwerte) */
+    body::before {
+        background: 
+            radial-gradient(at 0% 0%, rgba(0, 176, 240, 0.12) 0px, transparent 45%),
+            radial-gradient(at 100% 100%, rgba(88, 101, 242, 0.08) 0px, transparent 40%);
+    }
+
+    /* Punkt-Raster für Dark Mode (Hellere Punkte) */
+    body::after {
+        background-image: radial-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+    }
 }
