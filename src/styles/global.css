@@ -6,20 +6,17 @@
 
 @custom-variant dark (&:where(.dark, .dark *));
 
-/* FIX FÜR DIE LESBARKEIT */
 @layer base {
-  /* Überschriften & Fettschrift automatisch anpassen */
   h1, h2, h3, h4, h5, h6, strong, b {
     @apply text-slate-900 dark:text-white transition-colors duration-300;
   }
   
-  /* Standard-Texte */
   p, span, li, a {
     @apply text-slate-700 dark:text-slate-300 transition-colors duration-300;
   }
 }
 
-/* Erwingt saubere Hardware-Beschleunigung */
+/* --- View Transitions Core --- */
 ::view-transition-old(root),
 ::view-transition-new(root) {
   animation-duration: 0.3s;
@@ -36,30 +33,42 @@ body {
     min-height: 100vh;
 }
 
-/* Spezifische Styles für die About-Cards */
+/* --- Component Utilities --- */
+
+/* About Cards */
 .about-card-number {
     @apply transition-colors duration-300 opacity-50 italic mb-4 text-3xl;
 }
-
 .group:hover .about-card-number {
-    color: #00b0f0;
-    opacity: 1; /* optional, falls du sie auch heller haben willst */
+    @apply text-[#00b0f0] opacity-100;
 }
 
-/* --- Feature Card Styles --- */
-
-/* Die Basis-Klasse für die Liste in den Karten */
+/* Feature/Roadmap List Items */
 .feature-list-item {
-    transition: transform 0.3s ease;
+    @apply transition-transform duration-300 will-change-transform;
 }
-
-/* Wenn die umschließende Gruppe (group) gehovered wird, rücken die Items ein */
 .group:hover .feature-list-item {
-    transform: translateX(5px);
+    @apply translate-x-1.5;
 }
 
-/* Optimierung für mobile Geräte (Hardware-Beschleunigung) */
-.feature-list-item {
-    will-change: transform;
+/* Roadmap Specific Styles (ausgelagert aus der astro-Datei) */
+.roadmap-timeline {
+    @apply relative border-l-2 border-[#00b0f0]/20 ml-5 pl-10;
 }
 
+.phase-item {
+    @apply relative mb-16;
+}
+
+.phase-item::before {
+    content: '';
+    @apply absolute -left-[51px] top-0 w-5 h-5 bg-white dark:bg-[#0b0f1a] border-[3px] border-[#00b0f0] rounded-full z-10;
+}
+
+.phase-card {
+    @apply bg-slate-50 dark:bg-slate-800/40 p-8 rounded-[20px] border border-black/5 dark:border-white/5 transition-transform duration-300 will-change-transform;
+}
+
+.phase-card:hover {
+    @apply -translate-y-1;
+}
