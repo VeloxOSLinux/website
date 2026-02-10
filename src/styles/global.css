@@ -21,6 +21,7 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-y: scroll;
 }
 
 body {
@@ -45,8 +46,19 @@ body {
   animation-fill-mode: both;
 }
 
-/* Verhindert das "Springen" der Scrollbar, was oft das Ruckeln verursacht */
-html {
-  overflow-y: scroll;
+/* --- Feature Card Styles --- */
+
+/* Die Basis-Klasse für die Liste in den Karten */
+.feature-list-item {
+    transition: transform 0.3s ease;
 }
 
+/* Wenn die umschließende Gruppe (group) gehovered wird, rücken die Items ein */
+.group:hover .feature-list-item {
+    transform: translateX(5px);
+}
+
+/* Optimierung für mobile Geräte (Hardware-Beschleunigung) */
+.feature-list-item {
+    will-change: transform;
+}
