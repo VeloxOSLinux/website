@@ -3,112 +3,109 @@ import Layout from '../layouts/MainLayout.astro';
 ---
 
 <Layout title="VeloxOS - Technical Features">
-	<div id="page-content" transition:animate="fade">	
-		<div class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full pointer-events-none">
-			<div class="absolute top-40 left-[-10%] w-[500px] h-[500px] bg-[#00b0f0]/5 blur-[120px] rounded-full"></div>
-			<div class="absolute bottom-0 right-[-10%] w-[400px] h-[400px] bg-blue-600/5 blur-[100px] rounded-full"></div>
-		</div>
+    <div id="page-content" transition:animate="fade">    
+        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full pointer-events-none">
+            <div class="absolute top-40 left-[-10%] w-[500px] h-[500px] bg-[#00b0f0]/5 blur-[120px] rounded-full"></div>
+            <div class="absolute bottom-0 right-[-10%] w-[400px] h-[400px] bg-blue-600/5 blur-[100px] rounded-full"></div>
+        </div>
 
-		<section class="max-w-6xl mx-auto px-6 relative z-10">
-			
-			<div class="text-center mb-20">
-				<span class="inline-block px-4 py-1.5 mb-6 text-xs font-bold tracking-[0.2em] text-[#00b0f0] uppercase bg-[#00b0f0]/10 rounded-full border border-[#00b0f0]/20">
-					Engineered for Speed
-				</span>
-				<h1 class="text-4xl md:text-6xl font-extrabold text-slate-900 dark:text-white mb-6 tracking-tight">
-					The <span class="text-[#00b0f0]">VeloxOS</span> Stack
-				</h1>
-				<p class="text-slate-600 dark:text-slate-400 text-lg max-w-2xl mx-auto">
-					A carefully curated selection of high-performance components, pre-configured for an elite out-of-the-box experience.
-				</p>
-			</div>
+        <section class="max-w-6xl mx-auto px-6 relative z-10 py-10">
+            
+            <div class="text-center mb-20">
+                <span class="inline-block px-4 py-1.5 mb-6 text-xs font-bold tracking-[0.2em] text-[#00b0f0] uppercase bg-[#00b0f0]/10 rounded-full border border-[#00b0f0]/20">
+                    Engineered for Speed
+                </span>
+                <h1 class="text-4xl md:text-6xl font-extrabold mb-6 tracking-tight">
+                    The <span class="text-[#00b0f0]">VeloxOS</span> Stack
+                </h1>
+                <p class="text-slate-600 dark:text-slate-400 text-lg max-w-2xl mx-auto">
+                    A carefully curated selection of high-performance components, pre-configured for an elite out-of-the-box experience.
+                </p>
+            </div>
 
-			<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-				
-				<div class="group relative bg-white dark:bg-white/[0.02] border border-slate-200 dark:border-white/10 p-8 rounded-[24px] transition-all duration-500 hover:-translate-y-2 hover:border-[#00b0f0]/50 shadow-sm hover:shadow-2xl hover:shadow-[#00b0f0]/10">
-					<div class="w-12 h-12 bg-[#00b0f0]/10 rounded-xl flex items-center justify-center mb-8 group-hover:scale-110 transition-transform duration-500">
-						<svg class="w-6 h-6 text-[#00b0f0]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
-					</div>
-					<h3 class="text-2xl font-bold mb-6 text-slate-900 dark:text-white">Core & Performance</h3>
-					<ul class="space-y-5">
-						<li class="feature-list-item flex items-start gap-3">
-							<div class="mt-1.5 w-1.5 h-1.5 rounded-full bg-[#00b0f0] shrink-0"></div>
-							<p class="text-[15px] text-slate-600 dark:text-slate-400"><strong class="text-slate-900 dark:text-white block">Manjaro Base</strong> Professional rolling-release stability.</p>
-						</li>
-						<li class="feature-list-item flex items-start gap-3">
-							<div class="mt-1.5 w-1.5 h-1.5 rounded-full bg-[#00b0f0] shrink-0"></div>
-							<p class="text-[15px] text-slate-600 dark:text-slate-400"><strong class="text-slate-900 dark:text-white block">CachyOS Kernel</strong> x86-64-v3/v4 optimized for maximum speed.</p>
-						</li>
-						<li class="feature-list-item flex items-start gap-3">
-							<div class="mt-1.5 w-1.5 h-1.5 rounded-full bg-[#00b0f0] shrink-0"></div>
-							<p class="text-[15px] text-slate-600 dark:text-slate-400"><strong class="text-slate-900 dark:text-white block">ZRAM & Tuning</strong> Intelligent memory compression by default.</p>
-						</li>
-					</ul>
-				</div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                
+                <div class="group relative bg-white dark:bg-white/[0.02] border border-slate-200 dark:border-white/10 p-8 rounded-[24px] transition-all duration-500 hover:-translate-y-2 hover:border-[#00b0f0]/50 shadow-sm hover:shadow-2xl hover:shadow-[#00b0f0]/10">
+                    <div class="w-12 h-12 bg-[#00b0f0]/10 rounded-xl flex items-center justify-center mb-8 group-hover:scale-110 transition-transform duration-500">
+                        <svg class="w-6 h-6 text-[#00b0f0]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-6">Core & Performance</h3>
+                    <ul class="space-y-5">
+                        <li class="feature-list-item flex items-start gap-3">
+                            <div class="mt-1.5 w-1.5 h-1.5 rounded-full bg-[#00b0f0] shrink-0"></div>
+                            <p class="text-[15px]"><strong class="block">Manjaro Base</strong> Professional rolling-release stability.</p>
+                        </li>
+                        <li class="feature-list-item flex items-start gap-3">
+                            <div class="mt-1.5 w-1.5 h-1.5 rounded-full bg-[#00b0f0] shrink-0"></div>
+                            <p class="text-[15px]"><strong class="block">CachyOS Kernel</strong> x86-64-v3/v4 optimized for maximum speed.</p>
+                        </li>
+                        <li class="feature-list-item flex items-start gap-3">
+                            <div class="mt-1.5 w-1.5 h-1.5 rounded-full bg-[#00b0f0] shrink-0"></div>
+                            <p class="text-[15px]"><strong class="block">ZRAM & Tuning</strong> Intelligent memory compression by default.</p>
+                        </li>
+                    </ul>
+                </div>
 
-				<div class="group relative bg-white dark:bg-white/[0.02] border border-slate-200 dark:border-white/10 p-8 rounded-[24px] transition-all duration-500 hover:-translate-y-2 hover:border-[#00b0f0]/50 shadow-sm hover:shadow-2xl hover:shadow-[#00b0f0]/10">
-					<div class="w-12 h-12 bg-[#00b0f0]/10 rounded-xl flex items-center justify-center mb-8 group-hover:scale-110 transition-transform duration-500">
-						<svg class="w-6 h-6 text-[#00b0f0]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
-					</div>
-					<h3 class="text-2xl font-bold mb-6 text-slate-900 dark:text-white">Security & Privacy</h3>
-					<ul class="space-y-5">
-						<li class="feature-list-item flex items-start gap-3">
-							<div class="mt-1.5 w-1.5 h-1.5 rounded-full bg-[#00b0f0] shrink-0"></div>
-							<p class="text-[15px] text-slate-600 dark:text-slate-400"><strong class="text-slate-900 dark:text-white block">LibreWolf</strong> Ultimate privacy-focused browser pre-installed.</p>
-						</li>
-						<li class="feature-list-item flex items-start gap-3">
-							<div class="mt-1.5 w-1.5 h-1.5 rounded-full bg-[#00b0f0] shrink-0"></div>
-							<p class="text-[15px] text-slate-600 dark:text-slate-400"><strong class="text-slate-900 dark:text-white block">Betterbird</strong> A superior, privacy-hardened email client.</p>
-						</li>
-						<li class="feature-list-item flex items-start gap-3">
-							<div class="mt-1.5 w-1.5 h-1.5 rounded-full bg-[#00b0f0] shrink-0"></div>
-							<p class="text-[15px] text-slate-600 dark:text-slate-400"><strong class="text-slate-900 dark:text-white block">UFW Firewall</strong> Pre-configured protection from first boot.</p>
-						</li>
-					</ul>
-				</div>
+                <div class="group relative bg-white dark:bg-white/[0.02] border border-slate-200 dark:border-white/10 p-8 rounded-[24px] transition-all duration-500 hover:-translate-y-2 hover:border-[#00b0f0]/50 shadow-sm hover:shadow-2xl hover:shadow-[#00b0f0]/10">
+                    <div class="w-12 h-12 bg-[#00b0f0]/10 rounded-xl flex items-center justify-center mb-8 group-hover:scale-110 transition-transform duration-500">
+                        <svg class="w-6 h-6 text-[#00b0f0]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-6">Security & Privacy</h3>
+                    <ul class="space-y-5">
+                        <li class="feature-list-item flex items-start gap-3">
+                            <div class="mt-1.5 w-1.5 h-1.5 rounded-full bg-[#00b0f0] shrink-0"></div>
+                            <p class="text-[15px]"><strong class="block">LibreWolf</strong> Ultimate privacy-focused browser pre-installed.</p>
+                        </li>
+                        <li class="feature-list-item flex items-start gap-3">
+                            <div class="mt-1.5 w-1.5 h-1.5 rounded-full bg-[#00b0f0] shrink-0"></div>
+                            <p class="text-[15px]"><strong class="block">Betterbird</strong> A superior, privacy-hardened email client.</p>
+                        </li>
+                        <li class="feature-list-item flex items-start gap-3">
+                            <div class="mt-1.5 w-1.5 h-1.5 rounded-full bg-[#00b0f0] shrink-0"></div>
+                            <p class="text-[15px]"><strong class="block">UFW Firewall</strong> Pre-configured protection from first boot.</p>
+                        </li>
+                    </ul>
+                </div>
 
-				<div class="group relative bg-white dark:bg-white/[0.02] border border-slate-200 dark:border-white/10 p-8 rounded-[24px] transition-all duration-500 hover:-translate-y-2 hover:border-[#00b0f0]/50 shadow-sm hover:shadow-2xl hover:shadow-[#00b0f0]/10">
-					<div class="w-12 h-12 bg-[#00b0f0]/10 rounded-xl flex items-center justify-center mb-8 group-hover:scale-110 transition-transform duration-500">
-						<svg class="w-6 h-6 text-[#00b0f0]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 5v2m-4-2v2m-4-2v2m-2 8l4-6h8l4 6-4 6H9l-4-6z"></path></svg>
-					</div>
-					<h3 class="text-2xl font-bold mb-6 text-slate-900 dark:text-white">Gaming & Apps</h3>
-					<ul class="space-y-5">
-						<li class="feature-list-item flex items-start gap-3">
-							<div class="mt-1.5 w-1.5 h-1.5 rounded-full bg-[#00b0f0] shrink-0"></div>
-							<p class="text-[15px] text-slate-600 dark:text-slate-400"><strong class="text-slate-900 dark:text-white block">Steam & Heroic</strong> Ready-to-play launchers out of the box.</p>
-						</li>
-						<li class="feature-list-item flex items-start gap-3">
-							<div class="mt-1.5 w-1.5 h-1.5 rounded-full bg-[#00b0f0] shrink-0"></div>
-							<p class="text-[15px] text-slate-600 dark:text-slate-400"><strong class="text-slate-900 dark:text-white block">CachyOS-Proton</strong> Elite compatibility for Windows gaming.</p>
-						</li>
-						<li class="feature-list-item flex items-start gap-3">
-							<div class="mt-1.5 w-1.5 h-1.5 rounded-full bg-[#00b0f0] shrink-0"></div>
-							<p class="text-[15px] text-slate-600 dark:text-slate-400"><strong class="text-slate-900 dark:text-white block">Zero Bloat</strong> No unnecessary background services or apps.</p>
-						</li>
-					</ul>
-				</div>
+                <div class="group relative bg-white dark:bg-white/[0.02] border border-slate-200 dark:border-white/10 p-8 rounded-[24px] transition-all duration-500 hover:-translate-y-2 hover:border-[#00b0f0]/50 shadow-sm hover:shadow-2xl hover:shadow-[#00b0f0]/10">
+                    <div class="w-12 h-12 bg-[#00b0f0]/10 rounded-xl flex items-center justify-center mb-8 group-hover:scale-110 transition-transform duration-500">
+                        <svg class="w-6 h-6 text-[#00b0f0]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 5v2m-4-2v2m-4-2v2m-2 8l4-6h8l4 6-4 6H9l-4-6z"></path></svg>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-6">Gaming & Apps</h3>
+                    <ul class="space-y-5">
+                        <li class="feature-list-item flex items-start gap-3">
+                            <div class="mt-1.5 w-1.5 h-1.5 rounded-full bg-[#00b0f0] shrink-0"></div>
+                            <p class="text-[15px]"><strong class="block">Steam & Heroic</strong> Ready-to-play launchers out of the box.</p>
+                        </li>
+                        <li class="feature-list-item flex items-start gap-3">
+                            <div class="mt-1.5 w-1.5 h-1.5 rounded-full bg-[#00b0f0] shrink-0"></div>
+                            <p class="text-[15px]"><strong class="block">CachyOS-Proton</strong> Elite compatibility for Windows gaming.</p>
+                        </li>
+                        <li class="feature-list-item flex items-start gap-3">
+                            <div class="mt-1.5 w-1.5 h-1.5 rounded-full bg-[#00b0f0] shrink-0"></div>
+                            <p class="text-[15px]"><strong class="block">Zero Bloat</strong> No unnecessary background services or apps.</p>
+                        </li>
+                    </ul>
+                </div>
 
-			</div> 
+            </div>
 
-			<div class="mt-20 p-8 bg-slate-50 dark:bg-white/[0.02] rounded-3xl border border-slate-200 dark:border-white/5 flex flex-col md:flex-row items-center justify-between gap-6">
-				<p class="text-slate-500 dark:text-slate-400 text-sm italic text-center md:text-left">
-					VeloxOS is designed to give you the best out-of-the-box experience without the need for manual tuning.
-				</p>
-				<div class="flex gap-4">
-					<div class="flex items-center gap-2 px-4 py-2 bg-green-500/10 rounded-full">
-						<div class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
-						<span class="text-green-500 text-xs font-bold uppercase tracking-widest">Optimized</span>
-					</div>
-					<div class="flex items-center gap-2 px-4 py-2 bg-[#00b0f0]/10 rounded-full">
-						<div class="w-2 h-2 bg-[#00b0f0] rounded-full animate-pulse"></div>
-						<span class="text-[#00b0f0] text-xs font-bold uppercase tracking-widest">Stable</span>
-					</div>
-				</div>
-			</div>
+            <div class="mt-20 p-8 bg-slate-50 dark:bg-white/[0.02] rounded-3xl border border-slate-200 dark:border-white/5 flex flex-col md:flex-row items-center justify-between gap-6">
+                <p class="text-slate-500 dark:text-slate-400 text-sm italic text-center md:text-left">
+                    VeloxOS is designed to give you the best out-of-the-box experience without the need for manual tuning.
+                </p>
+                <div class="flex gap-4">
+                    <div class="flex items-center gap-2 px-4 py-2 bg-green-500/10 rounded-full">
+                        <div class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
+                        <span class="text-green-500 text-xs font-bold uppercase tracking-widest">Optimized</span>
+                    </div>
+                    <div class="flex items-center gap-2 px-4 py-2 bg-[#00b0f0]/10 rounded-full">
+                        <div class="w-2 h-2 bg-[#00b0f0] rounded-full animate-pulse"></div>
+                        <span class="text-[#00b0f0] text-xs font-bold uppercase tracking-widest">Stable</span>
+                    </div>
+                </div>
+            </div>
 
-		</section>
-  </div>
+        </section>
+    </div>
 </Layout>
-
-
-
