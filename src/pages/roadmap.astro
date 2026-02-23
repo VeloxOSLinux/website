@@ -14,12 +14,39 @@ import Layout from '../layouts/MainLayout.astro';
                     🗺️ Roadmap <span class="text-[#00b0f0]">2026/2027</span>
                 </h1>
                 <p class="text-slate-600 dark:text-slate-400 text-lg max-w-2xl mx-auto leading-relaxed">
-                    VeloxOS is a work in progress. Track our journey from the first preview to a global repository infrastructure.
+                    VeloxOS development is moving fast. We've prioritized core infrastructure to ensure a clean and stable rolling-release cycle from day one.
                 </p>
             </div>
 
             <div class="roadmap-timeline">
                 
+                <div class="phase-item">
+                    <span class="inline-block px-3 py-1 bg-green-500/10 text-green-500 rounded-full text-[11px] font-bold mb-3 tracking-wider">COMPLETED / LIVE</span>
+                    <div class="phase-card group border-green-500/30 bg-green-500/[0.02]">
+                        <div class="flex flex-col sm:flex-row justify-between items-start gap-3 mb-6">
+                            <h3 class="text-xl font-extrabold m-0 text-green-500">🚀 Core Infrastructure</h3>
+                            <span class="status-badge bg-green-500 text-white">Ready</span>
+                        </div>
+                        <ul class="list-none p-0 m-0">
+                            <li class="feature-list-item flex items-center gap-3 mb-3">
+                                <svg class="w-5 h-5 text-green-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="3"><path d="M5 13l4 4L19 7"></path></svg>
+                                <span class="font-semibold dark:text-white text-slate-900">Independent VeloxOS Repositories</span>
+                            </li>
+                            <li class="feature-list-item flex items-center gap-3 mb-3">
+                                <svg class="w-5 h-5 text-green-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="3"><path d="M5 13l4 4L19 7"></path></svg>
+                                <span class="font-semibold dark:text-white text-slate-900">Mirror Management & Staging System</span>
+                            </li>
+                            <li class="feature-list-item flex items-center gap-3 mb-3">
+                                <svg class="w-5 h-5 text-green-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="3"><path d="M5 13l4 4L19 7"></path></svg>
+                                <span class="font-semibold dark:text-white text-slate-900">PGP Key & Signature Integration</span>
+                            </li>
+                        </ul>
+                        <div class="mt-5 p-3 bg-green-500/10 rounded-xl border border-dashed border-green-500/20 text-sm font-bold text-green-600 dark:text-green-400">
+                            📍 Infrastructure is online and syncing.
+                        </div>
+                    </div>
+                </div>
+
                 <div class="phase-item">
                     <span class="inline-block px-3 py-1 bg-[#00b0f0]/10 text-[#00b0f0] rounded-full text-[11px] font-bold mb-3 tracking-wider">SPRING 2026</span>
                     <div class="phase-card group">
@@ -50,7 +77,7 @@ import Layout from '../layouts/MainLayout.astro';
                 </div>
 
                 <div class="phase-item">
-                    <span class="inline-block px-3 py-1 bg-[#00b0f0]/10 text-[#00b0f0] rounded-full text-[11px] font-bold mb-3 tracking-wider">SUMMER 2026</span>
+                    <span class="inline-block px-3 py-1 bg-slate-500/10 text-slate-500 rounded-full text-[11px] font-bold mb-3 tracking-wider">SUMMER 2026</span>
                     <div class="phase-card group">
                         <div class="flex flex-col sm:flex-row justify-between items-start gap-3 mb-6">
                             <h3 class="text-xl font-extrabold m-0">🛠 Phase 2: The Optimization</h3>
@@ -62,33 +89,13 @@ import Layout from '../layouts/MainLayout.astro';
                                 Automated zRAM & Performance Tuning
                             </li>
                             <li class="feature-list-item flex items-center gap-3 mb-3 text-slate-500">
-                                <svg class="w-5 h-5 opacity-50 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path d="M15 7a2 2 0 012 2m4 0a6 6 0 01-7.743 5.743L11 17H9v2H7v2H4a1 1 0 01-1-1v-2.586a1 1 0 01.293-.707l5.964-5.964A6 6 0 1121 9z"></path></svg>
-                                Full CachyOS Repo & PGP Key Integration
+                                <svg class="w-5 h-5 opacity-50 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+                                Advanced Update-Governance Pipeline
                             </li>
                         </ul>
                         <div class="mt-5 p-3 bg-slate-500/5 rounded-xl border border-dashed border-slate-500/20 text-sm font-bold text-slate-500">
                             📍 Milestone: First Stable Release Candidate
                         </div>
-                    </div>
-                </div>
-
-                <div class="phase-item">
-                    <span class="inline-block px-3 py-1 bg-slate-500/10 text-slate-500 rounded-full text-[11px] font-bold mb-3 tracking-wider">VISION 2027</span>
-                    <div class="phase-card group border-dashed opacity-80">
-                        <div class="flex flex-col sm:flex-row justify-between items-start gap-3 mb-6">
-                            <h3 class="text-xl font-extrabold m-0">💡 Phase 3: Long-term Goals</h3>
-                            <span class="status-badge status-planned">Future</span>
-                        </div>
-                        <ul class="list-none p-0 m-0 text-slate-500/70">
-                            <li class="feature-list-item flex items-center gap-3 mb-3">
-                                <svg class="w-5 h-5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path></svg>
-                                Independent VeloxOS Repository Staging
-                            </li>
-                            <li class="feature-list-item flex items-center gap-3 mb-3">
-                                <svg class="w-5 h-5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
-                                Advanced Update-Governance Pipeline
-                            </li>
-                        </ul>
                     </div>
                 </div>
 
@@ -101,7 +108,7 @@ import Layout from '../layouts/MainLayout.astro';
                 <div class="relative p-10 bg-white dark:bg-[#0d1117] border border-slate-200 dark:border-white/10 rounded-[22px] shadow-xl">
                     <h2 class="text-2xl font-bold mb-2">Shape the future of VeloxOS</h2>
                     <p class="text-slate-600 dark:text-slate-400 mb-8 max-w-md mx-auto">
-                        Do you have ideas for Phase 3 or want to help with development? Join our developer hub on Discord.
+                        Do you want to help with development or test our new repository infrastructure? Join our developer hub on Discord.
                     </p>
                     <a href="https://discord.gg/pgHSK8NGxG" target="_blank" class="inline-flex items-center gap-3 bg-[#5865f2] hover:bg-[#4752c4] text-white no-underline px-8 py-4 rounded-xl font-bold transition-all shadow-lg hover:-translate-y-1">
                         <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028 14.006 14.006 0 0 0 1.226-1.994.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z"/></svg>
