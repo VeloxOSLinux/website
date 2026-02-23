@@ -144,55 +144,33 @@ import Layout from '../layouts/MainLayout.astro';
 		</section>
 
         <div id="veloxDownloadModal" class="hidden fixed inset-0 z-[9999] bg-black/80 backdrop-blur-md items-center justify-center p-4">
-            <div class="bg-white dark:bg-[#0d1117] border border-red-500/50 dark:border-red-500/30 p-8 rounded-[28px] max-w-2xl w-full text-left shadow-2xl relative overflow-hidden">
-                <div class="absolute top-0 right-0 p-4 opacity-10">
-                    <svg width="120" height="120" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" class="text-red-500">
-                        <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path>
-                        <line x1="12" y1="9" x2="12" y2="13"></line>
-                        <line x1="12" y1="17" x2="12.01" y2="17"></line>
+            <div class="bg-white dark:bg-[#0d1117] border border-[#00b0f0]/30 p-8 rounded-[28px] max-w-lg w-full text-center shadow-2xl relative overflow-hidden">
+                
+                <div class="w-20 h-20 bg-[#00b0f0]/10 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#00b0f0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <polyline points="12 6 12 12 16 14"></polyline>
                     </svg>
                 </div>
 
-                <div class="flex items-center gap-4 mb-6 text-left">
-                    <div class="w-12 h-12 bg-red-500/10 rounded-xl flex items-center justify-center text-2xl">⚠️</div>
-                    <div>
-                        <h2 class="text-2xl font-bold text-slate-900 dark:text-white leading-tight">Developer Snapshot</h2>
-                        <p class="text-red-500 font-mono text-xs uppercase tracking-widest">Early Experimental Build</p>
-                    </div>
-                </div>
-
-                <div class="space-y-4 text-slate-600 dark:text-slate-300 mb-8 text-left">
-                    <p>This ISO is a <b>very early technical preview</b>. It is intended for transparency and testing purposes only. Do not use it as your primary operating system yet.</p>
-                    
-                    <div class="bg-slate-100 dark:bg-white/5 border border-slate-200 dark:border-white/10 rounded-xl p-4">
-                        <h3 class="text-sm font-bold text-slate-900 dark:text-white mb-2 flex items-center gap-2">
-                            <span class="w-2 h-2 bg-yellow-500 rounded-full"></span> Known Issues:
-                        </h3>
-                        <ul class="text-xs space-y-1.5 list-disc list-inside opacity-80">
-                            <li><b>Autologin:</b> Currently disabled / manual login required. (Password: veloxoslive)</li>
-                            <li><b>Zram:</b> Basic setup only, not yet optimized.</li>
-                            <li><b>Calamares:</b> Installer branding is not yet finished.</li>
-                            <li><b>General:</b> Early design state, potential package conflicts.</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="grid sm:grid-cols-2 gap-4">
-                    <a href="https://downloads.veloxos.org/VeloxOS-Cosmic-cosmic-1.0-minimal-260219-linux-cachyos-bore.iso" 
-                       class="flex items-center justify-center gap-2 py-4 bg-[#00b0f0] hover:bg-[#00d4ff] text-white font-bold rounded-xl transition-all shadow-lg shadow-[#00b0f0]/20">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
-                        Download ISO
-                    </a>
-                    <a href="https://downloads.veloxos.org/VeloxOS-Cosmic-cosmic-1.0-minimal-260219-linux-cachyos-bore.sha256" 
-                       target="_blank"
-                       class="flex items-center justify-center gap-2 py-4 bg-slate-100 dark:bg-white/5 hover:bg-slate-200 dark:hover:bg-white/10 text-slate-900 dark:text-white font-semibold rounded-xl border border-slate-200 dark:border-white/20 transition-all">
-                        Check SHA256
-                    </a>
-                </div>
+                <h2 class="text-3xl font-bold text-slate-900 dark:text-white mb-4">Coming Soon</h2>
                 
-                <button onclick="closeVeloxModal()" class="mt-6 w-full text-xs text-slate-500 hover:text-[#00b0f0] transition-colors py-2 uppercase tracking-widest font-bold">
-                    [ Close Window ]
-                </button>
+                <div class="space-y-4 text-slate-600 dark:text-slate-400 mb-8">
+                    <p class="text-lg">The first public <span class="text-[#00b0f0] font-bold">Technical Preview</span> of VeloxOS is currently under development.</p>
+                    <p class="bg-[#00b0f0]/5 py-3 px-4 rounded-xl border border-[#00b0f0]/10 text-[#00b0f0] font-semibold">
+                        Expected Release: March 2026
+                    </p>
+                    <p class="text-sm">We are currently fine-tuning the installer and repository integration to provide the best possible experience.</p>
+                </div>
+
+                <div class="flex flex-col gap-3">
+                    <a href="/roadmap" class="w-full py-4 bg-[#00b0f0] hover:bg-[#00d4ff] text-white font-bold rounded-xl transition-all">
+                        Check Roadmap
+                    </a>
+                    <button onclick="closeVeloxModal()" class="w-full py-3 text-slate-500 hover:text-slate-700 dark:hover:text-white transition-colors text-sm font-medium uppercase tracking-widest">
+                        Close
+                    </button>
+                </div>
             </div>
         </div>
 
