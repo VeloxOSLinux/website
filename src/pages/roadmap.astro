@@ -20,37 +20,37 @@ import Layout from '../layouts/MainLayout.astro';
 
             <div class="roadmap-timeline">
                 
+                {/* Phase 1: COMPLETED */}
                 <div class="phase-item">
-                    <span class="inline-block px-3 py-1 bg-[#00b0f0]/10 text-[#00b0f0] rounded-full text-[11px] font-bold mb-3 tracking-wider">WINTER 2025/2026</span>
-                    <div class="phase-card group">
+                    <span class="inline-block px-3 py-1 bg-green-500/10 text-green-500 rounded-full text-[11px] font-bold mb-3 tracking-wider uppercase">Winter 2025/2026</span>
+                    <div class="phase-card group border-green-500/20 shadow-green-500/5">
                         <div class="flex flex-col sm:flex-row justify-between items-start gap-3 mb-6">
                             <h3 class="text-xl font-extrabold m-0">🚀 Phase 1: Core Infrastructure</h3>
-                            <span class="status-badge status-progress">In Progress</span>
+                            <span class="status-badge bg-green-500/10 text-green-500 border-green-500/20">Completed</span>
                         </div>
                         <ul class="list-none p-0 m-0">
                             <li class="feature-list-item flex items-center gap-3 mb-3">
                                 <svg class="w-5 h-5 text-green-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="3"><path d="M5 13l4 4L19 7"></path></svg>
-                                <span class="font-semibold dark:text-white text-slate-900">Independent VeloxOS Repositories (Live)</span>
+                                <span class="font-semibold dark:text-white text-slate-900">Independent VeloxOS Repositories</span>
                             </li>
                             <li class="feature-list-item flex items-center gap-3 mb-3">
-                                <div class="w-5 h-5 shrink-0 rounded-full border-2 border-[#00b0f0]/30 flex items-center justify-center">
-                                    <div class="w-2 h-2 bg-[#00b0f0] rounded-full animate-pulse"></div>
-                                </div>
-                                <span class="font-semibold dark:text-white text-slate-900">Internal Mirror & Staging System</span>
+                                <svg class="w-5 h-5 text-green-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="3"><path d="M5 13l4 4L19 7"></path></svg>
+                                <span class="font-semibold dark:text-white text-slate-900">Internal Mirror & Staging System (Stable/Testing)</span>
                             </li>
-                            <li class="feature-list-item flex items-center gap-3 mb-3 text-slate-500">
-                                <svg class="w-5 h-5 opacity-50 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path></svg>
-                                PGP Key & Signature Integration
+                            <li class="feature-list-item flex items-center gap-3 mb-3">
+                                <svg class="w-5 h-5 text-green-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="3"><path d="M5 13l4 4L19 7"></path></svg>
+                                <span class="font-semibold dark:text-white text-slate-900">PGP Key & Repository Signature Integration</span>
                             </li>
                         </ul>
-                        <div class="mt-5 p-3 bg-[#00b0f0]/5 rounded-xl border border-dashed border-[#00b0f0]/20 text-sm font-bold text-[#00b0f0]">
-                            📍 Repo structure is active on internal nodes (Stable & Testing).
+                        <div class="mt-5 p-3 bg-green-500/5 rounded-xl border border-dashed border-green-500/20 text-sm font-bold text-green-500">
+                            📍 Infrastructure is fully operational. Curation and automated sync are active.
                         </div>
                     </div>
                 </div>
 
+                {/* Phase 2: IN PROGRESS */}
                 <div class="phase-item">
-                    <span class="inline-block px-3 py-1 bg-[#00b0f0]/10 text-[#00b0f0] rounded-full text-[11px] font-bold mb-3 tracking-wider">SPRING 2026</span>
+                    <span class="inline-block px-3 py-1 bg-[#00b0f0]/10 text-[#00b0f0] rounded-full text-[11px] font-bold mb-3 tracking-wider uppercase">Spring 2026</span>
                     <div class="phase-card group">
                         <div class="flex flex-col sm:flex-row justify-between items-start gap-3 mb-6">
                             <h3 class="text-xl font-extrabold m-0">🎨 Phase 2: The Identity</h3>
@@ -65,21 +65,22 @@ import Layout from '../layouts/MainLayout.astro';
                                 <div class="w-5 h-5 shrink-0 rounded-full border-2 border-[#00b0f0]/30 flex items-center justify-center">
                                     <div class="w-2 h-2 bg-[#00b0f0] rounded-full animate-pulse"></div>
                                 </div>
-                                <span>Custom Calamares Installer & Branding</span>
+                                <span class="dark:text-white text-slate-900 font-semibold">Custom Calamares Installer & Branding</span>
                             </li>
-                            <li class="feature-list-item flex items-center gap-3 mb-3">
-                                <svg class="w-5 h-5 text-slate-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><circle cx="12" cy="12" r="10"></circle></svg>
+                            <li class="feature-list-item flex items-center gap-3 mb-3 text-slate-500">
+                                <svg class="w-5 h-5 opacity-50 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><circle cx="12" cy="12" r="10"></circle></svg>
                                 <span>VeloxOS Desktop (Custom Layout)</span>
                             </li>
                         </ul>
                         <div class="mt-5 p-3 bg-[#00b0f0]/5 rounded-xl border border-dashed border-[#00b0f0]/20 text-sm font-bold text-[#00b0f0]">
-                            📍 Milestone: First Public Technical Preview (ISO)
+                            📍 Milestone: First Public Technical Preview (ISO Build)
                         </div>
                     </div>
                 </div>
 
+                {/* Phase 3: PLANNED */}
                 <div class="phase-item">
-                    <span class="inline-block px-3 py-1 bg-slate-500/10 text-slate-500 rounded-full text-[11px] font-bold mb-3 tracking-wider">SUMMER 2026</span>
+                    <span class="inline-block px-3 py-1 bg-slate-500/10 text-slate-500 rounded-full text-[11px] font-bold mb-3 tracking-wider uppercase">Summer 2026</span>
                     <div class="phase-card group">
                         <div class="flex flex-col sm:flex-row justify-between items-start gap-3 mb-6">
                             <h3 class="text-xl font-extrabold m-0">🛠 Phase 3: The Optimization</h3>
