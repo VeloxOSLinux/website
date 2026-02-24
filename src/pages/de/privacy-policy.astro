@@ -1,0 +1,77 @@
+---
+import Layout from '../../layouts/MainLayout.astro';
+---
+
+<Layout title="VeloxOS - Datenschutzerklärung">
+<div id="page-content">
+        <div class="max-w-4xl mx-auto px-6">
+            <div class="bg-slate-50 dark:bg-white/5 backdrop-blur-sm p-8 md:p-12 rounded-3xl border border-slate-200 dark:border-[#00b0f0]/15 shadow-xl dark:shadow-2xl">
+                
+                <div class="text-center mb-12">
+                    <h1 class="text-4xl md:text-5xl font-bold text-slate-900 dark:text-white mb-4">Datenschutzerklärung</h1>
+                    <div class="w-16 h-1.5 bg-[#00b0f0] mx-auto rounded-full"></div>
+                    <p class="mt-4 text-slate-500 text-sm uppercase tracking-widest">Verpflichtung zu einer Privacy-First Architektur</p>
+                </div>
+
+                <section class="mb-10">
+                    <h2 class="text-[#00b0f0] text-xl font-bold border-l-4 border-[#00b0f0] pl-4 mb-4 uppercase tracking-wide">1. Allgemeine Hinweise</h2>
+                    <p class="text-slate-600 dark:text-slate-400 leading-relaxed">
+                        Der Schutz Ihrer persönlichen Daten hat für uns einen hohen Stellenwert. Diese Datenschutzerklärung informiert Sie darüber, wie wir mit Daten umgehen, wenn Sie unsere Webseite besuchen. Da wir einen <strong class="text-slate-900 dark:text-white">"Privacy-First"</strong>-Ansatz verfolgen, erheben wir so wenig Daten wie möglich.
+                    </p>
+                </section>
+
+                <section class="mb-10 bg-[#00b0f0]/5 p-8 rounded-2xl border border-[#00b0f0]/10">
+                    <h2 class="text-[#00b0f0] text-xl font-bold mb-6">2. Datenerfassung auf unserer Webseite</h2>
+                    <div class="grid gap-6">
+                        <div>
+                            <strong class="text-slate-900 dark:text-white block mb-2">Cookies:</strong>
+                            <p class="text-slate-600 dark:text-slate-400 leading-relaxed">Diese Webseite verwendet keine Tracking- oder Marketing-Cookies. Wir setzen nur technisch notwendige Cookies ein, sofern diese für die Funktionalität der Webseite zwingend erforderlich sind.</p>
+                        </div>
+                        <div>
+                            <strong class="text-slate-900 dark:text-white block mb-2">Kommentare & Benutzerkonten:</strong>
+                            <p class="text-slate-600 dark:text-slate-400 leading-relaxed">Wir bieten keine Benutzerkonten oder Kommentarbereiche an, daher werden in dieser Hinsicht keine personenbezogenen Daten gespeichert.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="mb-10">
+                    <h2 class="text-[#00b0f0] text-xl font-bold border-l-4 border-[#00b0f0] pl-4 mb-4 uppercase tracking-wide">3. Server-Log-Dateien</h2>
+                    <p class="text-slate-600 dark:text-slate-400 leading-relaxed mb-6">
+                        Unser Hosting-Anbieter (netcup GmbH) erhebt und speichert automatisch Informationen in sogenannten Server-Log-Dateien, die Ihr Browser automatisch an uns übermittelt:
+                    </p>
+                    <ul class="grid md:grid-cols-2 gap-3 text-sm text-slate-600 dark:text-slate-400">
+                        <li class="flex items-center gap-2"><span class="text-[#00b0f0]">🔹</span> Browsertyp und Browserversion</li>
+                        <li class="flex items-center gap-2"><span class="text-[#00b0f0]">🔹</span> Verwendetes Betriebssystem</li>
+                        <li class="flex items-center gap-2"><span class="text-[#00b0f0]">🔹</span> Referrer URL</li>
+                        <li class="flex items-center gap-2"><span class="text-[#00b0f0]">🔹</span> Hostname des zugreifenden Rechners</li>
+                        <li class="flex items-center gap-2"><span class="text-[#00b0f0]">🔹</span> Uhrzeit der Serveranfrage</li>
+                        <li class="flex items-center gap-2"><span class="text-[#00b0f0]">🔹</span> IP-Adresse</li>
+                    </ul>
+                    <p class="mt-6 text-xs text-slate-500 italic">
+                        Diese Daten sind aus technischen Gründen erforderlich, um eine stabile und sichere Verbindung zu gewährleisten. Rechtsgrundlage: Art. 6 Abs. 1 lit. f DSGVO.
+                    </p>
+                </section>
+
+                <section class="mb-10 border-2 border-dashed border-[#00b0f0]/30 p-8 rounded-2xl bg-white dark:bg-transparent">
+                    <h2 class="text-[#00b0f0] text-xl font-bold mb-4">4. ISO Downloads</h2>
+                    <p class="text-slate-600 dark:text-slate-400 leading-relaxed">
+                        Wenn Sie eine VeloxOS ISO-Datei herunterladen, kann der Server die IP-Adresse und den Zeitstempel protokollieren, um die Integrität unserer Download-Mirror sicherzustellen und Missbrauch zu verhindern. Diese Daten werden nicht dazu verwendet, persönliche Nutzerprofile zu erstellen.
+                    </p>
+                </section>
+
+                <section class="mb-4">
+                    <h2 class="text-[#00b0f0] text-xl font-bold border-l-4 border-[#00b0f0] pl-4 mb-4 uppercase tracking-wide">5. Ihre Rechte</h2>
+                    <p class="text-slate-600 dark:text-slate-400 leading-relaxed">
+                        Sie haben jederzeit das Recht, Auskunft über Ihre gespeicherten Daten zu verlangen. Sie haben außerdem das Recht, die Berichtigung, Sperrung oder Löschung dieser Daten zu verlangen. Bei Fragen wenden Sie sich bitte an die im Impressum angegebenen Kontaktdaten.
+                    </p>
+                </section>
+            </div>
+
+            <div class="mt-12 text-center">
+                <a href="/de" class="text-slate-500 hover:text-[#00b0f0] transition-colors text-sm font-medium">
+                    &larr; Zurück zur Startseite
+                </a>
+            </div>
+        </div>
+</div>
+</Layout>
