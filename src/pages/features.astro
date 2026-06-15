@@ -13,18 +13,19 @@ import Layout from '../layouts/MainLayout.astro';
             
             <div class="text-center mb-20">
                 <span class="inline-block px-4 py-1.5 mb-6 text-xs font-bold tracking-[0.2em] text-[#00b0f0] uppercase bg-[#00b0f0]/10 rounded-full border border-[#00b0f0]/20">
-                    Engineered for Speed
+                    Engineered for Speed & Reproducibility
                 </span>
                 <h1 class="text-4xl md:text-6xl font-extrabold mb-6 tracking-tight">
                     The <span class="text-[#00b0f0]">VeloxOS</span> Stack
                 </h1>
                 <p class="text-slate-600 dark:text-slate-400 text-lg max-w-2xl mx-auto">
-                    A carefully curated selection of high-performance components, pre-configured for a streamlined out-of-the-box experience.
+                    A carefully curated selection of high-performance components, declaratively pre-configured for an uncompromised out-of-the-box experience.
                 </p>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                 
+                {/* Column 1: Core & Performance */}
                 <div class="group relative bg-white dark:bg-white/[0.02] border border-slate-200 dark:border-white/10 p-8 rounded-[24px] transition-all duration-500 hover:-translate-y-2 hover:border-[#00b0f0]/50 shadow-sm hover:shadow-2xl hover:shadow-[#00b0f0]/10">
                     <div class="w-12 h-12 bg-[#00b0f0]/10 rounded-xl flex items-center justify-center mb-8 group-hover:scale-110 transition-transform duration-500">
                         <svg class="w-6 h-6 text-[#00b0f0]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
@@ -33,78 +34,81 @@ import Layout from '../layouts/MainLayout.astro';
                     <ul class="space-y-5">
                         <li class="feature-list-item flex items-start gap-3">
                            <div class="mt-1.5 w-1.5 h-1.5 rounded-full bg-[#00b0f0] shrink-0"></div>
-                           <p class="text-[15px]"><strong class="block">Arch Linux Base</strong> Pure rolling-release power with the latest upstream packages.</p>
+                           <p class="text-[15px]"><strong class="block">NixOS Foundation</strong> Absolute reproducibility across system builds without configuration drift.</p>
                        </li>
                         <li class="feature-list-item flex items-start gap-3">
                             <div class="mt-1.5 w-1.5 h-1.5 rounded-full bg-[#00b0f0] shrink-0"></div>
-                            <p class="text-[15px]"><strong class="block">CachyOS Kernel</strong> x86-64-v3/v4 optimized for maximum CPU performance.</p>
+                            <p class="text-[15px]"><strong class="block">Optimized Kernel</strong> Tailored scheduler tweaks engineered for minimal latency and high CPU performance under load.</p>
                         </li>
                         <li class="feature-list-item flex items-start gap-3">
                             <div class="mt-1.5 w-1.5 h-1.5 rounded-full bg-[#00b0f0] shrink-0"></div>
-                            <p class="text-[15px]"><strong class="block">ZRAM & Tuning</strong> Intelligent memory compression by default.</p>
+                            <p class="text-[15px]"><strong class="block">zRAM & Sysctl Tuning</strong> Intelligent memory compression and aggressive kernel configurations active by default.</p>
                         </li>
                     </ul>
                 </div>
 
+                {/* Column 2: Nix Architecture */}
                 <div class="group relative bg-white dark:bg-white/[0.02] border border-slate-200 dark:border-white/10 p-8 rounded-[24px] transition-all duration-500 hover:-translate-y-2 hover:border-[#00b0f0]/50 shadow-sm hover:shadow-2xl hover:shadow-[#00b0f0]/10">
                     <div class="w-12 h-12 bg-[#00b0f0]/10 rounded-xl flex items-center justify-center mb-8 group-hover:scale-110 transition-transform duration-500">
                         <svg class="w-6 h-6 text-[#00b0f0]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path></svg>
                     </div>
-                    <h3 class="text-2xl font-bold mb-6">Update Lifecycle</h3>
+                    <h3 class="text-2xl font-bold mb-6">Flakes & Generations</h3>
                     <ul class="space-y-5">
                         <li class="feature-list-item flex items-start gap-3">
                             <div class="mt-1.5 w-1.5 h-1.5 rounded-full bg-[#00b0f0] shrink-0"></div>
-                            <p class="text-[15px]"><strong class="block">Daily Sync</strong> Automated upstream synchronization with Arch and CachyOS.</p>
+                            <p class="text-[15px]"><strong class="block">Flake-Based Blueprints</strong> Pin exact system dependencies via lock files for strictly identical setups.</p>
                         </li>
                         <li class="feature-list-item flex items-start gap-3">
                             <div class="mt-1.5 w-1.5 h-1.5 rounded-full bg-[#00b0f0] shrink-0"></div>
-                            <p class="text-[15px]"><strong class="block">Staged Rollouts</strong> 2-week testing cycle: Dev → Testing → Production for maximum reliability.</p>
+                            <p class="text-[15px]"><strong class="block">Atomic Rollbacks</strong> Broken system upgrade? Simply boot straight into a pristine previous generation via GRUB.</p>
                         </li>
                         <li class="feature-list-item flex items-start gap-3">
                             <div class="mt-1.5 w-1.5 h-1.5 rounded-full bg-[#00b0f0] shrink-0"></div>
-                            <p class="text-[15px]"><strong class="block">Vetted Updates</strong> Carefully whitelisted optimizations to bridge speed and stability.</p>
+                            <p class="text-[15px]"><strong class="block">Home-Manager Profiles</strong> Seamlessly manage user-specific dotfiles and application states declaratively.</p>
                         </li>
                     </ul>
                 </div>
 
+                {/* Column 3: Desktop Experience */}
                 <div class="group relative bg-white dark:bg-white/[0.02] border border-slate-200 dark:border-white/10 p-8 rounded-[24px] transition-all duration-500 hover:-translate-y-2 hover:border-[#00b0f0]/50 shadow-sm hover:shadow-2xl hover:shadow-[#00b0f0]/10">
                     <div class="w-12 h-12 bg-[#00b0f0]/10 rounded-xl flex items-center justify-center mb-8 group-hover:scale-110 transition-transform duration-500">
                         <svg class="w-6 h-6 text-[#00b0f0]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
                     </div>
-                    <h3 class="text-2xl font-bold mb-6">Security & Privacy</h3>
+                    <h3 class="text-2xl font-bold mb-6">Niri Desktop Fluidity</h3>
                     <ul class="space-y-5">
                         <li class="feature-list-item flex items-start gap-3">
                             <div class="mt-1.5 w-1.5 h-1.5 rounded-full bg-[#00b0f0] shrink-0"></div>
-                            <p class="text-[15px]"><strong class="block">LibreWolf</strong> Privacy-focused browser pre-installed by default.</p>
+                            <p class="text-[15px]"><strong class="block">Niri Scroll-Window-Manager</strong> A tiling Wayland compositor that dynamically spaces windows on an infinite horizontal ribbon.</p>
                         </li>
                         <li class="feature-list-item flex items-start gap-3">
                             <div class="mt-1.5 w-1.5 h-1.5 rounded-full bg-[#00b0f0] shrink-0"></div>
-                            <p class="text-[15px]"><strong class="block">Betterbird</strong> A privacy-hardened, feature-rich email client.</p>
+                            <p class="text-[15px]"><strong class="block">Hardware-Accelerated</strong> Silky smooth rendering pipeline eliminating tearing and stuttering entirely.</p>
                         </li>
                         <li class="feature-list-item flex items-start gap-3">
                             <div class="mt-1.5 w-1.5 h-1.5 rounded-full bg-[#00b0f0] shrink-0"></div>
-                            <p class="text-[15px]"><strong class="block">UFW Firewall</strong> Pre-configured protection from first boot.</p>
+                            <p class="text-[15px]"><strong class="block">Sovereign App Suite</strong> Out-of-the-box integration of privacy-respecting core desktop utilities.</p>
                         </li>
                     </ul>
                 </div>
 
+                {/* Column 4: Gaming & Environment */}
                 <div class="group relative bg-white dark:bg-white/[0.02] border border-slate-200 dark:border-white/10 p-8 rounded-[24px] transition-all duration-500 hover:-translate-y-2 hover:border-[#00b0f0]/50 shadow-sm hover:shadow-2xl hover:shadow-[#00b0f0]/10">
                     <div class="w-12 h-12 bg-[#00b0f0]/10 rounded-xl flex items-center justify-center mb-8 group-hover:scale-110 transition-transform duration-500">
                         <svg class="w-6 h-6 text-[#00b0f0]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 5v2m-4-2v2m-4-2v2m-2 8l4-6h8l4 6-4 6H9l-4-6z"></path></svg>
                     </div>
-                    <h3 class="text-2xl font-bold mb-6">Gaming & Apps</h3>
+                    <h3 class="text-2xl font-bold mb-6">Gaming Ecosystem</h3>
                     <ul class="space-y-5">
                         <li class="feature-list-item flex items-start gap-3">
                             <div class="mt-1.5 w-1.5 h-1.5 rounded-full bg-[#00b0f0] shrink-0"></div>
-                            <p class="text-[15px]"><strong class="block">Steam & Faugus Launcher</strong> Ready-to-play launchers out of the box.</p>
+                            <p class="text-[15px]"><strong class="block">Steam & Proton Integration</strong> Declaratively provisioned gaming hooks providing immediate compatibility with modern titles.</p>
                         </li>
                         <li class="feature-list-item flex items-start gap-3">
                             <div class="mt-1.5 w-1.5 h-1.5 rounded-full bg-[#00b0f0] shrink-0"></div>
-                            <p class="text-[15px]"><strong class="block">CachyOS-Proton</strong> Enhanced compatibility layer for Windows gaming.</p>
+                            <p class="text-[15px]"><strong class="block">GameMode & Tuning</strong> Automatic governor overrides and core prioritization whenever a game launches.</p>
                         </li>
                         <li class="feature-list-item flex items-start gap-3">
                             <div class="mt-1.5 w-1.5 h-1.5 rounded-full bg-[#00b0f0] shrink-0"></div>
-                            <p class="text-[15px]"><strong class="block">Zero Bloat</strong> No unnecessary background services or apps.</p>
+                            <p class="text-[15px]"><strong class="block">Zero-Bloat Guarantee</strong> No background daemons or opaque telemetry loops. Every single active package is user-controlled.</p>
                         </li>
                     </ul>
                 </div>
@@ -113,7 +117,7 @@ import Layout from '../layouts/MainLayout.astro';
 
             <div class="mt-20 p-8 bg-slate-50 dark:bg-white/[0.02] rounded-3xl border border-slate-200 dark:border-white/5 flex flex-col md:flex-row items-center justify-between gap-6">
                 <p class="text-slate-500 dark:text-slate-400 text-sm italic text-center md:text-left">
-                    VeloxOS is designed to deliver a high-performance out-of-the-box experience — without requiring manual tuning.
+                    VeloxOS fuses the unyielding resilience of declarative configuration structures with a fast, deeply optimized user space.
                 </p>
                 <div class="flex gap-4">
                     <div class="flex items-center gap-2 px-4 py-2 bg-green-500/10 rounded-full">
@@ -122,7 +126,7 @@ import Layout from '../layouts/MainLayout.astro';
                     </div>
                     <div class="flex items-center gap-2 px-4 py-2 bg-[#00b0f0]/10 rounded-full">
                         <div class="w-2 h-2 bg-[#00b0f0] rounded-full animate-pulse"></div>
-                        <span class="text-[#00b0f0] text-xs font-bold uppercase tracking-widest">Stable</span>
+                        <span class="text-[#00b0f0] text-xs font-bold uppercase tracking-widest">Declarative</span>
                     </div>
                 </div>
             </div>
