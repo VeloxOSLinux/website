@@ -4,6 +4,22 @@ import Layout from '../layouts/MainLayout.astro';
 
 <Layout title="VeloxOS - Next Generation Performance">
     <div id="page-content">
+		<div class="w-full bg-gradient-to-r from-amber-500/10 via-[#00b0f0]/10 to-amber-500/10 border-b border-amber-500/20 py-4 px-6 transition-colors duration-300">
+			<div class="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
+				<div class="flex items-center gap-3 flex-col sm:flex-row">
+					<span class="px-2.5 py-1 text-xs font-bold uppercase tracking-wider text-amber-600 dark:text-amber-400 bg-amber-500/10 rounded border border-amber-500/20 animate-pulse">
+						Project Reboot
+					</span>
+					<p class="text-sm text-slate-700 dark:text-slate-300 font-medium">
+						<strong class="text-slate-900 dark:text-white">VeloxOS is shifting gears!</strong> We are fully re-architecting the distribution, moving away from Arch Linux to a completely custom, declarative <span class="text-[#00b0f0] font-bold">NixOS foundation</span>.
+					</p>
+				</div>
+				<a href="/roadmap" class="text-xs font-bold text-[#00b0f0] hover:text-[#00d4ff] uppercase tracking-wider flex items-center gap-1 shrink-0 whitespace-nowrap">
+					Track Progress <span class="text-amber-500">→</span>
+				</a>
+			</div>
+		</div>
+
 		<section class="relative pt-20 pb-20 overflow-hidden transition-colors duration-300">
 			<div class="max-w-6xl mx-auto px-6">
 				<div class="grid lg:grid-cols-2 gap-12 items-center text-left mb-20">
@@ -60,10 +76,10 @@ import Layout from '../layouts/MainLayout.astro';
       \____/    </pre>
 										</div>
 										<div class="text-xs space-y-1.5">
-											<p><span class="text-[#00b0f0] font-semibold">OS:</span> VeloxOS v2026.1.0 (Rolling)</p>
-											<p><span class="text-[#00b0f0] font-semibold">Kernel:</span> Linux-CachyOS-BORE</p>
-											<p><span class="text-[#00b0f0] font-semibold">Optimized:</span> x86-64-v3/v4</p>
-											<p><span class="text-[#00b0f0] font-semibold">DE:</span> KDE Plasma</p>
+											<p><span class="text-[#00b0f0] font-semibold">OS:</span> VeloxOS v2026.2.0 (NixOS-based)</p>
+											<p><span class="text-[#00b0f0] font-semibold">Base:</span> NixOS Unstable / Flakes</p>
+											<p><span class="text-[#00b0f0] font-semibold">Features:</span> Declarative & Reproducible</p>
+											<p><span class="text-[#00b0f0] font-semibold">Compositor:</span> Niri Wayland</p>
 											<p><span class="text-[#00b0f0] font-semibold">Shell:</span> Zsh / Velox-Prompt</p>
 										</div>
 									</div>
@@ -85,7 +101,7 @@ import Layout from '../layouts/MainLayout.astro';
 								<span class="relative inline-flex rounded-full h-3 w-3 bg-[#00b0f0]"></span>
 							</span>
 							<p class="text-sm md:text-base font-medium text-slate-900 dark:text-white">
-								<span class="text-[#00b0f0] uppercase mr-2 text-xs tracking-widest">Status:</span> Phase 1 (The Identity) is currently <b class="text-[#00b0f0]">In Progress</b>
+								<span class="text-[#00b0f0] uppercase mr-2 text-xs tracking-widest">Status:</span> Phase 2 (NixOS Core & Flakes Architecture) is currently <b class="text-[#00b0f0]">In Progress</b>
 							</p>
 						</div>
 						<a href="/roadmap" class="group flex items-center gap-2 text-sm font-bold text-[#00b0f0] hover:text-[#00d4ff] transition-all">
@@ -110,7 +126,7 @@ import Layout from '../layouts/MainLayout.astro';
 					</div>
 					<h3 class="text-xl font-bold mb-4 text-slate-900 dark:text-white">Built for Speed</h3>
 					<p class="text-slate-600 dark:text-slate-400 leading-relaxed text-[15px]">
-						With the <span class="text-[#00b0f0] font-medium">CachyOS-BORE Kernel</span> and <span class="text-[#00b0f0] font-medium">x86-64-v3/v4</span> optimizations, we squeeze every bit of performance out of your CPU.
+						Powered by <span class="text-[#00b0f0] font-medium">NixOS Flakes</span> and tailored kernel tweaks, we minimize latency and squeeze every bit of performance out of your gaming hardware.
 					</p>
 				</div>
 
@@ -120,7 +136,7 @@ import Layout from '../layouts/MainLayout.astro';
 					</div>
 					<h3 class="text-xl font-bold mb-4 text-slate-900 dark:text-white">Zero Setup Required</h3>
 					<p class="text-slate-600 dark:text-slate-400 leading-relaxed text-[15px]">
-						Skip the hours of configuration. Essential tools like <span class="text-[#00b0f0] font-medium">Steam, Faugus Launcher and Betterbird</span> are pre-installed and optimized.
+						Skip the hours of manual editing. Essential tools like <span class="text-[#00b0f0] font-medium">Steam, ProtonUp-Qt and ZRAM-Tweaks</span> are baked into the system-declarations.
 					</p>
 				</div>
 
@@ -128,9 +144,9 @@ import Layout from '../layouts/MainLayout.astro';
 					<div class="w-12 h-12 bg-[#00b0f0]/10 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-500">
 						<svg class="w-6 h-6 text-[#00b0f0]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
 					</div>
-					<h3 class="text-xl font-bold mb-4 text-slate-900 dark:text-white">Privacy by Design</h3>
+					<h3 class="text-xl font-bold mb-4 text-slate-900 dark:text-white">100% Declarative</h3>
 					<p class="text-slate-600 dark:text-slate-400 leading-relaxed text-[15px]">
-						No AI-bloat, no telemetry. With <span class="text-[#00b0f0] font-medium">LibreWolf</span> and an active firewall, your data stays where it belongs: with you.
+						No more broken updates. Your entire OS state is defined in code. Rollback instantly if something goes wrong, keeping your setup clean and pristine.
 					</p>
 				</div>
 			</div>
@@ -153,19 +169,19 @@ import Layout from '../layouts/MainLayout.astro';
                     </svg>
                 </div>
 
-                <h2 class="text-3xl font-bold text-slate-900 dark:text-white mb-4">Coming Soon</h2>
+                <h2 class="text-3xl font-bold text-slate-900 dark:text-white mb-4">Under Reconstruction</h2>
                 
                 <div class="space-y-4 text-slate-600 dark:text-slate-400 mb-8">
-                    <p class="text-lg">The first public <span class="text-[#00b0f0] font-bold">Technical Preview</span> of VeloxOS is currently under development.</p>
+                    <p class="text-lg">The upcoming version of VeloxOS is being rebuilt from scratch using <span class="text-[#00b0f0] font-bold">Nix Flakes</span>.</p>
                     <p class="bg-[#00b0f0]/5 py-3 px-4 rounded-xl border border-[#00b0f0]/10 text-[#00b0f0] font-semibold">
-                        Expected Release: March 2026
+                        NixOS Architecture Transition Concept Active
                     </p>
-                    <p class="text-sm">We are currently fine-tuning the installer and repository integration to provide the best possible experience.</p>
+                    <p class="text-sm">We are currently porting our automated performance optimizations and game-launcher integrations into modular Nix-expressions.</p>
                 </div>
 
                 <div class="flex flex-col gap-3">
                     <a href="/roadmap" class="w-full py-4 bg-[#00b0f0] hover:bg-[#00d4ff] text-white font-bold rounded-xl transition-all">
-                        Check Roadmap
+                        Check New Roadmap
                     </a>
                     <button onclick="closeVeloxModal()" class="w-full py-3 text-slate-500 hover:text-slate-700 dark:hover:text-white transition-colors text-sm font-medium uppercase tracking-widest">
                         Close
