@@ -88,16 +88,19 @@ import Layout from '../layouts/MainLayout.astro';
 
         <section
             class="relative
-                   pt-20
-                   md:pt-28
-                   pb-28
-                   md:pb-36
+                   pt-24
+                   md:pt-32
+                   pb-24
+                   md:pb-32
                    overflow-hidden
                    transition-colors
                    duration-300"
         >
 
-            <!-- Background glow -->
+            <!-- =====================================================
+                 BACKGROUND GLOW
+                 ===================================================== -->
+
             <div
                 class="absolute
                        inset-0
@@ -105,41 +108,49 @@ import Layout from '../layouts/MainLayout.astro';
                        pointer-events-none"
             >
 
+                <!-- Main logo glow -->
+
                 <div
                     class="absolute
                            left-1/2
                            -translate-x-1/2
-                           -top-32
+                           -top-20
                            w-[500px]
                            md:w-[800px]
-                           h-[400px]
-                           md:h-[550px]
+                           h-[420px]
+                           md:h-[600px]
                            bg-[#00b0f0]/10
                            blur-[120px]
                            md:blur-[160px]
                            rounded-full"
                 ></div>
 
+
+                <!-- Lower subtle glow -->
+
                 <div
                     class="absolute
                            left-1/2
                            -translate-x-1/2
-                           top-[500px]
+                           top-[520px]
                            w-[600px]
                            md:w-[1000px]
-                           h-[300px]
+                           h-[350px]
                            bg-blue-700/5
                            blur-[120px]
                            rounded-full"
                 ></div>
 
-                <!-- subtle decorative line -->
+
+                <!-- Decorative horizontal line -->
+
                 <div
                     class="absolute
                            left-1/2
-                           top-[300px]
+                           top-[360px]
                            -translate-x-1/2
                            w-[900px]
+                           max-w-[90vw]
                            h-px
                            bg-gradient-to-r
                            from-transparent
@@ -150,6 +161,10 @@ import Layout from '../layouts/MainLayout.astro';
             </div>
 
 
+            <!-- =====================================================
+                 HERO CONTENT
+                 ===================================================== -->
+
             <div
                 class="relative
                        max-w-6xl
@@ -157,27 +172,26 @@ import Layout from '../layouts/MainLayout.astro';
                        px-6"
             >
 
-                <!-- =================================================
-                     BRAND / LOGO
-                     ================================================= -->
-
                 <div class="text-center">
+
+
+                    <!-- =================================================
+                         VELOXOS LOGO
+                         ================================================= -->
 
                     <div
                         class="flex
                                justify-center
-                               mb-10"
+                               mb-12
+                               md:mb-14"
                     >
-
-                        <!--
-                            VeloxOS logo
-                        -->
 
                         <div
                             class="relative
-                                   group
-                                   drop-shadow-[0_0_35px_rgba(0,176,240,0.22)]"
+                                   drop-shadow-[0_0_45px_rgba(0,176,240,0.25)]"
                         >
+
+                            <!-- Logo glow -->
 
                             <div
                                 class="absolute
@@ -185,62 +199,23 @@ import Layout from '../layouts/MainLayout.astro';
                                        bg-[#00b0f0]/10
                                        blur-3xl
                                        rounded-full
-                                       scale-150"
+                                       scale-150
+                                       pointer-events-none"
                             ></div>
 
-                            <div class="flex justify-center mb-10">
-    <img
-        src="/NewLogo_wText.webp"
-        alt="VeloxOS"
-        class="w-auto
-               h-24
-               md:h-40
-               object-contain
-               drop-shadow-[0_0_35px_rgba(0,176,240,0.22)]"
-    />
-</div>
 
-                                <!-- Main V -->
-                                <path
-                                    d="M22 24
-                                       L52 24
-                                       L82 102
-                                       L112 24
-                                       L142 24
-                                       L98 136
-                                       L68 136
-                                       Z"
-                                    fill="currentColor"
-                                    class="text-slate-900 dark:text-white"
-                                />
+                            <!-- Actual VeloxOS logo -->
 
-                                <!-- Blue speed element -->
-                                <path
-                                    d="M91 48
-                                       L128 48
-                                       L108 66
-                                       L126 66
-                                       L86 106
-                                       L96 78
-                                       L76 78
-                                       Z"
-                                    fill="#00b0f0"
-                                />
-
-                                <path
-                                    d="M96 80
-                                       L119 80
-                                       L101 98
-                                       L111 98
-                                       L87 121
-                                       L94 101
-                                       L81 101
-                                       Z"
-                                    fill="#0077cc"
-                                    opacity="0.9"
-                                />
-
-                            </svg>
+                            <img
+                                src="/NewLogo_wText.webp"
+                                alt="VeloxOS"
+                                class="relative
+                                       w-auto
+                                       h-32
+                                       md:h-48
+                                       lg:h-56
+                                       object-contain"
+                            />
 
                         </div>
 
@@ -248,17 +223,17 @@ import Layout from '../layouts/MainLayout.astro';
 
 
                     <!-- =================================================
-                         SLOGAN
+                         SUBTITLE
                          ================================================= -->
 
-                    <h1
-                        class="text-5xl
-                               md:text-7xl
-                               lg:text-8xl
-                               font-extrabold
+                    <p
+                        class="text-2xl
+                               md:text-3xl
+                               lg:text-4xl
+                               font-semibold
                                tracking-tight
-                               leading-[1.02]
-                               mb-8
+                               leading-tight
+                               mb-7
                                text-slate-900
                                dark:text-white"
                     >
@@ -267,10 +242,9 @@ import Layout from '../layouts/MainLayout.astro';
                             Minimal.
                         </span>
 
-                        Fast.
-                        Yours.
+                        Fast. Yours.
 
-                    </h1>
+                    </p>
 
 
                     <!-- =================================================
@@ -279,9 +253,9 @@ import Layout from '../layouts/MainLayout.astro';
 
                     <p
                         class="mx-auto
-                               max-w-3xl
-                               text-lg
-                               md:text-xl
+                               max-w-2xl
+                               text-base
+                               md:text-lg
                                text-slate-600
                                dark:text-slate-400
                                leading-relaxed
@@ -299,8 +273,8 @@ import Layout from '../layouts/MainLayout.astro';
                         is a performance-driven Linux distribution built
                         on reproducible system properties. Designed for
                         gamers and power users, it delivers a modern
-                        software stack and extreme system responsiveness —
-                        without compromising on stability or control.
+                        software stack and extreme system responsiveness
+                        — without compromising on stability or control.
 
                     </p>
 
@@ -315,9 +289,10 @@ import Layout from '../layouts/MainLayout.astro';
                                sm:flex-row
                                items-center
                                justify-center
-                               gap-4
-                               mb-20"
+                               gap-4"
                     >
+
+                        <!-- Download -->
 
                         <button
                             onclick="openVeloxModal()"
@@ -352,6 +327,7 @@ import Layout from '../layouts/MainLayout.astro';
                                 stroke-linecap="round"
                                 stroke-linejoin="round"
                             >
+
                                 <path
                                     d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"
                                 ></path>
@@ -373,6 +349,8 @@ import Layout from '../layouts/MainLayout.astro';
 
                         </button>
 
+
+                        <!-- Learn More -->
 
                         <a
                             href="#why-veloxos"
@@ -399,388 +377,6 @@ import Layout from '../layouts/MainLayout.astro';
                         >
                             Learn More
                         </a>
-
-                    </div>
-
-                </div>
-
-
-                <!-- =================================================
-                     SYSTEM / TERMINAL PREVIEW
-                     ================================================= -->
-
-                <div
-                    class="relative
-                           max-w-5xl
-                           mx-auto"
-                >
-
-                    <!-- terminal glow -->
-
-                    <div
-                        class="absolute
-                               -inset-1
-                               bg-gradient-to-r
-                               from-[#00b0f0]/30
-                               via-blue-600/20
-                               to-[#00b0f0]/30
-                               rounded-3xl
-                               blur-2xl
-                               opacity-50"
-                    ></div>
-
-
-                    <!-- terminal -->
-
-                    <div
-                        class="relative
-                               bg-white
-                               dark:bg-[#080c12]
-                               rounded-2xl
-                               border
-                               border-slate-200
-                               dark:border-white/10
-                               shadow-2xl
-                               overflow-hidden
-                               font-mono
-                               text-sm
-                               text-left"
-                    >
-
-                        <!-- Terminal header -->
-
-                        <div
-                            class="bg-slate-100
-                                   dark:bg-white/[0.04]
-                                   px-5
-                                   py-3.5
-                                   border-b
-                                   border-slate-200
-                                   dark:border-white/5
-                                   flex
-                                   items-center"
-                        >
-
-                            <div class="flex gap-1.5">
-
-                                <div
-                                    class="w-3
-                                           h-3
-                                           rounded-full
-                                           bg-red-500/70"
-                                ></div>
-
-                                <div
-                                    class="w-3
-                                           h-3
-                                           rounded-full
-                                           bg-yellow-500/70"
-                                ></div>
-
-                                <div
-                                    class="w-3
-                                           h-3
-                                           rounded-full
-                                           bg-green-500/70"
-                                ></div>
-
-                            </div>
-
-                            <span
-                                class="text-slate-500
-                                       dark:text-slate-400
-                                       text-xs
-                                       ml-4"
-                            >
-                                veloxos@veloxos ~
-                            </span>
-
-                        </div>
-
-
-                        <!-- Terminal body -->
-
-                        <div
-                            class="p-6
-                                   md:p-10"
-                        >
-
-                            <!-- command -->
-
-                            <div
-                                class="flex
-                                       gap-2
-                                       mb-7"
-                            >
-
-                                <span
-                                    class="text-[#00b0f0]
-                                           font-bold"
-                                >
-                                    ➜
-                                </span>
-
-                                <span
-                                    class="text-slate-900
-                                           dark:text-white"
-                                >
-                                    fastfetch
-                                </span>
-
-                            </div>
-
-
-                            <!-- system information -->
-
-                            <div
-                                class="grid
-                                       md:grid-cols-[220px_1fr]
-                                       gap-8
-                                       md:gap-12
-                                       items-center"
-                            >
-
-                                <!-- Logo inside terminal -->
-
-                                <div
-                                    class="hidden
-                                           md:flex
-                                           justify-center
-                                           items-center"
-                                >
-
-                                    <svg
-                                        class="w-32
-                                               h-32
-                                               drop-shadow-[0_0_20px_rgba(0,176,240,0.25)]"
-                                        viewBox="0 0 160 160"
-                                        fill="none"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                    >
-
-                                        <path
-                                            d="M22 24
-                                               L52 24
-                                               L82 102
-                                               L112 24
-                                               L142 24
-                                               L98 136
-                                               L68 136
-                                               Z"
-                                            fill="currentColor"
-                                            class="text-slate-900 dark:text-white"
-                                        />
-
-                                        <path
-                                            d="M91 48
-                                               L128 48
-                                               L108 66
-                                               L126 66
-                                               L86 106
-                                               L96 78
-                                               L76 78
-                                               Z"
-                                            fill="#00b0f0"
-                                        />
-
-                                        <path
-                                            d="M96 80
-                                               L119 80
-                                               L101 98
-                                               L111 98
-                                               L87 121
-                                               L94 101
-                                               L81 101
-                                               Z"
-                                            fill="#0077cc"
-                                        />
-
-                                    </svg>
-
-                                </div>
-
-
-                                <!-- Information -->
-
-                                <div
-                                    class="grid
-                                           grid-cols-1
-                                           sm:grid-cols-2
-                                           gap-x-10
-                                           gap-y-3
-                                           text-xs
-                                           md:text-sm"
-                                >
-
-                                    <p>
-
-                                        <span
-                                            class="text-[#00b0f0]
-                                                   font-semibold"
-                                        >
-                                            OS:
-                                        </span>
-
-                                        <span
-                                            class="text-slate-700
-                                                   dark:text-slate-300"
-                                        >
-                                            VeloxOS
-                                        </span>
-
-                                    </p>
-
-
-                                    <p>
-
-                                        <span
-                                            class="text-[#00b0f0]
-                                                   font-semibold"
-                                        >
-                                            Kernel:
-                                        </span>
-
-                                        <span
-                                            class="text-slate-700
-                                                   dark:text-slate-300"
-                                        >
-                                            Linux
-                                        </span>
-
-                                    </p>
-
-
-                                    <p>
-
-                                        <span
-                                            class="text-[#00b0f0]
-                                                   font-semibold"
-                                        >
-                                            Base:
-                                        </span>
-
-                                        <span
-                                            class="text-slate-700
-                                                   dark:text-slate-300"
-                                        >
-                                            NixOS
-                                        </span>
-
-                                    </p>
-
-
-                                    <p>
-
-                                        <span
-                                            class="text-[#00b0f0]
-                                                   font-semibold"
-                                        >
-                                            Compositor:
-                                        </span>
-
-                                        <span
-                                            class="text-slate-700
-                                                   dark:text-slate-300"
-                                        >
-                                            Niri Wayland
-                                        </span>
-
-                                    </p>
-
-
-                                    <p>
-
-                                        <span
-                                            class="text-[#00b0f0]
-                                                   font-semibold"
-                                        >
-                                            Shell:
-                                        </span>
-
-                                        <span
-                                            class="text-slate-700
-                                                   dark:text-slate-300"
-                                        >
-                                            Noctalia
-                                        </span>
-
-                                    </p>
-
-
-                                    <p>
-
-                                        <span
-                                            class="text-[#00b0f0]
-                                                   font-semibold"
-                                        >
-                                            Terminal:
-                                        </span>
-
-                                        <span
-                                            class="text-slate-700
-                                                   dark:text-slate-300"
-                                        >
-                                            Kitty
-                                        </span>
-
-                                    </p>
-
-                                </div>
-
-                            </div>
-
-
-                            <!-- Fake system status -->
-
-                            <div
-                                class="mt-8
-                                       pt-5
-                                       border-t
-                                       border-slate-200
-                                       dark:border-white/5
-                                       flex
-                                       flex-col
-                                       sm:flex-row
-                                       sm:items-center
-                                       sm:justify-between
-                                       gap-3
-                                       text-xs"
-                            >
-
-                                <div class="flex items-center gap-2">
-
-                                    <span
-                                        class="w-2
-                                               h-2
-                                               rounded-full
-                                               bg-[#00b0f0]
-                                               shadow-[0_0_8px_rgba(0,176,240,0.7)]"
-                                    ></span>
-
-                                    <span
-                                        class="text-slate-500
-                                               dark:text-slate-400"
-                                    >
-                                        system ready
-                                    </span>
-
-                                </div>
-
-                                <div
-                                    class="text-slate-400
-                                           dark:text-slate-500"
-                                >
-                                    veloxos@veloxos:~$
-                                    <span
-                                        class="text-[#00b0f0]"
-                                    >
-                                        _
-                                    </span>
-                                </div>
-
-                            </div>
-
-                        </div>
 
                     </div>
 
@@ -857,7 +453,9 @@ import Layout from '../layouts/MainLayout.astro';
             </div>
 
 
-            <!-- Feature grid -->
+            <!-- =====================================================
+                 FEATURE GRID
+                 ===================================================== -->
 
             <div
                 class="grid
@@ -865,7 +463,10 @@ import Layout from '../layouts/MainLayout.astro';
                        gap-6"
             >
 
-                <!-- Feature 1 -->
+
+                <!-- =================================================
+                     FEATURE 1
+                     ================================================= -->
 
                 <div
                     class="group
@@ -946,7 +547,9 @@ import Layout from '../layouts/MainLayout.astro';
                 </div>
 
 
-                <!-- Feature 2 -->
+                <!-- =================================================
+                     FEATURE 2
+                     ================================================= -->
 
                 <div
                     class="group
@@ -1033,7 +636,9 @@ import Layout from '../layouts/MainLayout.astro';
                 </div>
 
 
-                <!-- Feature 3 -->
+                <!-- =================================================
+                     FEATURE 3
+                     ================================================= -->
 
                 <div
                     class="group
@@ -1230,6 +835,7 @@ import Layout from '../layouts/MainLayout.astro';
                         The upcoming generation of VeloxOS is being
                         rebuilt from the ground up.
                     </p>
+
 
                     <p
                         class="bg-[#00b0f0]/5
