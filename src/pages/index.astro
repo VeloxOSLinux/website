@@ -7,17 +7,19 @@ import Layout from '../layouts/MainLayout.astro';
     <div id="page-content">
 
         <!-- =========================================================
-             PROJECT REBOOT BANNER
+             PROJECT REBOOT
              ========================================================= -->
 
         <div
             class="w-full
                    border-b
-                   border-white/[0.06]
-                   bg-[#080d16]/80
+                   border-slate-200
+                   bg-white/80
+                   dark:border-white/[0.06]
+                   dark:bg-[#080d16]/80
                    backdrop-blur-xl
-                   px-6
-                   py-3.5"
+                   transition-colors
+                   duration-300"
         >
 
             <div
@@ -28,6 +30,8 @@ import Layout from '../layouts/MainLayout.astro';
                        items-center
                        justify-center
                        gap-2
+                       px-6
+                       py-3.5
                        text-center
                        sm:flex-row"
             >
@@ -35,30 +39,40 @@ import Layout from '../layouts/MainLayout.astro';
                 <span
                     class="rounded
                            border
-                           border-amber-400/20
-                           bg-amber-400/[0.07]
+                           border-amber-400/30
+                           bg-amber-400/[0.08]
                            px-2.5
                            py-1
                            text-[10px]
                            font-bold
                            uppercase
                            tracking-[0.15em]
-                           text-amber-400"
+                           text-amber-600
+                           dark:text-amber-400"
                 >
                     Project Reboot
                 </span>
 
+
                 <p
                     class="text-xs
-                           text-slate-400
+                           text-slate-500
+                           dark:text-slate-400
                            sm:text-sm"
                 >
-                    <strong class="font-semibold text-slate-200">
+
+                    <strong
+                        class="font-semibold
+                               text-slate-800
+                               dark:text-slate-200"
+                    >
                         VeloxOS is stepping up a gear!
                     </strong>
+
                     <span class="ml-1">
                         We are completely restructuring the distribution.
                     </span>
+
                 </p>
 
             </div>
@@ -74,17 +88,19 @@ import Layout from '../layouts/MainLayout.astro';
             class="relative
                    isolate
                    overflow-hidden
-                   bg-[#070c16]
+                   bg-slate-50
                    px-6
                    pb-28
                    pt-24
+                   transition-colors
+                   duration-300
+                   dark:bg-[#070c16]
                    md:pb-36
                    md:pt-32"
         >
 
             <!-- =====================================================
-                 CLEAN BACKGROUND
-                 No blurred divs — only radial gradients.
+                 CLEAN LIGHT MODE BACKGROUND
                  ===================================================== -->
 
             <div
@@ -92,11 +108,27 @@ import Layout from '../layouts/MainLayout.astro';
                        absolute
                        inset-0
                        -z-10
-                       bg-[radial-gradient(ellipse_65%_55%_at_50%_8%,rgba(0,176,240,0.115),transparent_68%),radial-gradient(ellipse_55%_55%_at_100%_100%,rgba(0,119,204,0.045),transparent_72%)]"
+                       bg-[radial-gradient(ellipse_60%_55%_at_50%_5%,rgba(0,176,240,0.10),transparent_70%),radial-gradient(ellipse_50%_50%_at_100%_100%,rgba(0,119,204,0.035),transparent_75%)]
+                       dark:hidden"
             ></div>
 
 
-            <!-- Very subtle top vignette -->
+            <!-- =====================================================
+                 CLEAN DARK MODE BACKGROUND
+                 ===================================================== -->
+
+            <div
+                class="pointer-events-none
+                       absolute
+                       inset-0
+                       -z-10
+                       hidden
+                       bg-[radial-gradient(ellipse_65%_55%_at_50%_8%,rgba(0,176,240,0.115),transparent_68%),radial-gradient(ellipse_55%_55%_at_100%_100%,rgba(0,119,204,0.045),transparent_72%)]
+                       dark:block"
+            ></div>
+
+
+            <!-- Very subtle top atmosphere -->
 
             <div
                 class="pointer-events-none
@@ -104,10 +136,11 @@ import Layout from '../layouts/MainLayout.astro';
                        inset-x-0
                        top-0
                        -z-10
-                       h-40
+                       h-48
                        bg-gradient-to-b
-                       from-[#0b1725]/40
-                       to-transparent"
+                       from-slate-200/30
+                       to-transparent
+                       dark:from-[#0b1725]/30"
             ></div>
 
 
@@ -127,22 +160,24 @@ import Layout from '../layouts/MainLayout.astro';
                      ================================================= -->
 
                 <div
-                    class="mb-12
+                    class="mb-10
                            flex
                            justify-center
-                           md:mb-14"
+                           md:mb-12"
                 >
 
                     <img
                         src="https://wiki.veloxos.org/_astro/new_logo.CxzxC9pm_2vCcGx.webp"
                         alt="VeloxOS"
-                        class="relative
-                               h-32
+                        class="h-32
                                w-auto
                                object-contain
-                               drop-shadow-[0_0_35px_rgba(0,176,240,0.18)]
-                               md:h-48
-                               lg:h-52"
+                               drop-shadow-[0_0_35px_rgba(0,176,240,0.16)]
+                               transition-all
+                               duration-300
+                               dark:drop-shadow-[0_0_40px_rgba(0,176,240,0.20)]
+                               md:h-44
+                               lg:h-48"
                     />
 
                 </div>
@@ -152,13 +187,14 @@ import Layout from '../layouts/MainLayout.astro';
                      TAGLINE
                      ================================================= -->
 
-                <p
-                    class="mb-7
+                <h1
+                    class="mb-6
                            text-2xl
                            font-semibold
                            leading-tight
                            tracking-tight
-                           text-slate-100
+                           text-slate-800
+                           dark:text-slate-100
                            md:text-3xl"
                 >
 
@@ -168,7 +204,7 @@ import Layout from '../layouts/MainLayout.astro';
 
                     Fast. Yours.
 
-                </p>
+                </h1>
 
 
                 <!-- =================================================
@@ -177,18 +213,20 @@ import Layout from '../layouts/MainLayout.astro';
 
                 <p
                     class="mx-auto
-                           mb-10
+                           mb-9
                            max-w-2xl
                            text-base
                            leading-7
-                           text-slate-400
+                           text-slate-500
+                           dark:text-slate-400
                            md:text-lg
                            md:leading-8"
                 >
 
                     <span
                         class="font-semibold
-                               text-slate-200"
+                               text-slate-800
+                               dark:text-slate-200"
                     >
                         VeloxOS
                     </span>
@@ -231,12 +269,12 @@ import Layout from '../layouts/MainLayout.astro';
                                text-sm
                                font-bold
                                text-white
-                               shadow-[0_8px_30px_rgba(0,176,240,0.22)]
+                               shadow-[0_8px_30px_rgba(0,176,240,0.20)]
                                transition-all
                                duration-300
                                hover:-translate-y-0.5
                                hover:bg-[#00c8ff]
-                               hover:shadow-[0_10px_35px_rgba(0,176,240,0.32)]
+                               hover:shadow-[0_10px_35px_rgba(0,176,240,0.30)]
                                sm:w-auto"
                     >
 
@@ -283,17 +321,24 @@ import Layout from '../layouts/MainLayout.astro';
                                justify-center
                                rounded-xl
                                border
-                               border-white/[0.12]
-                               bg-white/[0.035]
+                               border-slate-200
+                               bg-white/70
                                px-7
                                py-3.5
                                text-sm
                                font-semibold
-                               text-slate-200
+                               text-slate-700
+                               backdrop-blur-sm
                                transition-all
                                duration-300
+                               hover:-translate-y-0.5
                                hover:border-[#00b0f0]/40
-                               hover:bg-white/[0.06]
+                               hover:bg-white
+                               dark:border-white/[0.10]
+                               dark:bg-white/[0.035]
+                               dark:text-slate-200
+                               dark:hover:border-[#00b0f0]/40
+                               dark:hover:bg-white/[0.06]
                                sm:w-auto"
                     >
                         Learn More
@@ -314,10 +359,11 @@ import Layout from '../layouts/MainLayout.astro';
                        inset-x-0
                        bottom-0
                        -z-10
-                       h-40
+                       h-32
                        bg-gradient-to-b
                        from-transparent
-                       to-[#070c16]"
+                       to-slate-50
+                       dark:to-[#070c16]"
             ></div>
 
         </section>
@@ -331,13 +377,18 @@ import Layout from '../layouts/MainLayout.astro';
             id="why-veloxos"
             class="relative
                    overflow-hidden
-                   bg-[#070c16]
+                   bg-white
                    px-6
                    py-24
+                   transition-colors
+                   duration-300
+                   dark:bg-[#070c16]
                    md:py-32"
         >
 
-            <!-- Extremely subtle section glow -->
+            <!-- =====================================================
+                 VERY SUBTLE SECTION ATMOSPHERE
+                 ===================================================== -->
 
             <div
                 class="pointer-events-none
@@ -392,7 +443,8 @@ import Layout from '../layouts/MainLayout.astro';
                                text-3xl
                                font-extrabold
                                tracking-tight
-                               text-white
+                               text-slate-900
+                               dark:text-white
                                md:text-5xl"
                     >
                         Built with purpose.
@@ -405,44 +457,49 @@ import Layout from '../layouts/MainLayout.astro';
                                text-base
                                leading-7
                                text-slate-500
+                               dark:text-slate-400
                                md:text-lg"
                     >
-                        The perfect balance between extreme performance
-                        and reliability.
+                        A Linux desktop designed around performance,
+                        gaming, reproducibility and control.
                     </p>
 
                 </div>
 
 
                 <!-- =================================================
-                     FEATURE GRID
+                     TECHNICAL GRID
                      ================================================= -->
 
                 <div
                     class="grid
                            gap-4
-                           md:grid-cols-3"
+                           md:grid-cols-2"
                 >
 
 
                     <!-- =================================================
-                         FEATURE 1
+                         PERFORMANCE
                          ================================================= -->
 
-                    <div
+                    <article
                         class="group
                                relative
                                overflow-hidden
                                rounded-2xl
                                border
-                               border-white/[0.07]
-                               bg-white/[0.025]
+                               border-slate-200
+                               bg-slate-50/80
                                p-7
                                transition-all
                                duration-300
                                hover:-translate-y-1
-                               hover:border-[#00b0f0]/30
-                               hover:bg-white/[0.04]"
+                               hover:border-[#00b0f0]/35
+                               hover:bg-white
+                               dark:border-white/[0.07]
+                               dark:bg-white/[0.025]
+                               dark:hover:border-[#00b0f0]/30
+                               dark:hover:bg-white/[0.04]"
                     >
 
                         <!-- Accent -->
@@ -463,167 +520,147 @@ import Layout from '../layouts/MainLayout.astro';
                         <div
                             class="mb-6
                                    flex
-                                   h-11
-                                   w-11
-                                   items-center
-                                   justify-center
-                                   rounded-xl
-                                   border
-                                   border-[#00b0f0]/15
-                                   bg-[#00b0f0]/[0.07]"
+                                   items-start
+                                   justify-between"
                         >
 
-                            <svg
-                                class="h-5 w-5 text-[#00b0f0]"
-                                fill="none"
-                                stroke="currentColor"
-                                viewBox="0 0 24 24"
+                            <div
+                                class="flex
+                                       h-11
+                                       w-11
+                                       items-center
+                                       justify-center
+                                       rounded-xl
+                                       border
+                                       border-[#00b0f0]/15
+                                       bg-[#00b0f0]/[0.07]"
                             >
 
-                                <path
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    stroke-width="2"
-                                    d="M13 10V3L4 14h7v7l9-11h-7z"
-                                ></path>
+                                <svg
+                                    class="h-5 w-5 text-[#00b0f0]"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    viewBox="0 0 24 24"
+                                >
 
-                            </svg>
+                                    <path
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        stroke-width="2"
+                                        d="M13 10V3L4 14h7v7l9-11h-7z"
+                                    ></path>
 
-                        </div>
+                                </svg>
 
-
-                        <h3
-                            class="mb-3
-                                   text-lg
-                                   font-bold
-                                   text-white"
-                        >
-                            Tuned for Speed
-                        </h3>
+                            </div>
 
 
-                        <p
-                            class="text-sm
-                                   leading-6
-                                   text-slate-500"
-                        >
-                            Powered by custom kernel tweaks, we minimize
-                            latency and squeeze the maximum performance
-                            out of your gaming hardware.
-                        </p>
-
-                    </div>
-
-
-                    <!-- =================================================
-                         FEATURE 2
-                         ================================================= -->
-
-                    <div
-                        class="group
-                               relative
-                               overflow-hidden
-                               rounded-2xl
-                               border
-                               border-white/[0.07]
-                               bg-white/[0.025]
-                               p-7
-                               transition-all
-                               duration-300
-                               hover:-translate-y-1
-                               hover:border-[#00b0f0]/30
-                               hover:bg-white/[0.04]"
-                    >
-
-                        <div
-                            class="absolute
-                                   left-0
-                                   top-0
-                                   h-px
-                                   w-0
-                                   bg-[#00b0f0]
-                                   transition-all
-                                   duration-500
-                                   group-hover:w-full"
-                        ></div>
-
-
-                        <div
-                            class="mb-6
-                                   flex
-                                   h-11
-                                   w-11
-                                   items-center
-                                   justify-center
-                                   rounded-xl
-                                   border
-                                   border-[#00b0f0]/15
-                                   bg-[#00b0f0]/[0.07]"
-                        >
-
-                            <svg
-                                class="h-5 w-5 text-[#00b0f0]"
-                                fill="none"
-                                stroke="currentColor"
-                                viewBox="0 0 24 24"
+                            <span
+                                class="font-mono
+                                       text-[10px]
+                                       font-bold
+                                       tracking-[0.2em]
+                                       text-slate-400
+                                       dark:text-slate-600"
                             >
-
-                                <path
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    stroke-width="2"
-                                    d="M11 4a2 2 0 114 0v1a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-1a2 2 0 100 4h1a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-1a2 2 0 10-4 0v1a1 1 0 01-1 1H7a1 1 0 01-1-1v-3a1 1 0 00-1-1H4a2 2 0 110-4h1a1 1 0 001-1V7a1 1 0 011-1h3a1 1 0 001-1V4z"
-                                ></path>
-
-                            </svg>
-
-                        </div>
-
-
-                        <h3
-                            class="mb-3
-                                   text-lg
-                                   font-bold
-                                   text-white"
-                        >
-                            Zero Configuration Required
-                        </h3>
-
-
-                        <p
-                            class="text-sm
-                                   leading-6
-                                   text-slate-500"
-                        >
-                            Save yourself hours of manual setup.
-                            Essential tools like
-                            <span class="font-medium text-slate-300">
-                                Steam, ProtonUp-Qt, and ZRAM optimizations
+                                01
                             </span>
-                            are baked right into the system.
+
+                        </div>
+
+
+                        <h3
+                            class="mb-3
+                                   text-xl
+                                   font-bold
+                                   text-slate-900
+                                   dark:text-white"
+                        >
+                            Performance
+                        </h3>
+
+
+                        <p
+                            class="text-sm
+                                   leading-6
+                                   text-slate-500
+                                   dark:text-slate-400"
+                        >
+                            A system tuned for responsiveness, low
+                            latency and efficient resource usage.
+                            VeloxOS puts the desktop experience first
+                            instead of adding unnecessary layers.
                         </p>
 
-                    </div>
+
+                        <div
+                            class="mt-6
+                                   flex
+                                   flex-wrap
+                                   gap-2"
+                        >
+
+                            <span
+                                class="rounded-md
+                                       border
+                                       border-slate-200
+                                       bg-white
+                                       px-2.5
+                                       py-1
+                                       font-mono
+                                       text-[10px]
+                                       text-slate-500
+                                       dark:border-white/[0.06]
+                                       dark:bg-white/[0.025]
+                                       dark:text-slate-500"
+                            >
+                                LOW LATENCY
+                            </span>
+
+                            <span
+                                class="rounded-md
+                                       border
+                                       border-slate-200
+                                       bg-white
+                                       px-2.5
+                                       py-1
+                                       font-mono
+                                       text-[10px]
+                                       text-slate-500
+                                       dark:border-white/[0.06]
+                                       dark:bg-white/[0.025]
+                                       dark:text-slate-500"
+                            >
+                                RESPONSIVE
+                            </span>
+
+                        </div>
+
+                    </article>
 
 
                     <!-- =================================================
-                         FEATURE 3
+                         GAMING
                          ================================================= -->
 
-                    <div
+                    <article
                         class="group
                                relative
                                overflow-hidden
                                rounded-2xl
                                border
-                               border-white/[0.07]
-                               bg-white/[0.025]
+                               border-slate-200
+                               bg-slate-50/80
                                p-7
                                transition-all
                                duration-300
                                hover:-translate-y-1
-                               hover:border-[#00b0f0]/30
-                               hover:bg-white/[0.04]"
+                               hover:border-[#00b0f0]/35
+                               hover:bg-white
+                               dark:border-white/[0.07]
+                               dark:bg-white/[0.025]
+                               dark:hover:border-[#00b0f0]/30
+                               dark:hover:bg-white/[0.04]"
                     >
 
                         <div
@@ -642,56 +679,471 @@ import Layout from '../layouts/MainLayout.astro';
                         <div
                             class="mb-6
                                    flex
-                                   h-11
-                                   w-11
-                                   items-center
-                                   justify-center
-                                   rounded-xl
-                                   border
-                                   border-[#00b0f0]/15
-                                   bg-[#00b0f0]/[0.07]"
+                                   items-start
+                                   justify-between"
                         >
 
-                            <svg
-                                class="h-5 w-5 text-[#00b0f0]"
-                                fill="none"
-                                stroke="currentColor"
-                                viewBox="0 0 24 24"
+                            <div
+                                class="flex
+                                       h-11
+                                       w-11
+                                       items-center
+                                       justify-center
+                                       rounded-xl
+                                       border
+                                       border-[#00b0f0]/15
+                                       bg-[#00b0f0]/[0.07]"
                             >
 
-                                <path
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    stroke-width="2"
-                                    d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 00-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
-                                ></path>
+                                <svg
+                                    class="h-5 w-5 text-[#00b0f0]"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    viewBox="0 0 24 24"
+                                >
 
-                            </svg>
+                                    <path
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        stroke-width="2"
+                                        d="M6.5 6.5h11a4.5 4.5 0 014.3 5.8l-1.1 3.8a3.5 3.5 0 01-6.5.7l-.7-1.2H10.5l-.7 1.2a3.5 3.5 0 01-6.5-.7l-1.1-3.8a4.5 4.5 0 014.3-5.8z"
+                                    ></path>
+
+                                    <path
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        stroke-width="2"
+                                        d="M8 10v4M6 12h4M16 11h.01M19 13h.01"
+                                    ></path>
+
+                                </svg>
+
+                            </div>
+
+
+                            <span
+                                class="font-mono
+                                       text-[10px]
+                                       font-bold
+                                       tracking-[0.2em]
+                                       text-slate-400
+                                       dark:text-slate-600"
+                            >
+                                02
+                            </span>
 
                         </div>
 
 
                         <h3
                             class="mb-3
-                                   text-lg
+                                   text-xl
                                    font-bold
-                                   text-white"
+                                   text-slate-900
+                                   dark:text-white"
                         >
-                            100% Secure via Snapshots
+                            Gaming
                         </h3>
 
 
                         <p
                             class="text-sm
                                    leading-6
-                                   text-slate-500"
+                                   text-slate-500
+                                   dark:text-slate-400"
                         >
-                            No more broken updates. Your entire OS is
-                            backed up via snapshots. If something fails,
-                            instantly rollback to a working previous state.
+                            Built with modern Linux gaming in mind.
+                            Steam, Proton and the surrounding tooling
+                            are treated as first-class parts of the
+                            desktop experience.
                         </p>
 
-                    </div>
+
+                        <div
+                            class="mt-6
+                                   flex
+                                   flex-wrap
+                                   gap-2"
+                        >
+
+                            <span
+                                class="rounded-md
+                                       border
+                                       border-slate-200
+                                       bg-white
+                                       px-2.5
+                                       py-1
+                                       font-mono
+                                       text-[10px]
+                                       text-slate-500
+                                       dark:border-white/[0.06]
+                                       dark:bg-white/[0.025]
+                                       dark:text-slate-500"
+                            >
+                                STEAM
+                            </span>
+
+                            <span
+                                class="rounded-md
+                                       border
+                                       border-slate-200
+                                       bg-white
+                                       px-2.5
+                                       py-1
+                                       font-mono
+                                       text-[10px]
+                                       text-slate-500
+                                       dark:border-white/[0.06]
+                                       dark:bg-white/[0.025]
+                                       dark:text-slate-500"
+                            >
+                                PROTON
+                            </span>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- =================================================
+                         DECLARATIVE
+                         ================================================= -->
+
+                    <article
+                        class="group
+                               relative
+                               overflow-hidden
+                               rounded-2xl
+                               border
+                               border-slate-200
+                               bg-slate-50/80
+                               p-7
+                               transition-all
+                               duration-300
+                               hover:-translate-y-1
+                               hover:border-[#00b0f0]/35
+                               hover:bg-white
+                               dark:border-white/[0.07]
+                               dark:bg-white/[0.025]
+                               dark:hover:border-[#00b0f0]/30
+                               dark:hover:bg-white/[0.04]"
+                    >
+
+                        <div
+                            class="absolute
+                                   left-0
+                                   top-0
+                                   h-px
+                                   w-0
+                                   bg-[#00b0f0]
+                                   transition-all
+                                   duration-500
+                                   group-hover:w-full"
+                        ></div>
+
+
+                        <div
+                            class="mb-6
+                                   flex
+                                   items-start
+                                   justify-between"
+                        >
+
+                            <div
+                                class="flex
+                                       h-11
+                                       w-11
+                                       items-center
+                                       justify-center
+                                       rounded-xl
+                                       border
+                                       border-[#00b0f0]/15
+                                       bg-[#00b0f0]/[0.07]"
+                            >
+
+                                <svg
+                                    class="h-5 w-5 text-[#00b0f0]"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    viewBox="0 0 24 24"
+                                >
+
+                                    <path
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        stroke-width="2"
+                                        d="M8 7V3m8 4V3M5 11h14M5 5h14a2 2 0 012 2v12a2 2 0 01-2 2H5a2 2 0 01-2-2V7a2 2 0 012-2z"
+                                    ></path>
+
+                                </svg>
+
+                            </div>
+
+
+                            <span
+                                class="font-mono
+                                       text-[10px]
+                                       font-bold
+                                       tracking-[0.2em]
+                                       text-slate-400
+                                       dark:text-slate-600"
+                            >
+                                03
+                            </span>
+
+                        </div>
+
+
+                        <h3
+                            class="mb-3
+                                   text-xl
+                                   font-bold
+                                   text-slate-900
+                                   dark:text-white"
+                        >
+                            Declarative
+                        </h3>
+
+
+                        <p
+                            class="text-sm
+                                   leading-6
+                                   text-slate-500
+                                   dark:text-slate-400"
+                        >
+                            Your system should be reproducible instead
+                            of being a collection of undocumented manual
+                            changes. Configuration becomes part of the
+                            operating system itself.
+                        </p>
+
+
+                        <div
+                            class="mt-6
+                                   flex
+                                   flex-wrap
+                                   gap-2"
+                        >
+
+                            <span
+                                class="rounded-md
+                                       border
+                                       border-slate-200
+                                       bg-white
+                                       px-2.5
+                                       py-1
+                                       font-mono
+                                       text-[10px]
+                                       text-slate-500
+                                       dark:border-white/[0.06]
+                                       dark:bg-white/[0.025]
+                                       dark:text-slate-500"
+                            >
+                                REPRODUCIBLE
+                            </span>
+
+                            <span
+                                class="rounded-md
+                                       border
+                                       border-slate-200
+                                       bg-white
+                                       px-2.5
+                                       py-1
+                                       font-mono
+                                       text-[10px]
+                                       text-slate-500
+                                       dark:border-white/[0.06]
+                                       dark:bg-white/[0.025]
+                                       dark:text-slate-500"
+                            >
+                                DECLARATIVE
+                            </span>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- =================================================
+                         NIRI + NOCTALIA
+                         ================================================= -->
+
+                    <article
+                        class="group
+                               relative
+                               overflow-hidden
+                               rounded-2xl
+                               border
+                               border-slate-200
+                               bg-slate-50/80
+                               p-7
+                               transition-all
+                               duration-300
+                               hover:-translate-y-1
+                               hover:border-[#00b0f0]/35
+                               hover:bg-white
+                               dark:border-white/[0.07]
+                               dark:bg-white/[0.025]
+                               dark:hover:border-[#00b0f0]/30
+                               dark:hover:bg-white/[0.04]"
+                    >
+
+                        <div
+                            class="absolute
+                                   left-0
+                                   top-0
+                                   h-px
+                                   w-0
+                                   bg-[#00b0f0]
+                                   transition-all
+                                   duration-500
+                                   group-hover:w-full"
+                        ></div>
+
+
+                        <div
+                            class="mb-6
+                                   flex
+                                   items-start
+                                   justify-between"
+                        >
+
+                            <div
+                                class="flex
+                                       h-11
+                                       w-11
+                                       items-center
+                                       justify-center
+                                       rounded-xl
+                                       border
+                                       border-[#00b0f0]/15
+                                       bg-[#00b0f0]/[0.07]"
+                            >
+
+                                <svg
+                                    class="h-5 w-5 text-[#00b0f0]"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    viewBox="0 0 24 24"
+                                >
+
+                                    <rect
+                                        x="3"
+                                        y="4"
+                                        width="18"
+                                        height="16"
+                                        rx="2"
+                                        stroke-width="2"
+                                    ></rect>
+
+                                    <path
+                                        d="M3 9h18M9 9v11"
+                                        stroke-width="2"
+                                    ></path>
+
+                                </svg>
+
+                            </div>
+
+
+                            <span
+                                class="font-mono
+                                       text-[10px]
+                                       font-bold
+                                       tracking-[0.2em]
+                                       text-slate-400
+                                       dark:text-slate-600"
+                            >
+                                04
+                            </span>
+
+                        </div>
+
+
+                        <h3
+                            class="mb-3
+                                   text-xl
+                                   font-bold
+                                   text-slate-900
+                                   dark:text-white"
+                        >
+                            Niri + Noctalia
+                        </h3>
+
+
+                        <p
+                            class="text-sm
+                                   leading-6
+                                   text-slate-500
+                                   dark:text-slate-400"
+                        >
+                            A modern Wayland desktop built around
+                            scrollable tiling with Niri and a focused
+                            desktop shell powered by Noctalia.
+                        </p>
+
+
+                        <div
+                            class="mt-6
+                                   flex
+                                   flex-wrap
+                                   gap-2"
+                        >
+
+                            <span
+                                class="rounded-md
+                                       border
+                                       border-slate-200
+                                       bg-white
+                                       px-2.5
+                                       py-1
+                                       font-mono
+                                       text-[10px]
+                                       text-slate-500
+                                       dark:border-white/[0.06]
+                                       dark:bg-white/[0.025]
+                                       dark:text-slate-500"
+                            >
+                                WAYLAND
+                            </span>
+
+                            <span
+                                class="rounded-md
+                                       border
+                                       border-slate-200
+                                       bg-white
+                                       px-2.5
+                                       py-1
+                                       font-mono
+                                       text-[10px]
+                                       text-slate-500
+                                       dark:border-white/[0.06]
+                                       dark:bg-white/[0.025]
+                                       dark:text-slate-500"
+                            >
+                                NIRI
+                            </span>
+
+                            <span
+                                class="rounded-md
+                                       border
+                                       border-slate-200
+                                       bg-white
+                                       px-2.5
+                                       py-1
+                                       font-mono
+                                       text-[10px]
+                                       text-slate-500
+                                       dark:border-white/[0.06]
+                                       dark:bg-white/[0.025]
+                                       dark:text-slate-500"
+                            >
+                                NOCTALIA
+                            </span>
+
+                        </div>
+
+                    </article>
 
                 </div>
 
@@ -701,18 +1153,18 @@ import Layout from '../layouts/MainLayout.astro';
 
 
         <!-- =========================================================
-             DOWNLOAD MODAL
+             MODAL
              ========================================================= -->
 
         <div
             id="veloxDownloadModal"
-            class="hidden
-                   fixed
+            class="fixed
                    inset-0
                    z-[9999]
+                   hidden
                    items-center
                    justify-center
-                   bg-black/75
+                   bg-black/60
                    p-4
                    backdrop-blur-md"
         >
@@ -724,11 +1176,13 @@ import Layout from '../layouts/MainLayout.astro';
                        overflow-hidden
                        rounded-3xl
                        border
-                       border-white/[0.08]
-                       bg-[#0b111c]
+                       border-slate-200
+                       bg-white
                        p-8
                        text-center
-                       shadow-2xl"
+                       shadow-2xl
+                       dark:border-white/[0.08]
+                       dark:bg-[#0b111c]"
             >
 
                 <!-- Modal glow -->
@@ -792,7 +1246,8 @@ import Layout from '../layouts/MainLayout.astro';
                     class="mb-4
                            text-2xl
                            font-bold
-                           text-white
+                           text-slate-900
+                           dark:text-white
                            md:text-3xl"
                 >
                     Under Restructuring
@@ -802,7 +1257,8 @@ import Layout from '../layouts/MainLayout.astro';
                 <div
                     class="mb-8
                            space-y-4
-                           text-slate-400"
+                           text-slate-500
+                           dark:text-slate-400"
                 >
 
                     <p class="text-base leading-7">
@@ -833,18 +1289,24 @@ import Layout from '../layouts/MainLayout.astro';
                     class="w-full
                            rounded-xl
                            border
-                           border-white/[0.08]
-                           bg-white/[0.03]
+                           border-slate-200
+                           bg-slate-50
                            py-3
                            text-xs
                            font-semibold
                            uppercase
                            tracking-[0.18em]
-                           text-slate-400
+                           text-slate-500
                            transition-all
-                           hover:border-white/[0.15]
-                           hover:bg-white/[0.06]
-                           hover:text-white"
+                           hover:border-slate-300
+                           hover:bg-slate-100
+                           hover:text-slate-900
+                           dark:border-white/[0.08]
+                           dark:bg-white/[0.03]
+                           dark:text-slate-400
+                           dark:hover:border-white/[0.15]
+                           dark:hover:bg-white/[0.06]
+                           dark:hover:text-white"
                 >
                     Close
                 </button>
@@ -868,7 +1330,6 @@ import Layout from '../layouts/MainLayout.astro';
                 if (!modal) return;
 
                 modal.classList.remove("hidden");
-
                 modal.style.display = "flex";
 
                 document.body.style.overflow = "hidden";
@@ -883,10 +1344,9 @@ import Layout from '../layouts/MainLayout.astro';
                 if (!modal) return;
 
                 modal.classList.add("hidden");
-
                 modal.style.display = "none";
 
-                document.body.style.overflow = "auto";
+                document.body.style.overflow = "";
             }
 
 
