@@ -14,10 +14,9 @@ import Layout from '../layouts/MainLayout.astro';
             class="w-full
                    border-b
                    border-slate-200
-                   bg-white/80
+                   bg-white
                    dark:border-white/[0.06]
-                   dark:bg-[#080d16]/80
-                   backdrop-blur-xl
+                   dark:bg-[#080d16]
                    transition-colors
                    duration-300"
         >
@@ -31,7 +30,7 @@ import Layout from '../layouts/MainLayout.astro';
                        justify-center
                        gap-2
                        px-6
-                       py-3.5
+                       py-3
                        text-center
                        sm:flex-row"
             >
@@ -88,47 +87,21 @@ import Layout from '../layouts/MainLayout.astro';
             class="relative
                    isolate
                    overflow-hidden
+                   border-b
+                   border-slate-200
                    bg-slate-50
                    px-6
                    pb-28
                    pt-24
                    transition-colors
                    duration-300
+                   dark:border-white/[0.06]
                    dark:bg-[#070c16]
                    md:pb-36
                    md:pt-32"
         >
 
-            <!-- =====================================================
-                 CLEAN LIGHT MODE BACKGROUND
-                 ===================================================== -->
-
-            <div
-                class="pointer-events-none
-                       absolute
-                       inset-0
-                       -z-10
-                       bg-[radial-gradient(ellipse_60%_55%_at_50%_5%,rgba(0,176,240,0.10),transparent_70%),radial-gradient(ellipse_50%_50%_at_100%_100%,rgba(0,119,204,0.035),transparent_75%)]
-                       dark:hidden"
-            ></div>
-
-
-            <!-- =====================================================
-                 CLEAN DARK MODE BACKGROUND
-                 ===================================================== -->
-
-            <div
-                class="pointer-events-none
-                       absolute
-                       inset-0
-                       -z-10
-                       hidden
-                       bg-[radial-gradient(ellipse_65%_55%_at_50%_8%,rgba(0,176,240,0.115),transparent_68%),radial-gradient(ellipse_55%_55%_at_100%_100%,rgba(0,119,204,0.045),transparent_72%)]
-                       dark:block"
-            ></div>
-
-
-            <!-- Very subtle top atmosphere -->
+            <!-- Very subtle atmosphere -->
 
             <div
                 class="pointer-events-none
@@ -136,11 +109,27 @@ import Layout from '../layouts/MainLayout.astro';
                        inset-x-0
                        top-0
                        -z-10
-                       h-48
-                       bg-gradient-to-b
-                       from-slate-200/30
-                       to-transparent
-                       dark:from-[#0b1725]/30"
+                       h-[420px]
+                       bg-[radial-gradient(ellipse_55%_45%_at_50%_0%,rgba(0,176,240,0.055),transparent_72%)]
+                       dark:bg-[radial-gradient(ellipse_55%_45%_at_50%_0%,rgba(0,176,240,0.075),transparent_72%)]"
+            ></div>
+
+
+            <!-- Subtle technical grid -->
+
+            <div
+                class="pointer-events-none
+                       absolute
+                       inset-0
+                       -z-10
+                       opacity-[0.025]
+                       dark:opacity-[0.035]"
+                style="
+                    background-image:
+                        linear-gradient(to right, currentColor 1px, transparent 1px),
+                        linear-gradient(to bottom, currentColor 1px, transparent 1px);
+                    background-size: 72px 72px;
+                "
             ></div>
 
 
@@ -160,24 +149,25 @@ import Layout from '../layouts/MainLayout.astro';
                      ================================================= -->
 
                 <div
-                    class="mb-10
+                    class="mb-12
                            flex
                            justify-center
-                           md:mb-12"
+                           md:mb-14"
                 >
 
                     <img
                         src="https://wiki.veloxos.org/_astro/new_logo.CxzxC9pm_2vCcGx.webp"
                         alt="VeloxOS"
-                        class="h-32
+                        class="h-40
                                w-auto
                                object-contain
-                               drop-shadow-[0_0_35px_rgba(0,176,240,0.16)]
+                               drop-shadow-[0_0_30px_rgba(0,176,240,0.12)]
                                transition-all
                                duration-300
-                               dark:drop-shadow-[0_0_40px_rgba(0,176,240,0.20)]
-                               md:h-60
-                               lg:h-48"
+                               dark:drop-shadow-[0_0_40px_rgba(0,176,240,0.16)]
+                               sm:h-44
+                               md:h-52
+                               lg:h-56"
                     />
 
                 </div>
@@ -189,13 +179,13 @@ import Layout from '../layouts/MainLayout.astro';
 
                 <h1
                     class="mb-6
-                           text-2xl
+                           text-xl
                            font-semibold
                            leading-tight
                            tracking-tight
-                           text-slate-800
-                           dark:text-slate-100
-                           md:text-3xl"
+                           text-slate-700
+                           dark:text-slate-200
+                           sm:text-2xl"
                 >
 
                     <span class="text-[#00b0f0]">
@@ -269,12 +259,12 @@ import Layout from '../layouts/MainLayout.astro';
                                text-sm
                                font-bold
                                text-white
-                               shadow-[0_8px_30px_rgba(0,176,240,0.20)]
+                               shadow-[0_8px_30px_rgba(0,176,240,0.18)]
                                transition-all
                                duration-300
                                hover:-translate-y-0.5
                                hover:bg-[#00c8ff]
-                               hover:shadow-[0_10px_35px_rgba(0,176,240,0.30)]
+                               hover:shadow-[0_10px_35px_rgba(0,176,240,0.28)]
                                sm:w-auto"
                     >
 
@@ -322,23 +312,22 @@ import Layout from '../layouts/MainLayout.astro';
                                rounded-xl
                                border
                                border-slate-200
-                               bg-white/70
+                               bg-white
                                px-7
                                py-3.5
                                text-sm
                                font-semibold
                                text-slate-700
-                               backdrop-blur-sm
                                transition-all
                                duration-300
                                hover:-translate-y-0.5
                                hover:border-[#00b0f0]/40
-                               hover:bg-white
+                               hover:bg-slate-50
                                dark:border-white/[0.10]
-                               dark:bg-white/[0.035]
+                               dark:bg-white/[0.025]
                                dark:text-slate-200
                                dark:hover:border-[#00b0f0]/40
-                               dark:hover:bg-white/[0.06]
+                               dark:hover:bg-white/[0.05]
                                sm:w-auto"
                     >
                         Learn More
@@ -349,21 +338,19 @@ import Layout from '../layouts/MainLayout.astro';
             </div>
 
 
-            <!-- =====================================================
-                 HERO BOTTOM FADE
-                 ===================================================== -->
+            <!-- Bottom separator -->
 
             <div
                 class="pointer-events-none
                        absolute
                        inset-x-0
                        bottom-0
-                       -z-10
-                       h-32
-                       bg-gradient-to-b
+                       h-px
+                       bg-gradient-to-r
                        from-transparent
-                       to-slate-50
-                       dark:to-[#070c16]"
+                       via-slate-300
+                       to-transparent
+                       dark:via-white/[0.08]"
             ></div>
 
         </section>
@@ -382,23 +369,24 @@ import Layout from '../layouts/MainLayout.astro';
                    py-24
                    transition-colors
                    duration-300
-                   dark:bg-[#070c16]
+                   dark:bg-[#0a101b]
                    md:py-32"
         >
 
-            <!-- =====================================================
-                 VERY SUBTLE SECTION ATMOSPHERE
-                 ===================================================== -->
+            <!-- Very subtle background -->
 
             <div
                 class="pointer-events-none
                        absolute
-                       left-1/2
-                       top-0
-                       h-[500px]
-                       w-[900px]
-                       -translate-x-1/2
-                       bg-[radial-gradient(ellipse_at_center,rgba(0,176,240,0.045),transparent_68%)]"
+                       inset-0
+                       opacity-[0.018]
+                       dark:opacity-[0.025]"
+                style="
+                    background-image:
+                        linear-gradient(to right, currentColor 1px, transparent 1px),
+                        linear-gradient(to bottom, currentColor 1px, transparent 1px);
+                    background-size: 72px 72px;
+                "
             ></div>
 
 
@@ -489,7 +477,7 @@ import Layout from '../layouts/MainLayout.astro';
                                rounded-2xl
                                border
                                border-slate-200
-                               bg-slate-50/80
+                               bg-slate-50
                                p-7
                                transition-all
                                duration-300
@@ -499,10 +487,8 @@ import Layout from '../layouts/MainLayout.astro';
                                dark:border-white/[0.07]
                                dark:bg-white/[0.025]
                                dark:hover:border-[#00b0f0]/30
-                               dark:hover:bg-white/[0.04]"
+                               dark:hover:bg-white/[0.045]"
                     >
-
-                        <!-- Accent -->
 
                         <div
                             class="absolute
@@ -650,7 +636,7 @@ import Layout from '../layouts/MainLayout.astro';
                                rounded-2xl
                                border
                                border-slate-200
-                               bg-slate-50/80
+                               bg-slate-50
                                p-7
                                transition-all
                                duration-300
@@ -660,7 +646,7 @@ import Layout from '../layouts/MainLayout.astro';
                                dark:border-white/[0.07]
                                dark:bg-white/[0.025]
                                dark:hover:border-[#00b0f0]/30
-                               dark:hover:bg-white/[0.04]"
+                               dark:hover:bg-white/[0.045]"
                     >
 
                         <div
@@ -816,7 +802,7 @@ import Layout from '../layouts/MainLayout.astro';
                                rounded-2xl
                                border
                                border-slate-200
-                               bg-slate-50/80
+                               bg-slate-50
                                p-7
                                transition-all
                                duration-300
@@ -826,7 +812,7 @@ import Layout from '../layouts/MainLayout.astro';
                                dark:border-white/[0.07]
                                dark:bg-white/[0.025]
                                dark:hover:border-[#00b0f0]/30
-                               dark:hover:bg-white/[0.04]"
+                               dark:hover:bg-white/[0.045]"
                     >
 
                         <div
@@ -975,7 +961,7 @@ import Layout from '../layouts/MainLayout.astro';
                                rounded-2xl
                                border
                                border-slate-200
-                               bg-slate-50/80
+                               bg-slate-50
                                p-7
                                transition-all
                                duration-300
@@ -985,7 +971,7 @@ import Layout from '../layouts/MainLayout.astro';
                                dark:border-white/[0.07]
                                dark:bg-white/[0.025]
                                dark:hover:border-[#00b0f0]/30
-                               dark:hover:bg-white/[0.04]"
+                               dark:hover:bg-white/[0.045]"
                     >
 
                         <div
@@ -1185,8 +1171,6 @@ import Layout from '../layouts/MainLayout.astro';
                        dark:bg-[#0b111c]"
             >
 
-                <!-- Modal glow -->
-
                 <div
                     class="pointer-events-none
                            absolute
@@ -1195,11 +1179,9 @@ import Layout from '../layouts/MainLayout.astro';
                            h-56
                            w-80
                            -translate-x-1/2
-                           bg-[radial-gradient(ellipse_at_center,rgba(0,176,240,0.12),transparent_70%)]"
+                           bg-[radial-gradient(ellipse_at_center,rgba(0,176,240,0.10),transparent_70%)]"
                 ></div>
 
-
-                <!-- Icon -->
 
                 <div
                     class="relative
@@ -1317,7 +1299,7 @@ import Layout from '../layouts/MainLayout.astro';
 
 
         <!-- =========================================================
-             MODAL SCRIPT
+             SCRIPT
              ========================================================= -->
 
         <script is:inline>
