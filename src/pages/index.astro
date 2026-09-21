@@ -4,7 +4,7 @@ import MainLayout from '../layouts/MainLayout.astro';
 
 <MainLayout title="VeloxOS | Minimal. Fast. Yours.">
     <!-- Hero Section -->
-    <section class="relative pt-12 pb-20 md:pt-16 md:pb-32 overflow-hidden">
+    <section class="relative pt-12 pb-20 md:pt-16 md:pb-28 overflow-hidden">
         <div class="max-w-5xl mx-auto px-6 flex flex-col items-center text-center">
             
             <!-- Project Reboot Badge -->
@@ -13,12 +13,12 @@ import MainLayout from '../layouts/MainLayout.astro';
                 <span>VeloxOS is stepping up a gear!</span>
             </div>
 
-            <!-- Hero Logo (Erhalten & aufgeräumt) -->
+            <!-- Hero Logo -->
             <div class="mb-8 relative group">
                 <div class="absolute -inset-4 bg-[#00b0f0]/20 rounded-full blur-2xl group-hover:bg-[#00b0f0]/30 transition-all duration-500"></div>
                 <img 
                     src="/NewLogo_wText.webp" 
-                    alt="VeloxOS Large Logo" 
+                    alt="VeloxOS Logo" 
                     class="relative h-28 sm:h-36 md:h-44 w-auto object-contain drop-shadow-[0_10px_25px_rgba(0,176,240,0.2)]" 
                 />
             </div>
@@ -35,15 +35,15 @@ import MainLayout from '../layouts/MainLayout.astro';
 
             <!-- Action Buttons -->
             <div class="flex flex-col sm:flex-row items-center gap-4 w-full sm:w-auto">
-                <a 
-                    href="#download" 
-                    class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-xl bg-[#00b0f0] hover:bg-[#0090c8] text-slate-950 font-semibold transition-all duration-200 shadow-lg shadow-[#00b0f0]/25 hover:shadow-[#00b0f0]/40 hover:-translate-y-0.5"
+                <button 
+                    id="openDownloadModal" 
+                    class="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-7 py-3.5 rounded-xl bg-[#00b0f0] hover:bg-[#0090c8] text-slate-950 font-semibold transition-all duration-200 shadow-lg shadow-[#00b0f0]/25 hover:shadow-[#00b0f0]/40 hover:-translate-y-0.5 cursor-pointer"
                 >
                     <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"></path></svg>
                     Try VeloxOS (ISO)
-                </a>
+                </button>
                 <a 
-                    href="/about" 
+                    href="#why-velox" 
                     class="w-full sm:w-auto inline-flex items-center justify-center px-7 py-3.5 rounded-xl border border-slate-300 dark:border-white/15 hover:border-[#00b0f0] text-slate-700 dark:text-slate-200 font-semibold transition-all duration-200 bg-white/50 dark:bg-white/5 backdrop-blur-sm hover:-translate-y-0.5"
                 >
                     Learn More
@@ -54,7 +54,7 @@ import MainLayout from '../layouts/MainLayout.astro';
     </section>
 
     <!-- Why VeloxOS Section -->
-    <section class="py-16 md:py-24 border-t border-slate-200/60 dark:border-white/5 bg-slate-100/40 dark:bg-[#09111e]/50">
+    <section id="why-velox" class="py-16 md:py-24 border-t border-slate-200/60 dark:border-white/5 bg-slate-100/40 dark:bg-[#09111e]/50 scroll-mt-24">
         <div class="max-w-6xl mx-auto px-6">
             
             <div class="text-center mb-16">
@@ -69,37 +69,46 @@ import MainLayout from '../layouts/MainLayout.astro';
                 </p>
             </div>
 
-            <!-- Features Grid -->
+            <!-- Features Grid mit echten SVG Icons -->
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 
-                <div class="p-8 rounded-2xl border border-slate-200/80 dark:border-white/10 bg-white dark:bg-[#0c1524]/70 backdrop-blur-sm transition-all duration-300 hover:border-[#00b0f0]/50 hover:shadow-xl hover:shadow-[#00b0f0]/5">
-                    <div class="w-10 h-10 rounded-xl bg-[#00b0f0]/10 text-[#00b0f0] flex items-center justify-between px-3 font-mono font-bold text-xs mb-6">
-                        <span>⚡</span>
-                        <span>01</span>
+                <!-- Card 1 -->
+                <div class="p-8 rounded-2xl border border-slate-200/80 dark:border-white/10 bg-white dark:bg-[#0c1524]/70 backdrop-blur-sm transition-all duration-300 hover:border-[#00b0f0]/50 hover:shadow-xl hover:shadow-[#00b0f0]/5 group">
+                    <div class="w-12 h-12 rounded-xl bg-[#00b0f0]/10 border border-[#00b0f0]/20 text-[#00b0f0] flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"></path></svg>
                     </div>
-                    <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-3">Extreme Responsiveness</h3>
+                    <div class="flex items-center justify-between mb-2">
+                        <h3 class="text-xl font-bold text-slate-900 dark:text-white">Extreme Responsiveness</h3>
+                        <span class="text-xs font-mono text-[#00b0f0]/60">01</span>
+                    </div>
                     <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
                         Optimized kernel configurations and lightweight window management ensure every frame and keypress counts.
                     </p>
                 </div>
 
-                <div class="p-8 rounded-2xl border border-slate-200/80 dark:border-white/10 bg-white dark:bg-[#0c1524]/70 backdrop-blur-sm transition-all duration-300 hover:border-[#00b0f0]/50 hover:shadow-xl hover:shadow-[#00b0f0]/5">
-                    <div class="w-10 h-10 rounded-xl bg-[#00b0f0]/10 text-[#00b0f0] flex items-center justify-between px-3 font-mono font-bold text-xs mb-6">
-                        <span>🎮</span>
-                        <span>02</span>
+                <!-- Card 2 -->
+                <div class="p-8 rounded-2xl border border-slate-200/80 dark:border-white/10 bg-white dark:bg-[#0c1524]/70 backdrop-blur-sm transition-all duration-300 hover:border-[#00b0f0]/50 hover:shadow-xl hover:shadow-[#00b0f0]/5 group">
+                    <div class="w-12 h-12 rounded-xl bg-[#00b0f0]/10 border border-[#00b0f0]/20 text-[#00b0f0] flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M6 11h4M8 9v4m10-3h.01M15 13h.01M17 11h.01M15 9h.01M2 12c0 3.5 2.5 6 6 6 1.2 0 2.3-.3 3.2-.9l1.8 1.8c.4.4 1 .4 1.4 0l1.8-1.8c.6.9 1.7 1.2 3.2 1.2 3.5 0 6-2.5 6-6s-2.5-6-6-6c-1.5 0-2.6.3-3.2 1.2L14.4 5.7c-.4-.4-1-.4-1.4 0L11.2 7.5C10.3 6.9 9.2 6.6 8 6.6c-3.5 0-6 2.5-6 6z"></path></svg>
                     </div>
-                    <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-3">Gaming Ready</h3>
+                    <div class="flex items-center justify-between mb-2">
+                        <h3 class="text-xl font-bold text-slate-900 dark:text-white">Gaming Ready</h3>
+                        <span class="text-xs font-mono text-[#00b0f0]/60">02</span>
+                    </div>
                     <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
                         Pre-configured graphics drivers, Wayland optimizations, and game execution layers out-of-the-box.
                     </p>
                 </div>
 
-                <div class="p-8 rounded-2xl border border-slate-200/80 dark:border-white/10 bg-white dark:bg-[#0c1524]/70 backdrop-blur-sm transition-all duration-300 hover:border-[#00b0f0]/50 hover:shadow-xl hover:shadow-[#00b0f0]/5">
-                    <div class="w-10 h-10 rounded-xl bg-[#00b0f0]/10 text-[#00b0f0] flex items-center justify-between px-3 font-mono font-bold text-xs mb-6">
-                        <span>🛡️</span>
-                        <span>03</span>
+                <!-- Card 3 -->
+                <div class="p-8 rounded-2xl border border-slate-200/80 dark:border-white/10 bg-white dark:bg-[#0c1524]/70 backdrop-blur-sm transition-all duration-300 hover:border-[#00b0f0]/50 hover:shadow-xl hover:shadow-[#00b0f0]/5 group">
+                    <div class="w-12 h-12 rounded-xl bg-[#00b0f0]/10 border border-[#00b0f0]/20 text-[#00b0f0] flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
                     </div>
-                    <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-3">Reproducible & Clean</h3>
+                    <div class="flex items-center justify-between mb-2">
+                        <h3 class="text-xl font-bold text-slate-900 dark:text-white">Reproducible & Clean</h3>
+                        <span class="text-xs font-mono text-[#00b0f0]/60">03</span>
+                    </div>
                     <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
                         Predictable system states without bloatware. You decide what runs on your machine.
                     </p>
@@ -109,4 +118,106 @@ import MainLayout from '../layouts/MainLayout.astro';
 
         </div>
     </section>
+
+    <!-- ISO Download Modal -->
+    <div id="downloadModal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/80 backdrop-blur-md opacity-0 pointer-events-none transition-opacity duration-300">
+        <div class="relative w-full max-w-lg bg-white dark:bg-[#0c1524] border border-slate-200 dark:border-white/10 rounded-2xl p-6 sm:p-8 shadow-2xl scale-95 transition-transform duration-300" id="downloadModalContent">
+            
+            <!-- Close Button -->
+            <button id="closeDownloadModal" class="absolute top-5 right-5 text-slate-400 hover:text-slate-600 dark:hover:text-white p-1 transition-colors" aria-label="Close Modal">
+                <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M18 6L6 18M6 6l12 12"></path></svg>
+            </button>
+
+            <!-- Modal Header -->
+            <div class="flex items-center gap-3 mb-4">
+                <div class="w-10 h-10 rounded-xl bg-[#00b0f0]/10 border border-[#00b0f0]/20 text-[#00b0f0] flex items-center justify-center">
+                    <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"></path></svg>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold text-slate-900 dark:text-white">Download VeloxOS ISO</h3>
+                    <p class="text-xs text-slate-500 dark:text-slate-400">Select your preferred mirror or torrent</p>
+                </div>
+            </div>
+
+            <p class="text-sm text-slate-600 dark:text-slate-300 mb-6 leading-relaxed">
+                VeloxOS is currently undergoing its major <strong class="text-[#00b0f0]">Project Reboot</strong> restructuring. You can test early development ISO images or check our GitHub builds.
+            </p>
+
+            <!-- Download Links / Buttons -->
+            <div class="flex flex-col gap-3">
+                <a 
+                    href="https://github.com/VeloxOSLinux" 
+                    target="_blank" 
+                    class="flex items-center justify-between p-4 rounded-xl border border-slate-200 dark:border-white/10 bg-slate-50 dark:bg-white/5 hover:border-[#00b0f0] transition-colors group"
+                >
+                    <div class="flex items-center gap-3">
+                        <svg width="20" height="20" fill="currentColor" class="text-slate-700 dark:text-slate-200" viewBox="0 0 24 24"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+                        <div>
+                            <div class="text-sm font-semibold text-slate-900 dark:text-white group-hover:text-[#00b0f0] transition-colors">GitHub Releases</div>
+                            <div class="text-xs text-slate-500">Official ISOs & Build Artifacts</div>
+                        </div>
+                    </div>
+                    <span class="text-xs font-semibold px-2.5 py-1 rounded bg-[#00b0f0]/10 text-[#00b0f0]">Direct</span>
+                </a>
+
+                <a 
+                    href="https://wiki.veloxos.org" 
+                    target="_blank" 
+                    class="flex items-center justify-between p-4 rounded-xl border border-slate-200 dark:border-white/10 bg-slate-50 dark:bg-white/5 hover:border-[#00b0f0] transition-colors group"
+                >
+                    <div class="flex items-center gap-3">
+                        <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" class="text-slate-700 dark:text-slate-200" viewBox="0 0 24 24"><path d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
+                        <div>
+                            <div class="text-sm font-semibold text-slate-900 dark:text-white group-hover:text-[#00b0f0] transition-colors">Installation Guide</div>
+                            <div class="text-xs text-slate-500">Read instructions on Wiki</div>
+                        </div>
+                    </div>
+                    <span class="text-xs font-semibold px-2.5 py-1 rounded bg-slate-200 dark:bg-white/10 text-slate-600 dark:text-slate-300">Wiki</span>
+                </a>
+            </div>
+
+            <div class="mt-6 text-center">
+                <button id="closeDownloadModalBtn" class="text-xs text-slate-500 hover:text-slate-700 dark:hover:text-slate-300 underline">
+                    Cancel
+                </button>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Modal Script Integration -->
+    <script is:inline>
+        const setupModal = () => {
+            const openBtn = document.getElementById('openDownloadModal');
+            const closeBtn = document.getElementById('closeDownloadModal');
+            const closeBtnSecondary = document.getElementById('closeDownloadModalBtn');
+            const modal = document.getElementById('downloadModal');
+            const modalContent = document.getElementById('downloadModalContent');
+
+            if (!openBtn || !modal) return;
+
+            const openModal = () => {
+                modal.classList.remove('opacity-0', 'pointer-events-none');
+                modalContent?.classList.remove('scale-95');
+                modalContent?.classList.add('scale-100');
+            };
+
+            const closeModal = () => {
+                modal.classList.add('opacity-0', 'pointer-events-none');
+                modalContent?.classList.remove('scale-100');
+                modalContent?.classList.add('scale-95');
+            };
+
+            openBtn.onclick = openModal;
+            closeBtn.onclick = closeModal;
+            closeBtnSecondary.onclick = closeModal;
+
+            modal.onclick = (e) => {
+                if (e.target === modal) closeModal();
+            };
+        };
+
+        setupModal();
+        document.addEventListener('astro:after-swap', setupModal);
+    </script>
 </MainLayout>
