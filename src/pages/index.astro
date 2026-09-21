@@ -36,11 +36,11 @@ import MainLayout from '../layouts/MainLayout.astro';
             <!-- Action Buttons -->
             <div class="flex flex-col sm:flex-row items-center gap-4 w-full sm:w-auto">
                 <button 
-                    id="openDownloadModal" 
+                    id="openStatusModal" 
                     class="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-7 py-3.5 rounded-xl bg-[#00b0f0] hover:bg-[#0090c8] text-slate-950 font-semibold transition-all duration-200 shadow-lg shadow-[#00b0f0]/25 hover:shadow-[#00b0f0]/40 hover:-translate-y-0.5 cursor-pointer"
                 >
-                    <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"></path></svg>
-                    Try VeloxOS (ISO)
+                    <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    Reboot Status & Roadmap
                 </button>
                 <a 
                     href="#why-velox" 
@@ -69,7 +69,7 @@ import MainLayout from '../layouts/MainLayout.astro';
                 </p>
             </div>
 
-            <!-- Features Grid mit echten SVG Icons -->
+            <!-- Features Grid mit SVG Icons -->
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 
                 <!-- Card 1 -->
@@ -119,32 +119,47 @@ import MainLayout from '../layouts/MainLayout.astro';
         </div>
     </section>
 
-    <!-- ISO Download Modal -->
-    <div id="downloadModal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/80 backdrop-blur-md opacity-0 pointer-events-none transition-opacity duration-300">
-        <div class="relative w-full max-w-lg bg-white dark:bg-[#0c1524] border border-slate-200 dark:border-white/10 rounded-2xl p-6 sm:p-8 shadow-2xl scale-95 transition-transform duration-300" id="downloadModalContent">
+    <!-- Project Status / Reboot Modal -->
+    <div id="statusModal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/80 backdrop-blur-md opacity-0 pointer-events-none transition-opacity duration-300">
+        <div class="relative w-full max-w-lg bg-white dark:bg-[#0c1524] border border-slate-200 dark:border-white/10 rounded-2xl p-6 sm:p-8 shadow-2xl scale-95 transition-transform duration-300" id="statusModalContent">
             
             <!-- Close Button -->
-            <button id="closeDownloadModal" class="absolute top-5 right-5 text-slate-400 hover:text-slate-600 dark:hover:text-white p-1 transition-colors" aria-label="Close Modal">
+            <button id="closeStatusModal" class="absolute top-5 right-5 text-slate-400 hover:text-slate-600 dark:hover:text-white p-1 transition-colors" aria-label="Close Modal">
                 <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M18 6L6 18M6 6l12 12"></path></svg>
             </button>
 
             <!-- Modal Header -->
             <div class="flex items-center gap-3 mb-4">
                 <div class="w-10 h-10 rounded-xl bg-[#00b0f0]/10 border border-[#00b0f0]/20 text-[#00b0f0] flex items-center justify-center">
-                    <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"></path></svg>
+                    <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L5.05 15.12a2 2 0 00-1.022.547l-1.125 1.125a2 2 0 00.586 3.208l1.01.404a6 6 0 004.464 0l1.01-.404a6 6 0 014.464 0l1.01.404a6 6 0 004.464 0l1.01-.404a2 2 0 00.586-3.208l-1.125-1.125z"></path></svg>
                 </div>
                 <div>
-                    <h3 class="text-xl font-bold text-slate-900 dark:text-white">Download VeloxOS ISO</h3>
-                    <p class="text-xs text-slate-500 dark:text-slate-400">Select your preferred mirror or torrent</p>
+                    <h3 class="text-xl font-bold text-slate-900 dark:text-white">VeloxOS Project Reboot</h3>
+                    <p class="text-xs text-slate-500 dark:text-slate-400">Under Active Restructuring</p>
                 </div>
             </div>
 
             <p class="text-sm text-slate-600 dark:text-slate-300 mb-6 leading-relaxed">
-                VeloxOS is currently undergoing its major <strong class="text-[#00b0f0]">Project Reboot</strong> restructuring. You can test early development ISO images or check our GitHub builds.
+                We are currently completely restructuring VeloxOS. There is <strong class="text-[#00b0f0]">no public ISO available yet</strong>. Follow our progress or join the community to discuss the development:
             </p>
 
-            <!-- Download Links / Buttons -->
+            <!-- Status Community Links -->
             <div class="flex flex-col gap-3">
+                <a 
+                    href="https://discord.gg/pgHSK8NGxG" 
+                    target="_blank" 
+                    class="flex items-center justify-between p-4 rounded-xl border border-slate-200 dark:border-white/10 bg-slate-50 dark:bg-white/5 hover:border-[#00b0f0] transition-colors group"
+                >
+                    <div class="flex items-center gap-3">
+                        <svg width="20" height="20" fill="currentColor" class="text-slate-700 dark:text-slate-200" viewBox="0 0 24 24"><path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028 14.006 14.006 0 0 0 1.226-1.994.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z"/></svg>
+                        <div>
+                            <div class="text-sm font-semibold text-slate-900 dark:text-white group-hover:text-[#00b0f0] transition-colors">Join Discord</div>
+                            <div class="text-xs text-slate-500">Get dev updates & chat with us</div>
+                        </div>
+                    </div>
+                    <span class="text-xs font-semibold px-2.5 py-1 rounded bg-[#00b0f0]/10 text-[#00b0f0]">Community</span>
+                </a>
+
                 <a 
                     href="https://github.com/VeloxOSLinux" 
                     target="_blank" 
@@ -153,32 +168,17 @@ import MainLayout from '../layouts/MainLayout.astro';
                     <div class="flex items-center gap-3">
                         <svg width="20" height="20" fill="currentColor" class="text-slate-700 dark:text-slate-200" viewBox="0 0 24 24"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
                         <div>
-                            <div class="text-sm font-semibold text-slate-900 dark:text-white group-hover:text-[#00b0f0] transition-colors">GitHub Releases</div>
-                            <div class="text-xs text-slate-500">Official ISOs & Build Artifacts</div>
+                            <div class="text-sm font-semibold text-slate-900 dark:text-white group-hover:text-[#00b0f0] transition-colors">GitHub Repository</div>
+                            <div class="text-xs text-slate-500">Track development & commits</div>
                         </div>
                     </div>
-                    <span class="text-xs font-semibold px-2.5 py-1 rounded bg-[#00b0f0]/10 text-[#00b0f0]">Direct</span>
-                </a>
-
-                <a 
-                    href="https://wiki.veloxos.org" 
-                    target="_blank" 
-                    class="flex items-center justify-between p-4 rounded-xl border border-slate-200 dark:border-white/10 bg-slate-50 dark:bg-white/5 hover:border-[#00b0f0] transition-colors group"
-                >
-                    <div class="flex items-center gap-3">
-                        <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" class="text-slate-700 dark:text-slate-200" viewBox="0 0 24 24"><path d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
-                        <div>
-                            <div class="text-sm font-semibold text-slate-900 dark:text-white group-hover:text-[#00b0f0] transition-colors">Installation Guide</div>
-                            <div class="text-xs text-slate-500">Read instructions on Wiki</div>
-                        </div>
-                    </div>
-                    <span class="text-xs font-semibold px-2.5 py-1 rounded bg-slate-200 dark:bg-white/10 text-slate-600 dark:text-slate-300">Wiki</span>
+                    <span class="text-xs font-semibold px-2.5 py-1 rounded bg-slate-200 dark:bg-white/10 text-slate-600 dark:text-slate-300">Code</span>
                 </a>
             </div>
 
             <div class="mt-6 text-center">
-                <button id="closeDownloadModalBtn" class="text-xs text-slate-500 hover:text-slate-700 dark:hover:text-slate-300 underline">
-                    Cancel
+                <button id="closeStatusModalBtn" class="text-xs text-slate-500 hover:text-slate-700 dark:hover:text-slate-300 underline">
+                    Close
                 </button>
             </div>
 
@@ -188,11 +188,11 @@ import MainLayout from '../layouts/MainLayout.astro';
     <!-- Modal Script Integration -->
     <script is:inline>
         const setupModal = () => {
-            const openBtn = document.getElementById('openDownloadModal');
-            const closeBtn = document.getElementById('closeDownloadModal');
-            const closeBtnSecondary = document.getElementById('closeDownloadModalBtn');
-            const modal = document.getElementById('downloadModal');
-            const modalContent = document.getElementById('downloadModalContent');
+            const openBtn = document.getElementById('openStatusModal');
+            const closeBtn = document.getElementById('closeStatusModal');
+            const closeBtnSecondary = document.getElementById('closeStatusModalBtn');
+            const modal = document.getElementById('statusModal');
+            const modalContent = document.getElementById('statusModalContent');
 
             if (!openBtn || !modal) return;
 
