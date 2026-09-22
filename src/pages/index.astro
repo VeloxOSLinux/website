@@ -1,4 +1,3 @@
----
 import MainLayout from '../layouts/MainLayout.astro';
 import DesktopMockup from '../components/DesktopMockup.astro';
 ---
@@ -80,15 +79,15 @@ import DesktopMockup from '../components/DesktopMockup.astro';
         </div>
     </section>
 
-    <!-- WHY VELOXOS / KEY FEATURES SECTION (Visuell abgehobener Bereich) -->
+    <!-- WHY VELOXOS / KEY FEATURES SECTION -->
     <section id="whyveloxos" class="relative py-24 bg-[#080d1a] border-y border-[#00b0f0]/15 overflow-hidden scroll-mt-20">
         
-        <!-- Dezent leuchtender Cyan-Spotlight im Hintergrund -->
+        <!-- Background Glow -->
         <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[300px] bg-[#00b0f0]/5 blur-[120px] pointer-events-none rounded-full"></div>
 
         <div class="max-w-6xl mx-auto px-6 relative z-10">
             
-            <!-- Section Header (Linksbündig) -->
+            <!-- Section Header -->
             <div class="text-left max-w-3xl mb-14">
                 <span class="font-mono text-xs font-bold uppercase tracking-widest text-[#00b0f0] bg-[#00b0f0]/10 px-2.5 py-1 rounded border border-[#00b0f0]/20">
                     // WHY VELOXOS
@@ -97,43 +96,54 @@ import DesktopMockup from '../components/DesktopMockup.astro';
                     Stop Spending Hours Configuring Wayland.
                 </h2>
                 <p class="text-slate-300 text-sm sm:text-base mt-3 leading-relaxed">
-                    VeloxOS eliminates setup friction without taking away your control. Pure Arch performance paired with a pre-tuned, modern workflow.
+                    VeloxOS eliminates setup friction without taking away your control. Pure Arch performance paired with a pre-tuned, modern workflow and robust security defaults.
                 </p>
             </div>
 
-            <!-- 3 Feature Cards Grid -->
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- 4 Feature Cards Grid (2x2 on desktop) -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                 
                 <!-- Feature 1: Desktop Experience -->
-                <div class="p-8 rounded-2xl border border-white/10 bg-[#0c1222] hover:border-[#00b0f0]/60 transition-all duration-300 shadow-xl group">
+                <div class="p-6 rounded-2xl border border-white/10 bg-[#0c1222] hover:border-[#00b0f0]/60 transition-all duration-300 shadow-xl group">
                     <div class="w-12 h-12 rounded-xl bg-[#00b0f0]/10 border border-[#00b0f0]/30 text-[#00b0f0] flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                         <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z"></path></svg>
                     </div>
-                    <h3 class="text-xl font-bold text-white mb-3">Niri & Noctalia Shell</h3>
-                    <p class="text-slate-400 text-sm leading-relaxed">
+                    <h3 class="text-lg font-bold text-white mb-2">Niri & Noctalia Shell</h3>
+                    <p class="text-slate-400 text-xs leading-relaxed">
                         A modern, scrollable Wayland tiling environment out of the box. Pre-configured keybindings, sleek animations, and ultra-low resource usage.
                     </p>
                 </div>
 
                 <!-- Feature 2: Gaming Performance -->
-                <div class="p-8 rounded-2xl border border-white/10 bg-[#0c1222] hover:border-[#00b0f0]/60 transition-all duration-300 shadow-xl group">
+                <div class="p-6 rounded-2xl border border-white/10 bg-[#0c1222] hover:border-[#00b0f0]/60 transition-all duration-300 shadow-xl group">
                     <div class="w-12 h-12 rounded-xl bg-[#00b0f0]/10 border border-[#00b0f0]/30 text-[#00b0f0] flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                         <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
                     </div>
-                    <h3 class="text-xl font-bold text-white mb-3">Tuned for Gaming</h3>
-                    <p class="text-slate-400 text-sm leading-relaxed">
+                    <h3 class="text-lg font-bold text-white mb-2">Tuned for Gaming</h3>
+                    <p class="text-slate-400 text-xs leading-relaxed">
                         Optimized kernel parameters, tuned memory management, and pre-configured graphics stacks for maximum frame rates and low input latency.
                     </p>
                 </div>
 
                 <!-- Feature 3: Clean Repo Infrastructure -->
-                <div class="p-8 rounded-2xl border border-white/10 bg-[#0c1222] hover:border-[#00b0f0]/60 transition-all duration-300 shadow-xl group">
+                <div class="p-6 rounded-2xl border border-white/10 bg-[#0c1222] hover:border-[#00b0f0]/60 transition-all duration-300 shadow-xl group">
                     <div class="w-12 h-12 rounded-xl bg-[#00b0f0]/10 border border-[#00b0f0]/30 text-[#00b0f0] flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                         <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"></path></svg>
                     </div>
-                    <h3 class="text-xl font-bold text-white mb-3">Velox Custom Repo</h3>
-                    <p class="text-slate-400 text-sm leading-relaxed">
+                    <h3 class="text-lg font-bold text-white mb-2">Velox Custom Repo</h3>
+                    <p class="text-slate-400 text-xs leading-relaxed">
                         Dedicated system utilities and package infrastructure neatly isolated from Arch upstream. No messy workarounds needed.
+                    </p>
+                </div>
+
+                <!-- Feature 4: Hardened Security & Privacy -->
+                <div class="p-6 rounded-2xl border border-white/10 bg-[#0c1222] hover:border-[#00b0f0]/60 transition-all duration-300 shadow-xl group">
+                    <div class="w-12 h-12 rounded-xl bg-[#00b0f0]/10 border border-[#00b0f0]/30 text-[#00b0f0] flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2">Hardened & Private</h3>
+                    <p class="text-slate-400 text-xs leading-relaxed">
+                        Zero telemetry, sensible firewall defaults, secure boot support, and privacy-first configurations directly from the initial install.
                     </p>
                 </div>
 
@@ -179,6 +189,53 @@ import DesktopMockup from '../components/DesktopMockup.astro';
                     <h3 class="text-lg font-bold text-white mb-2">Custom Velox Repo</h3>
                     <p class="text-slate-400 text-sm leading-relaxed">
                         In-house system utilities, helper scripts, and fine-tuned desktop configs reside cleanly isolated in our own repository.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SECURITY & PRIVACY SECTION (Targeted via #security) -->
+    <section id="security" class="py-20 border-t border-white/[0.06] bg-[#060a14] scroll-mt-20">
+        <div class="max-w-6xl mx-auto px-6">
+            
+            <div class="mb-14 text-left max-w-3xl">
+                <span class="font-mono text-xs font-bold uppercase tracking-widest text-[#00b0f0] bg-[#00b0f0]/10 px-2.5 py-1 rounded border border-[#00b0f0]/20">
+                    // SECURITY & PRIVACY
+                </span>
+                <h2 class="text-3xl sm:text-4xl font-bold tracking-tight text-white mt-4">
+                    Built for Privacy. Secured by Default.
+                </h2>
+                <p class="text-slate-300 text-sm sm:text-base mt-3 leading-relaxed">
+                    Your operating system should belong to you. VeloxOS respects your digital sovereignty with zero data collection and robust security policies.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                
+                <div class="p-8 rounded-xl border border-white/[0.08] bg-white/[0.01] hover:bg-white/[0.03] transition-colors">
+                    <div class="font-mono text-xs text-[#00b0f0] mb-4">01. PRIVACY FIRST</div>
+                    <h3 class="text-lg font-bold text-white mb-2">Zero Telemetry</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">
+                        No background tracking, no diagnostics sent back home, no analytics. What happens on your machine stays on your machine.
+                    </p>
+                </div>
+
+                <div class="p-8 rounded-xl border border-white/[0.08] bg-white/[0.01] hover:bg-white/[0.03] transition-colors">
+                    <div class="font-mono text-xs text-[#00b0f0] mb-4">02. HARDENING</div>
+                    <h3 class="text-lg font-bold text-white mb-2">Pre-Configured Defense</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">
+                        Comes out of the box with strict firewall profiles, hardened kernel options, and sane default permissions for network services.
+                    </p>
+                </div>
+
+                <div class="p-8 rounded-xl border border-white/[0.08] bg-white/[0.01] hover:bg-white/[0.03] transition-colors">
+                    <div class="font-mono text-xs text-[#00b0f0] mb-4">03. INTEGRITY</div>
+                    <h3 class="text-lg font-bold text-white mb-2">Signed & Transparent</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">
+                        All custom Velox packages and PKGBUILDS are cryptographically signed. Complete open-source transparency on GitHub.
                     </p>
                 </div>
 
