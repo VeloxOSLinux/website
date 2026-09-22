@@ -159,42 +159,57 @@ const inactiveClass = "text-slate-400 hover:text-white transition-colors font-me
         </div>
 
         <script is:inline>
-            const initScripts = () => {
-                // Mobile Menu Toggle
-                const mobileBtn = document.getElementById('mobileMenuBtn');
-                const mobileMenu = document.getElementById('mobileMenu');
-                if (mobileBtn && mobileMenu) {
-                    mobileBtn.onclick = () => mobileMenu.classList.toggle('hidden');
-                }
+    const initScripts = () => {
+        // Mobile Menu Toggle
+        const mobileBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        if (mobileBtn && mobileMenu) {
+            mobileBtn.onclick = () => mobileMenu.classList.toggle('hidden');
+        }
 
-                // ScrollSpy: Markiert "Why?" als aktiv, sobald #whyveloxos im Viewport ist
-                const whySection = document.getElementById('whyveloxos');
-                const whyLink = document.querySelector('[data-nav-link="whyveloxos"]');
-                const distLink = document.querySelector('[data-nav-link="distribution"]');
+        // ScrollSpy & Navigation Active-State Handling
+        const whySection = document.getElementById('whyveloxos');
+        const whyLink = document.querySelector('[data-nav-link="whyveloxos"]');
+        const distLink = document.querySelector('[data-nav-link="distribution"]');
 
-                if (whySection && whyLink) {
-                    const observer = new IntersectionObserver((entries) => {
-                        entries.forEach(entry => {
-                            if (entry.isIntersecting) {
-                                whyLink.className = "text-[#00b0f0] font-semibold";
-                                if (distLink && window.location.pathname.replace(/\/$/, "") === (distLink.getAttribute('href')?.replace(/\/$/, "") || "/")) {
-                                    distLink.className = "text-slate-400 hover:text-white transition-colors font-medium";
-                                }
-                            } else {
-                                whyLink.className = "text-slate-400 hover:text-white transition-colors font-medium";
-                                if (distLink && window.location.pathname.replace(/\/$/, "") === (distLink.getAttribute('href')?.replace(/\/$/, "") || "/")) {
-                                    distLink.className = "text-[#00b0f0] font-semibold";
-                                }
-                            }
-                        });
-                    }, { threshold: 0.3 });
+        const activeClasses = ["text-[#00b0f0]", "font-semibold"];
+        const inactiveClasses = ["text-slate-400", "hover:text-white", "transition-colors", "font-medium"];
 
-                    observer.observe(whySection);
-                }
-            };
+        if (whySection && whyLink && distLink) {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        // Why? ist im Bild -> Why wird Blau, Distribution wird Grau
+                        whyLink.classList.remove(...inactiveClasses);
+                        whyLink.classList.add(...activeClasses);
 
-            initScripts();
-            document.addEventListener('astro:after-swap', initScripts);
-        </script>
+                        distLink.classList.remove(...activeClasses);
+                        distLink.classList.add(...inactiveClasses);
+                    } else {
+                        // Normaler Zustand -> Distribution wird Blau, Why wird Grau
+                        whyLink.classList.remove(...activeClasses);
+                        whyLink.classList.add(...inactiveClasses);
+
+                        // Nur blau färben, wenn wir uns auch auf der Startseite befinden
+                        const currentPath = window.location.pathname.replace(/\/$/, "") || "/";
+                        if (currentPath === "/" || currentPath === "/de") {
+                            distLink.classList.remove(...inactiveClasses);
+                            distLink.classList.add(...activeClasses);
+                        }
+                    }
+                });
+            }, { 
+                // In-View Threshold & Margins anpassen für sauberes Triggering beim Scrollen
+                rootMargin: "-20% 0px -60% 0px",
+                threshold: 0 
+            });
+
+            observer.observe(whySection);
+        }
+    };
+
+    initScripts();
+    document.addEventListener('astro:after-swap', initScripts);
+</script>
     </body>
 </html>
