@@ -161,57 +161,72 @@ const inactiveClass = "text-slate-400 hover:text-white transition-colors font-me
         </div>
 
         <script is:inline>
-    const initScripts = () => {
-        // Mobile Menu Toggle
-        const mobileBtn = document.getElementById('mobileMenuBtn');
-        const mobileMenu = document.getElementById('mobileMenu');
-        if (mobileBtn && mobileMenu) {
-            mobileBtn.onclick = () => mobileMenu.classList.toggle('hidden');
-        }
+            const initScripts = () => {
+                // Mobile Menu Toggle
+                const mobileBtn = document.getElementById('mobileMenuBtn');
+                const mobileMenu = document.getElementById('mobileMenu');
+                if (mobileBtn && mobileMenu) {
+                    mobileBtn.onclick = () => mobileMenu.classList.toggle('hidden');
+                }
 
-        // ScrollSpy & Navigation Active-State Handling
-        const whySection = document.getElementById('whyveloxos');
-        const whyLink = document.querySelector('[data-nav-link="whyveloxos"]');
-        const distLink = document.querySelector('[data-nav-link="distribution"]');
+                // ScrollSpy & Navigation Active-State Handling
+                const distLink = document.querySelector('[data-nav-link="distribution"]');
+                const whyLink = document.querySelector('[data-nav-link="whyveloxos"]');
+                const secLink = document.querySelector('[data-nav-link="security"]');
 
-        const activeClasses = ["text-[#00b0f0]", "font-semibold"];
-        const inactiveClasses = ["text-slate-400", "hover:text-white", "transition-colors", "font-medium"];
+                const whySection = document.getElementById('whyveloxos');
+                const secSection = document.getElementById('security');
 
-        if (whySection && whyLink && distLink) {
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        // Why? ist im Bild -> Why wird Blau, Distribution wird Grau
-                        whyLink.classList.remove(...inactiveClasses);
-                        whyLink.classList.add(...activeClasses);
+                const activeClasses = ["text-[#00b0f0]", "font-semibold"];
+                const inactiveClasses = ["text-slate-400", "hover:text-white", "transition-colors", "font-medium"];
 
-                        distLink.classList.remove(...activeClasses);
-                        distLink.classList.add(...inactiveClasses);
-                    } else {
-                        // Normaler Zustand -> Distribution wird Blau, Why wird Grau
-                        whyLink.classList.remove(...activeClasses);
-                        whyLink.classList.add(...inactiveClasses);
-
-                        // Nur blau färben, wenn wir uns auch auf der Startseite befinden
-                        const currentPath = window.location.pathname.replace(/\/$/, "") || "/";
-                        if (currentPath === "/" || currentPath === "/de") {
-                            distLink.classList.remove(...inactiveClasses);
-                            distLink.classList.add(...activeClasses);
+                const setActiveLink = (activeEl) => {
+                    [distLink, whyLink, secLink].forEach(link => {
+                        if (!link) return;
+                        if (link === activeEl) {
+                            link.classList.remove(...inactiveClasses);
+                            link.classList.add(...activeClasses);
+                        } else {
+                            link.classList.remove(...activeClasses);
+                            link.classList.add(...inactiveClasses);
                         }
-                    }
-                });
-            }, { 
-                // In-View Threshold & Margins anpassen für sauberes Triggering beim Scrollen
-                rootMargin: "-20% 0px -60% 0px",
-                threshold: 0 
-            });
+                    });
+                };
 
-            observer.observe(whySection);
-        }
-    };
+                const currentPath = window.location.pathname.replace(/\/$/, "") || "/";
+                const isHomePage = currentPath === "/" || currentPath === "/de";
 
-    initScripts();
-    document.addEventListener('astro:after-swap', initScripts);
-</script>
+                if (isHomePage) {
+                    let activeSection = null;
+
+                    const observer = new IntersectionObserver((entries) => {
+                        entries.forEach(entry => {
+                            if (entry.isIntersecting) {
+                                activeSection = entry.target.id;
+                            } else if (activeSection === entry.target.id) {
+                                activeSection = null;
+                            }
+                        });
+
+                        if (activeSection === 'whyveloxos') {
+                            setActiveLink(whyLink);
+                        } else if (activeSection === 'security') {
+                            setActiveLink(secLink);
+                        } else {
+                            setActiveLink(distLink);
+                        }
+                    }, { 
+                        rootMargin: "-20% 0px -60% 0px",
+                        threshold: 0 
+                    });
+
+                    if (whySection) observer.observe(whySection);
+                    if (secSection) observer.observe(secSection);
+                }
+            };
+
+            initScripts();
+            document.addEventListener('astro:after-swap', initScripts);
+        </script>
     </body>
 </html>
