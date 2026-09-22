@@ -133,21 +133,27 @@ const inactiveClass = "text-slate-400 hover:text-white transition-colors font-me
             </main>
 
             <!-- FOOTER -->
-            <footer class="border-t border-white/[0.06] bg-[#03050a] transition-colors py-12 mt-28">
-                <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6 text-sm text-slate-400">
-                    <div class="flex items-center gap-6 text-xs font-medium">
-                        <a href={l("/legal-notice")} class="hover:text-[#00b0f0] transition-colors">{isGerman ? "Impressum" : "Legal Notice"}</a>
-                        <a href={l("/privacy-policy")} class="hover:text-[#00b0f0] transition-colors">{isGerman ? "Datenschutz" : "Privacy Policy"}</a>
-                        <a href="https://github.com/VeloxOSLinux" target="_blank" class="hover:text-[#00b0f0] transition-colors">GitHub</a>
-                    </div>
-                    <br>
-                    <div class="flex items-center gap-3">
-                        <span class="text-xs font-mono text-slate-500">
-                            VeloxOS is free and open-source · Built on Arch Linux · Minimal. Fast. Yours
-                        </span>
-                    </div>
-                </div>
-            </footer>
+<footer class="border-t border-white/[0.06] bg-[#03050a] transition-colors py-12 mt-28">
+    <div class="max-w-6xl mx-auto px-6 flex flex-col items-center justify-center gap-4 text-center">
+        
+        <!-- Obere Zeile: Links -->
+        <div class="flex flex-wrap items-center justify-center gap-6 text-xs font-medium">
+            <a href={l("/legal-notice")} class="text-slate-400 hover:text-[#00b0f0] transition-colors">{isGerman ? "Impressum" : "Legal Notice"}</a>
+            <span class="text-white/10 select-none">•</span>
+            <a href={l("/privacy-policy")} class="text-slate-400 hover:text-[#00b0f0] transition-colors">{isGerman ? "Datenschutz" : "Privacy Policy"}</a>
+            <span class="text-white/10 select-none">•</span>
+            <a href="https://github.com/VeloxOSLinux" target="_blank" class="text-slate-400 hover:text-[#00b0f0] transition-colors">GitHub</a>
+        </div>
+
+        <!-- Untere Zeile: Status / Claim -->
+        <div class="pt-2 border-t border-white/[0.03] w-full max-w-md">
+            <p class="text-[11px] font-mono text-slate-500 tracking-wide">
+                VeloxOS is free and open-source <span class="text-[#00b0f0]/60">·</span> Built on Arch Linux <span class="text-[#00b0f0]/60">·</span> Minimal. Fast. Yours.
+            </p>
+        </div>
+
+    </div>
+</footer>
         </div>
 
         <script is:inline>
