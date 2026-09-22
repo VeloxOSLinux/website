@@ -80,28 +80,32 @@ import DesktopMockup from '../components/DesktopMockup.astro';
         </div>
     </section>
 
-    <!-- WHY VELOXOS / KEY FEATURES SECTION -->
-    <section class="py-20 border-t border-white/[0.06] bg-[#05080f]">
-        <div class="max-w-6xl mx-auto px-6">
+    <!-- WHY VELOXOS / KEY FEATURES SECTION (Visuell abgehobener Bereich) -->
+    <section class="relative py-24 bg-[#080d1a] border-y border-[#00b0f0]/15 overflow-hidden">
+        
+        <!-- Dezent leuchtender Cyan-Spotlight im Hintergrund -->
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[300px] bg-[#00b0f0]/5 blur-[120px] pointer-events-none rounded-full"></div>
+
+        <div class="max-w-6xl mx-auto px-6 relative z-10">
             
-            <!-- Section Header -->
-<div class="text-left max-w-3xl mb-14">
-    <span class="font-mono text-xs font-bold uppercase tracking-widest text-[#00b0f0]">
-        // WHY VELOXOS
-    </span>
-    <h2 class="text-3xl sm:text-4xl font-extrabold text-white mt-3 tracking-tight">
-        Stop Spending Hours Configuring Wayland.
-    </h2>
-    <p class="text-slate-400 text-sm sm:text-base mt-4 leading-relaxed">
-        VeloxOS eliminates setup friction without taking away your control. Pure Arch performance paired with a pre-tuned, modern workflow.
-    </p>
-</div>
+            <!-- Section Header (Linksbündig) -->
+            <div class="text-left max-w-3xl mb-14">
+                <span class="font-mono text-xs font-bold uppercase tracking-widest text-[#00b0f0] bg-[#00b0f0]/10 px-2.5 py-1 rounded border border-[#00b0f0]/20">
+                    // WHY VELOXOS
+                </span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-white mt-4 tracking-tight">
+                    Stop Spending Hours Configuring Wayland.
+                </h2>
+                <p class="text-slate-300 text-sm sm:text-base mt-3 leading-relaxed">
+                    VeloxOS eliminates setup friction without taking away your control. Pure Arch performance paired with a pre-tuned, modern workflow.
+                </p>
+            </div>
 
             <!-- 3 Feature Cards Grid -->
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 
                 <!-- Feature 1: Desktop Experience -->
-                <div class="p-8 rounded-2xl border border-white/10 bg-[#090d16]/80 hover:border-[#00b0f0]/50 transition-all duration-300 group">
+                <div class="p-8 rounded-2xl border border-white/10 bg-[#0c1222] hover:border-[#00b0f0]/60 transition-all duration-300 shadow-xl group">
                     <div class="w-12 h-12 rounded-xl bg-[#00b0f0]/10 border border-[#00b0f0]/30 text-[#00b0f0] flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                         <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z"></path></svg>
                     </div>
@@ -112,7 +116,7 @@ import DesktopMockup from '../components/DesktopMockup.astro';
                 </div>
 
                 <!-- Feature 2: Gaming Performance -->
-                <div class="p-8 rounded-2xl border border-white/10 bg-[#090d16]/80 hover:border-[#00b0f0]/50 transition-all duration-300 group">
+                <div class="p-8 rounded-2xl border border-white/10 bg-[#0c1222] hover:border-[#00b0f0]/60 transition-all duration-300 shadow-xl group">
                     <div class="w-12 h-12 rounded-xl bg-[#00b0f0]/10 border border-[#00b0f0]/30 text-[#00b0f0] flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                         <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
                     </div>
@@ -123,7 +127,7 @@ import DesktopMockup from '../components/DesktopMockup.astro';
                 </div>
 
                 <!-- Feature 3: Clean Repo Infrastructure -->
-                <div class="p-8 rounded-2xl border border-white/10 bg-[#090d16]/80 hover:border-[#00b0f0]/50 transition-all duration-300 group">
+                <div class="p-8 rounded-2xl border border-white/10 bg-[#0c1222] hover:border-[#00b0f0]/60 transition-all duration-300 shadow-xl group">
                     <div class="w-12 h-12 rounded-xl bg-[#00b0f0]/10 border border-[#00b0f0]/30 text-[#00b0f0] flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                         <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"></path></svg>
                     </div>
