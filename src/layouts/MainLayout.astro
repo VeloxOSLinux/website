@@ -135,16 +135,16 @@ const inactiveClass = "text-slate-400 hover:text-white transition-colors font-me
             <!-- FOOTER -->
             <footer class="border-t border-white/[0.06] bg-[#03050a] transition-colors py-12 mt-28">
                 <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6 text-sm text-slate-400">
-                    <div class="flex items-center gap-3">
-                        <img src="https://wiki.veloxos.org/_astro/new_logo.CxzxC9pm_2vCcGx.webp" alt="VeloxOS" class="h-6 w-auto opacity-90" />
-                        <span class="text-xs font-mono text-slate-500">
-                            © {new Date().getFullYear()} VeloxOS Project. Built on Arch Linux.
-                        </span>
-                    </div>
                     <div class="flex items-center gap-6 text-xs font-medium">
                         <a href={l("/legal-notice")} class="hover:text-[#00b0f0] transition-colors">{isGerman ? "Impressum" : "Legal Notice"}</a>
                         <a href={l("/privacy-policy")} class="hover:text-[#00b0f0] transition-colors">{isGerman ? "Datenschutz" : "Privacy Policy"}</a>
                         <a href="https://github.com/VeloxOSLinux" target="_blank" class="hover:text-[#00b0f0] transition-colors">GitHub</a>
+                    </div>
+                    <br>
+                    <div class="flex items-center gap-3">
+                        <span class="text-xs font-mono text-slate-500">
+                            VeloxOS is free and open-source · Built on Arch Linux · Minimal. Fast. Yours
+                        </span>
                     </div>
                 </div>
             </footer>
