@@ -5,7 +5,7 @@ import DesktopMockup from '../components/DesktopMockup.astro';
 
 <MainLayout title="VeloxOS | Minimal. Fast. Yours.">
     
-    <!-- HERO SECTION (Asymmetric, Modern & Unique) -->
+    <!-- HERO SECTION -->
     <section class="relative pt-12 pb-20 md:pt-20 md:pb-28 overflow-hidden">
         <div class="max-w-6xl mx-auto px-6">
             
@@ -68,54 +68,13 @@ import DesktopMockup from '../components/DesktopMockup.astro';
 
                 </div>
 
-                <!-- Right Column: Brand Visualizer (Interactive OS Spec Box) -->
+                <!-- Right Column: Clean Desktop Concept Preview -->
                 <div class="lg:col-span-5 relative">
-                    <div class="relative rounded-2xl border border-white/10 bg-[#090d16] p-6 shadow-2xl overflow-hidden group">
-                        
-                        <!-- Header Bar of the OS Box -->
-                        <div class="flex items-center justify-between pb-4 mb-4 border-b border-white/5 font-mono text-xs text-slate-400">
-                            <div class="flex items-center gap-2">
-                                <span class="w-3 h-3 rounded-full bg-red-500/80"></span>
-                                <span class="w-3 h-3 rounded-full bg-yellow-500/80"></span>
-                                <span class="w-3 h-3 rounded-full bg-green-500/80"></span>
-                            </div>
-                            <span class="text-slate-500">veloxos-fetch</span>
-                        </div>
-
-                        <!-- Logo Center Piece -->
-                        <div class="py-6 flex justify-center">
-                            <img 
-                                src="https://wiki.veloxos.org/_astro/new_logo.CxzxC9pm_2vCcGx.webp" 
-                                alt="VeloxOS Emblem" 
-                                class="h-32 sm:h-40 w-auto object-contain drop-shadow-[0_10px_20px_rgba(0,176,240,0.2)] group-hover:scale-105 transition-transform duration-500" 
-                            />
-                        </div>
-
-                        <!-- Custom Spec Box -->
-                        <div class="bg-black/40 rounded-lg p-4 font-mono text-xs space-y-2 border border-white/5">
-                            <div class="flex justify-between">
-                                <span class="text-slate-500">OS</span>
-                                <span class="text-white">VeloxOS x86_64</span>
-                            </div>
-                            <div class="flex justify-between">
-                                <span class="text-slate-500">Base</span>
-                                <span class="text-slate-300">Arch Linux (Pure)</span>
-                            </div>
-                            <div class="flex justify-between">
-                                <span class="text-slate-500">WM / Shell</span>
-                                <span class="text-[#00b0f0]">Niri Wayland</span>
-                            </div>
-                            <div class="flex justify-between">
-                                <span class="text-slate-500">Target</span>
-                                <span class="text-slate-300">Low-Latency / Gaming</span>
-                            </div>
-                        </div>
-
+                    <div class="relative">
+                        <DesktopMockup />
                     </div>
                 </div>
-<div class="relative">
-            <DesktopMockup />
-          </div>
+
             </div>
 
         </div>
@@ -127,7 +86,7 @@ import DesktopMockup from '../components/DesktopMockup.astro';
             
             <div class="mb-14">
                 <span class="font-mono text-xs font-bold uppercase tracking-widest text-[#00b0f0]">
-                    // ARCHITECTURE & PHILOSOPHOLOGY
+                    // ARCHITECTURE & PHILOSOPHY
                 </span>
                 <h2 class="text-3xl sm:text-4xl font-bold tracking-tight text-white mt-3">
                     Pure Arch Linux. Uncompromisingly Tuned.
